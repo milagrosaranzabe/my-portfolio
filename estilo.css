@@ -155,10 +155,11 @@
         }
 
         #sobremi .contenedor-foto img {
-          padding: 20px;
+          padding: 10px;
           width: 100%;
           border-radius: 20px;
-          background-color: #f2e5f8;
+          box-shadow: 5px 5px 10px #565353, -5px -5px 10px #c3c2c2;
+          background-color: #f2cef9;
         }
 
         #sobremi .sobremi {
@@ -219,6 +220,45 @@
           color: #fff;
         }
 
+         /* *********************/
+        /* seccion INTERESES */
+        /* *********************/
+
+        #intereses {
+          display: inline;
+          text-align: center;
+        }
+
+        #intereses h3 {
+          margin-bottom: 50px;
+          text-decoration: underline;
+          text-decoration-color:  #be03fc;
+          text-decoration-thickness: 3px;
+        }
+
+        .contenedor-intereses .interes {
+          display: inline;
+          padding: 20px;
+          background-color: #a604f7;
+          border-radius: 10px;
+          margin: 20px 15px 15px 20px;
+          transition: .3s;
+        }
+
+        .contenedor-intereses .interes:hover {
+          background-color: #f9b7e4;
+        }
+
+        .contenedor-intereses span {
+          font-weight: 700;
+        }
+
+        .contenedor-intereses .interes i {
+          font-size: 30px;
+          margin-bottom: 100px;
+        }
+
+
         /* *********************/
         /* seccion SERVICIOS */
         /* *********************/
@@ -255,7 +295,7 @@
           transition: .5s;
         }
 
-        #servicios .fila .servicio:hover {
+        #servicios .fila .servicio {
           box-shadow: 5px 5px 10px #565656, -5px -5px 10px #8a8a8a;
         }
 
@@ -333,30 +373,31 @@
           margin: 10px 0px;
         }
 
+        /* Habilidades Blandas */
         .contenedor-skills .skill .barra .barra-progreso1 {
           background-color: #fff;
-          width: 85%;
+          width: 100%;
           height: 6px;
           animation: progreso1 2s forwards;
         }
 
         .contenedor-skills .skill .barra .barra-progreso2 {
           background-color: #fff;
-          width: 70%;
+          width: 100%;
           height: 6px;
           animation: progreso2 2s forwards;
         }
 
         .contenedor-skills .skill .barra .barra-progreso3 {
           background-color: #fff;
-          width: 100%;
+          width: 90%;
           height: 6px;
           animation: progreso3 2s forwards;
         }
 
         .contenedor-skills .skill .barra .barra-progreso4 {
           background-color: #fff;
-          width: 70%;
+          width: 90%;
           height: 6px;
           animation: progreso4 2s forwards;
         }
@@ -370,33 +411,55 @@
 
         .contenedor-skills .skill .barra .barra-progreso6 {
           background-color: #fff;
-          width: 70%;
+          width: 85%;
           height: 6px;
           animation: progreso6 2s forwards;
         }
 
+        /* Habilidades Técnicas */
+        .contenedor-skills .skill .barra .barra-progreso7 {
+          background-color: #fff;
+          width: 85%;
+          height: 6px;
+          animation: progreso7 2s forwards;
+        }
+
+        .contenedor-skills .skill .barra .barra-progreso8 {
+          background-color: #fff;
+          width: 70%;
+          height: 6px;
+          animation: progreso8 2s forwards;
+        }
+
+        .contenedor-skills .skill .barra .barra-progreso9 {
+          background-color: #fff;
+          width: 100%;
+          height: 6px;
+          animation: progreso9 2s forwards;
+        }
+
+        .contenedor-skills .skill .barra .barra-progreso10 {
+          background-color: #fff;
+          width: 70%;
+          height: 6px;
+          animation: progreso10 2s forwards;
+        }
+
+        .contenedor-skills .skill .barra .barra-progreso11 {
+          background-color: #fff;
+          width: 85%;
+          height: 6px;
+          animation: progreso11 2s forwards;
+        }
+
+        .contenedor-skills .skill .barra .barra-progreso12 {
+          background-color: #fff;
+          width: 70%;
+          height: 6px;
+          animation: progreso12 2s forwards;
+        }
 
         @keyframes progreso1 {
-          0% {
-            width: 0;
-          }
-
-          100% {
-            width: 85%;
-          }
-        }
-
-        @keyframes progreso2 {
-          0% {
-            width: 0;
-          }
-
-          100% {
-            width: 70%;
-          }
-        }
-
-        @keyframes progreso3 {
           0% {
             width: 0;
           }
@@ -406,13 +469,33 @@
           }
         }
 
+        @keyframes progreso2 {
+          0% {
+            width: 0;
+          }
+
+          100% {
+            width: 100%;
+          }
+        }
+
+        @keyframes progreso3 {
+          0% {
+            width: 0;
+          }
+
+          100% {
+            width: 90%;
+          }
+        }
+
         @keyframes progreso4 {
           0% {
             width: 0;
           }
 
           100% {
-            width: 70%;
+            width: 90%;
           }
         }
 
@@ -427,6 +510,67 @@
         }
 
         @keyframes progreso6 {
+          0% {
+            width: 0;
+          }
+
+          100% {
+            width: 85%;
+          }
+        }
+
+
+        @keyframes progreso7 {
+          0% {
+            width: 0;
+          }
+
+          100% {
+            width: 85%;
+          }
+        }
+
+        @keyframes progreso8 {
+          0% {
+            width: 0;
+          }
+
+          100% {
+            width: 70%;
+          }
+        }
+
+        @keyframes progreso9 {
+          0% {
+            width: 0;
+          }
+
+          100% {
+            width: 100%;
+          }
+        }
+
+        @keyframes progreso10 {
+          0% {
+            width: 0;
+          }
+
+          100% {
+            width: 70%;
+          }
+        }
+
+        @keyframes progreso11 {
+          0% {
+            width: 0;
+          }
+
+          100% {
+            width: 85%;
+          }
+        }
+
+        @keyframes progreso12 {
           0% {
             width: 0;
           }
@@ -468,18 +612,12 @@
           margin: 0 10px;
           position: relative;
           overflow: hidden;
+          box-shadow: 5px 5px 10px #565353, -5px -5px 10px #c3c2c2;
         }
 
         #portfolio .fila .proyecto img {
           width: 100%;
           height: 100%;
-          filter: grayscale(1);
-          object-fit: cover;
-          transition: .5s;
-        }
-
-        #portfolio .fila .proyecto:hover img {
-          filter: grayscale(0);
         }
 
         #portfolio .fila .proyecto .info {
@@ -498,72 +636,6 @@
         #portfolio .fila .proyecto:hover .info {
           opacity: 1;
           bottom: 0;
-        }
-
-        /* *********************/
-        /* seccion CONTACTO */
-        /* *********************/
-
-        #contacto {
-          padding: 100px 15px;
-          background-color: #f4e7fa;
-        }
-
-        #contacto .titulo-seccion {
-          margin-bottom: 20px;
-        }
-
-        #contacto .contenedor-form {
-          max-width: 1100px;
-          margin: auto;
-        }
-
-        #contacto .contenedor-form .fila {
-          margin-bottom: 15px;
-        }
-
-        #contacto .contenedor-form .mitad {
-          display: flex;
-          justify-content: space-between;
-        }
-
-        #contacto .contenedor-form input,
-        #contacto .contenedor-form textarea {
-          padding: 20px;
-          border-radius: 20px;
-          border: none;
-          border: 1px solid #919191;
-        }
-
-        #contacto .contenedor-form .mitad input {
-          width: 48%;
-        }
-
-        #contacto .contenedor-form .input-full {
-          width: 100%;
-        }
-
-        #contacto .titulo-seccion {
-          text-align: center;
-          font-size: 22px;
-          text-transform: uppercase;
-          color: #111135;
-          text-decoration: underline;
-          text-decoration-color:  #c325f8;
-          text-decoration-thickness: 3px;
-        }
-
-        #contacto .btn-enviar {
-          display: block;
-          margin: auto;
-          cursor: pointer;
-          transition: .5s;
-          padding: 10px 15px !important;
-        }
-
-        #contacto .btn-enviar:hover {
-          background-color: #ff5080;
-          color: #fff;
         }
 
         /* *********************/
@@ -662,7 +734,7 @@
             margin: 10px auto;
           }
 
-          /* seccion HABLIDADES MI */
+          /* seccion HABLIDADES */
           .contenedor-skills {
             padding: 50px 20px;
           }
@@ -678,20 +750,5 @@
 
           #portfolio .fila .proyecto {
             margin: 10px auto;
-          }
-
-          /* seccion CONTACTO */
-          #contacto {
-            padding: 50px 15px;
-          }
-
-          #contacto .contenedor-form .mitad {
-            margin-bottom: 15px;
-            display: block;
-          }
-
-          #contacto .contenedor-form .mitad input {
-            width: 100%;
-            margin-bottom: 15px;
           }
         }
