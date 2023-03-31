@@ -603,8 +603,8 @@
 
         #portfolio .fila {
           display: flex;
-          justify-content: space-between;
-          margin: 30px 0;
+          justify-content: space-around;
+          margin: 40px 0;
         }
 
         #portfolio .fila .proyecto {
