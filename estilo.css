@@ -207,6 +207,7 @@
 
         #sobremi .sobremi a {
           display: inline-block;
+          font-weight: 700;
           text-decoration: none;
           color: #000;
           border-radius: 30px;
@@ -241,6 +242,7 @@
           display: inline;
           padding: 20px;
           background-color: #a604f7;
+          border: 3px solid #580282;
           border-radius: 10px;
           margin: 20px 15px 15px 20px;
           transition: .3s;
@@ -316,7 +318,7 @@
         }
 
         #servicios .fila .servicio hr {
-          width: 90%;
+          width: 100%;
           margin: auto;
           color: #000;
           margin-bottom: 25px;
@@ -332,6 +334,10 @@
         #servicios .fila .servicio p {
           font-size: 14px;
           line-height: 22px;
+        }
+
+        .servicio p {
+          text-align: justify;
         }
 
         /* *********************/
@@ -625,7 +631,7 @@
           font-size: 15px;
           position: absolute;
           left: 0px;
-          background-color: rgba(185, 4, 164, 0.9);
+          background-color: rgba(68, 2, 135, 0.9);
           color: #f9f8f8;
           width: 100%;
           padding: 10px;
