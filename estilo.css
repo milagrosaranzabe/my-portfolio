@@ -196,6 +196,7 @@
           text-transform: uppercase;
           margin-bottom: 20px;
           letter-spacing: 1px;
+        
         }
 
         #sobremi .sobremi p {
@@ -220,6 +221,42 @@
         #sobremi .sobremi a:hover {
           background-color: #ff5080;
           color: #fff;
+        }
+
+         /* *********************/
+        /* seccion EDUCACION */
+        /* *********************/
+
+        #educacion {
+          margin: 50px 320px 150px 320px;
+          padding: 5px;
+        }
+
+        #educacion h3 {
+          margin-bottom: 20px;
+        }
+
+        #educacion h5, h6 {
+          margin: 10px;
+        }
+
+        .educacion {
+          box-shadow: 5px 5px 10px #b56ed3, -5px -5px 10px #e4c4fa;
+          border-radius: 4px;
+          padding: 20px;
+          margin-bottom: 25px;
+        }
+
+        .educacion:hover {
+          background-color: #f7f0ca;
+        }
+
+        .educacion span {
+          margin-left: 15px;
+          margin-bottom: 10px;
+          text-decoration: underline;
+          text-decoration-color:  #c325f8;
+          text-decoration-thickness: 2px;
         }
 
          /* *********************/
@@ -272,7 +309,7 @@
           background-color: #f0d7fb;
         }
 
-        #servicios .titulo-seccion {
+        #servicios .titulo-seccion, #educacion h3 {
           text-align: center;
           font-size: 22px;
           text-transform: uppercase;
@@ -294,7 +331,7 @@
           background-color: #fff;
           padding: 30px;
           margin: 0 5px;
-          border-radius: 15px;
+          border-radius: 5px;
           transition: .5s;
         }
 
@@ -615,7 +652,7 @@
 
         #portfolio .fila .proyecto {
           max-width: 450px;
-          border: 1px solid #000;
+          border: 1px solid #8d09b1;
           margin: 0 10px;
           position: relative;
           overflow: hidden;
