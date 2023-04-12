@@ -122,7 +122,7 @@
           margin: 25px;
           padding: 20px 25px;
           border: 2px solid #fff;
-          border-radius: 50px;
+          border-radius: 25px;
           color: #fff;
           font-weight: bold;
           text-transform: uppercase;
@@ -168,12 +168,11 @@
         }
 
         #sobremi .sobremi .titulo-seccion {
+          font-family: cursive;
           font-size: 22px;
           font-weight: 600;
           text-transform: uppercase;
           color: #111135;
-          text-decoration: underline;
-          text-decoration-color:  #c325f8;
           text-decoration-thickness: 3px;
         }
 
@@ -211,9 +210,9 @@
           font-weight: 700;
           text-decoration: none;
           color: #000;
-          border-radius: 30px;
+          border-radius: 25px;
           border: 1px solid #000;
-          padding: 10px 20px;
+          padding: 20px;
           margin-top: 30px;
           transition: .5s;
         }
@@ -242,7 +241,7 @@
 
         .educacion {
           box-shadow: 5px 5px 10px #a241cc, -5px -5px 10px #e0bcf9;
-          border-radius: 6px;
+          border-radius: 10px;
           padding: 20px;
           margin-bottom: 25px;
         }
@@ -254,9 +253,6 @@
         .educacion span {
           margin-left: 15px;
           margin-bottom: 10px;
-          text-decoration: underline;
-          text-decoration-color:  #c325f8;
-          text-decoration-thickness: 2px;
         }
 
          /* *********************/
@@ -269,24 +265,22 @@
         }
 
         #intereses h3 {
+          font-family: cursive;
           margin-bottom: 50px;
-          text-decoration: underline;
-          text-decoration-color:  #be03fc;
-          text-decoration-thickness: 3px;
         }
 
         .contenedor-intereses .interes {
           display: inline;
           padding: 20px;
-          background-color: #a604f7;
-          border: 3px solid #580282;
+          background-color: #f9b7e4;
+          border: 2px solid #580282;
           border-radius: 10px;
           margin: 20px 15px 15px 20px;
           transition: .3s;
         }
 
         .contenedor-intereses .interes:hover {
-          background-color: #f9b7e4;
+          background-color: #f9daef;
         }
 
         .contenedor-intereses span {
@@ -312,11 +306,9 @@
         #servicios .titulo-seccion, #educacion h3 {
           text-align: center;
           font-size: 22px;
+          font-family: cursive;
           text-transform: uppercase;
           color: #111135;
-          text-decoration: underline;
-          text-decoration-color:  #c325f8;
-          text-decoration-thickness: 3px;
         }
 
         #servicios .fila {
@@ -331,7 +323,7 @@
           background-color: #fff;
           padding: 30px;
           margin: 0 5px;
-          border-radius: 5px;
+          border-radius: 10px;
           transition: .5s;
         }
 
@@ -637,11 +629,9 @@
         #portfolio .titulo-seccion {
           text-align: center;
           font-size: 22px;
+          font-family: cursive;
           text-transform: uppercase;
           color: #111135;
-          text-decoration: underline;
-          text-decoration-color:  #c325f8;
-          text-decoration-thickness: 3px;
         }
 
         #portfolio .fila {
