@@ -15,398 +15,401 @@
 </head>
 
 <body>
-  <!-- SECCION INICIO -->
-  <section id="inicio">
-    <div class="contenido">
-      <header>
-        <div class="contenido-header">
-          <h1>MILAGROS</h1>
-          <nav id="nav" class="">
-            <ul id="links">
-              <li><a href="#inicio" class="seleccionado" onclick="seleccionar(this)">INICIO</a></li>
-              <li><a href="#sobremi" onclick="seleccionar(this)">SOBRE MI</a></li>
-              <li><a href="#servicios" onclick="seleccionar(this)">SERVICIOS</a></li>
-              <li><a href="#skills" onclick="seleccionar(this)">HABILIDADES</a></li>
-              <li><a href="#portfolio" onclick="seleccionar(this)">PROYECTOS</a></li>
-            </ul>
-          </nav>
+  <main>
+    <!-- SECCION INICIO -->
+    <section id="inicio">
+      <div class="contenido">
+        <header>
+          <div class="contenido-header">
+            <h1>MILAGROS</h1>
+            <nav id="nav" class="">
+              <ul id="links">
+                <li><a href="#inicio" class="seleccionado" onclick="seleccionar(this)">INICIO</a></li>
+                <li><a href="#sobremi" onclick="seleccionar(this)">SOBRE MI</a></li>
+                <li><a href="#servicios" onclick="seleccionar(this)">SERVICIOS</a></li>
+                <li><a href="#skills" onclick="seleccionar(this)">HABILIDADES</a></li>
+                <li><a href="#portfolio" onclick="seleccionar(this)">PROYECTOS</a></li>
+              </ul>
+            </nav>
 
-          <!-- Icono del menu responsive -->
-          <div id="icono-nav" onclick="responsiveMenu()">
-            <i class="fa-solid fa-bars"></i>
+            <!-- Icono del menu responsive -->
+            <div id="icono-nav" onclick="responsiveMenu()">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+
+
+            <div class="redes">
+              <a href="https://www.linkedin.com/in/milagros-aranzabe-alonso-qa/"><i
+                  class="fa-brands fa-linkedin"></i></a>
+              <a href="https://github.com/milagrosaranzabe?tab=repositories"><i class="fa-brands fa-github"></i></a>
+              <a href="mailto: milagrosaranzabe@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+            </div>
           </div>
+        </header>
+        <div class="presentacion">
+          <p class="bienvenida">Bienvenidos</p>
+          <h2>Milagros A. Aranzabe Alonso</h2>
+          <h3 class="descripcion">Analista / Tester QA</h3>
+          <a href="#servicios">Ir a Portfolio</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCION SOBRE MI -->
+    <section id="sobremi">
+      <div class="contenedor-foto">
+        <img src="./img/mifoto.jpg" alt="Foto de perfil" title="Foto de perfil">
+      </div>
+
+      <div class="sobremi">
+        <p class="titulo-seccion">Sobre Mí</p>
+        <h2>Hola, Soy <span>Milagros A. Aranzabe Alonso</span> </h2>
+        <h3>Analista / Tester QA</h3>
+        <p>Soy Analista / Tester QA y Profesora de Educación Especial con orientación en Discapacidad Neuromotora.</p>
+        <p>Me considero una persona responsable, comprometida, detallista y curiosa que constantemente está indagando e
+          incorporando nuevos conocimientos y habilidades. </p>
+        <p>Mi lema es: <em>"La enseñanza es mi vocación y el Testing mi pasión"</em>.</p>
+        <a href="https://drive.google.com/file/d/1uPDf35gqO2AD9OANA0zWw22_8PWtFLo4/view?usp=sharing">Descargar CV</a>
+      </div>
+    </section>
+
+    <section id="educacion">
+      <h3>FORMACIÓN</h3>
+      <div class="educacion">
+        <i class="fa-solid fa-award"><span>TESTING QA</span></i>
+        <h5>EducaciónIT</h5>
+        <h6>Agosto 2022 - Marzo 2023</h6>
+      </div>
+    </section>
+
+    <!-- Intereses -->
+    <section id="intereses">
+      <div class="contenedor-intereses">
+        <h3>INTERESES</h3>
+
+        <div class="interes">
+          <i class="fa-solid fa-headphones"></i>
+          <span>Música</span>
+        </div>
+        <div class="interes">
+          <i class="fa-solid fa-person-walking"></i>
+          <span>Caminar</span>
+        </div>
+        <div class="interes">
+          <i class="fa-solid fa-book"></i>
+          <span>Lectura</span>
+        </div>
+        <div class="interes">
+          <i class="fa-solid fa-camera"></i>
+          <span>Fotografía</span>
+        </div>
+        <div class="interes">
+          <i class="fa-solid fa-book"></i>
+          <span>Psicología</span>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- SECCION SERVICIOS -->
+    <section id="servicios">
+      <h3 class="titulo-seccion">MIS SERVICIOS</h3>
+      <div class="fila">
+        <div class="servicio">
+          <span class="icono"><i class="fa-solid fa-magnifying-glass"></i></span>
+          <h4>Testing Explorario</h4>
+          <hr>
+          <ul class="servicios-tag">
+            <li lang="en">Test Case</li>
+            <li lang="en">Test</li>
+            <li lang="en">Bugs</li>
+          </ul>
+          <hr>
+          <p> Testing Exploratorio y Funcional de Aplicaciones Web </p>
+        </div>
+        <div class="servicio">
+          <span class="icono"><i class="fa-solid fa-file-lines"></i></span>
+          <h4>Análisis de Historias de Usuario y Casos de Uso</h4>
+          <hr>
+          <ul class="servicios-tag">
+            <li lang="en">Test Case</li>
+            <li lang="en">Test</li>
+            <li lang="en">Bugs</li>
+          </ul>
+          <hr>
+          <p>Análisis de Historias de Usuario con criterios de aceptación y Casos de Uso</p>
+        </div>
+        <div class="servicio">
+          <span class="icono"><i class="fa-solid fa-magnifying-glass"></i></span>
+          <h4>Testing Funcional y Manual</h4>
+          <hr>
+          <ul class="servicios-tag">
+            <li lang="en">Test Case</li>
+            <li lang="en">Test</li>
+            <li lang="en">Bugs</li>
+          </ul>
+          <hr>
+          <p>Testing Funcional y Manual de Aplicaciones Web, utilizando JIRA para el diseño de Casos de Prueba y Zephyr
+            para la ejecución de Pruebas</p>
+        </div>
+      </div>
+      <div class="fila">
+        <div class="servicio">
+          <span class="icono"><i class="fa-solid fa-code"></i></span>
+          <h4>Testing Funcional y Automatizado</h4>
+          <hr>
+          <ul class="servicios-tag">
+            <li lang="en">Test Case</li>
+            <li lang="en">Test</li>
+            <li lang="en">Bugs</li>
+          </ul>
+          <hr>
+          <p>Testing Automatizado de Aplicaciones Web utilizando como Framework de automatización: Java, Maven,
+            Seleniuum
+            WebDriver, JUnit y TestNG, Eclipse</p>
+        </div>
+        <div class="servicio">
+          <span class="icono"><i class="fa-solid fa-database"></i></span>
+          <h4>Testing de Bases de Datos Relacionales</h4>
+          <hr>
+          <ul class="servicios-tag">
+            <li lang="en">MySQL</li>
+            <li lang="en">MySQL Workbench</li>
+            <li lang="en">SQL</li>
+          </ul>
+          <hr>
+          <p>Testing Funcional de Integración de Bases de Datos relacionales</p>
+        </div>
+        <div class="servicio">
+          <span class="icono"><i class="fa-solid fa-server"></i></span>
+          <h4>Testing de APIs o Servicios Web</h4>
+          <hr>
+          <ul class="servicios-tag">
+            <li lang="en">SOAP UI</li>
+            <li lang="en">SOAP</li>
+            <li lang="en">REST</li>
+          </ul>
+          <hr>
+          <p>Testing Funcional y No funcional de Servidores Web con la Herramienta SOAP UI y servicios SOAP y REST</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCION HABILIDADES -->
+    <div class="contenedor-skills" id="skills">
+      <h3>HABILIDADES BLANDAS</h3>
+      <div class="skill">
+        <div class="info">
+          <p> <span class="lista"> </span>Compromiso</p>
+          <span class="porcentaje">100%</span>
+        </div>
+
+        <div class="barra">
+          <div class="" id="co"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="info">
+          <p> <span class="lista"> </span>Responsabilidad</p>
+          <span class="porcentaje">100%</span>
+        </div>
+
+        <div class="barra">
+          <div class="" id="res"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="info">
+          <p> <span class="lista"> </span>Curiosidad</p>
+          <span class="porcentaje">90%</span>
+        </div>
+
+        <div class="barra">
+          <div class="" id="cur"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="info">
+          <p> <span class="lista"> </span>Detalle</p>
+          <span class="porcentaje">90%</span>
+        </div>
+
+        <div class="barra">
+          <div class="" id="det"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="info">
+          <p> <span class="lista"> </span>Trabajo en Equipo</p>
+          <span class="porcentaje">85%</span>
+        </div>
+
+        <div class="barra">
+          <div class="" id="tra"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="info">
+          <p> <span class="lista"> </span>Comunicación</p>
+          <span class="porcentaje">85%</span>
+        </div>
+
+        <div class="barra">
+          <div class="" id="com"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contenedor-skills" id="skills2">
+      <h3>HABILIDADES TÉCNICAS</h3>
+      <div class="skill">
+        <div class="info">
+          <p> <span class="lista"> </span>Testing Funcional y Manual</p>
+          <span class="porcentaje">100%</span>
+        </div>
+
+        <div class="barra">
+          <div class="" id="tm"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="info">
+          <p> <span class="lista"> </span>Testing de Base de Datos</p>
+          <span class="porcentaje">85%</span>
+        </div>
+
+        <div class="barra">
+          <div class="" id="tb"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="info">
+          <p> <span class="lista"> </span>HTML & CSS</p>
+          <span class="porcentaje">85%</span>
+        </div>
+
+        <div class="barra">
+          <div class="" id="html"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="info">
+          <p> <span class="lista"> </span>Testing Funcional y Automatizado</p>
+          <span class="porcentaje">70%</span>
+        </div>
+
+        <div class="barra">
+          <div class="" id="ta"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="info">
+          <p> <span class="lista"> </span>Java</p>
+          <span class="porcentaje">70%</span>
+        </div>
+
+        <div class="barra">
+          <div class="" id="jv"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="info">
+          <p> <span class="lista"> </span>Testing de APIs/Servidores Web</p>
+          <span class="porcentaje">70%</span>
+        </div>
+
+        <div class="barra">
+          <div class="" id="ap"></div>
+        </div>
+      </div>
+    </div>
 
 
-          <div class="redes">
-            <a href="https://www.linkedin.com/in/milagros-aranzabe-alonso-qa/"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://github.com/milagrosaranzabe?tab=repositories"><i class="fa-brands fa-github"></i></a>
-            <a href="mailto: milagrosaranzabe@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+
+
+    <!-- SECCION PROYECTOS -->
+    <section id="portfolio">
+      <h3 class="titulo-seccion">Mis Proyectos</h3>
+      <div class="fila">
+        <div class="proyecto">
+          <div class="overlay"></div>
+          <img src="./img/jira.png" alt="Logo de Jira" title="Logo de Jira">
+          <div class="info">
+            <h4>Diseño de Casos de Pruebas, Ejecución de Pruebas y Reporte de defectos</h4>
           </div>
         </div>
-      </header>
-      <div class="presentacion">
-        <p class="bienvenida">Bienvenidos</p>
-        <h2>Milagros A. Aranzabe Alonso</h2>
-        <h3 class="descripcion">Analista / Tester QA</h3>
-        <a href="#servicios">Ir a Portfolio</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECCION SOBRE MI -->
-  <section id="sobremi">
-    <div class="contenedor-foto">
-      <img src="./img/mifoto.jpg" alt="Foto de perfil" title="Foto de perfil">
-    </div>
-
-    <div class="sobremi">
-      <p class="titulo-seccion">Sobre Mí</p>
-      <h2>Hola, Soy <span>Milagros A. Aranzabe Alonso</span> </h2>
-      <h3>Analista / Tester QA</h3>
-      <p>Soy Analista / Tester QA y Profesora de Educación Especial con orientación en Discapacidad Neuromotora.</p>
-      <p>Me considero una persona responsable, comprometida, detallista y curiosa que constantemente está indagando e
-        incorporando nuevos conocimientos y habilidades. </p>
-      <p>Mi lema es: <em>"La enseñanza es mi vocación y el Testing mi pasión"</em>.</p>
-      <a href="https://drive.google.com/file/d/1gv6_phjc_tSaFlYFZj74ua9GBvyOnXm-/view?usp=sharing">Descargar CV</a>
-    </div>
-  </section>
-
-  <section id="educacion">
-    <h3>FORMACIÓN</h3>
-    <div class="educacion">
-      <i class="fa-solid fa-award"><span>TESTING QA</span></i>
-      <h5>EducaciónIT</h5>
-      <h6>Agosto 2022 - Marzo 2023</h6>
-    </div>
-  </section>
-
-  <!-- Intereses -->
-  <section id="intereses">
-    <div class="contenedor-intereses">
-      <h3>INTERESES</h3>
-
-      <div class="interes">
-        <i class="fa-solid fa-headphones"></i>
-        <span>Música</span>
-      </div>
-      <div class="interes">
-        <i class="fa-solid fa-person-walking"></i>
-        <span>Caminar</span>
-      </div>
-      <div class="interes">
-        <i class="fa-solid fa-book"></i>
-        <span>Lectura</span>
-      </div>
-      <div class="interes">
-        <i class="fa-solid fa-camera"></i>
-        <span>Fotografía</span>
-      </div>
-      <div class="interes">
-        <i class="fa-solid fa-book"></i>
-        <span>Psicología</span>
-      </div>
-    </div>
-    </div>
-  </section>
-
-  <!-- SECCION SERVICIOS -->
-  <section id="servicios">
-    <h3 class="titulo-seccion">MIS SERVICIOS</h3>
-    <div class="fila">
-      <div class="servicio">
-        <span class="icono"><i class="fa-solid fa-magnifying-glass"></i></span>
-        <h4>Testing Explorario</h4>
-        <hr>
-        <ul class="servicios-tag">
-          <li lang="en">Test Case</li>
-          <li lang="en">Test</li>
-          <li lang="en">Bugs</li>
-        </ul>
-        <hr>
-        <p> Testing Exploratorio y Funcional de Aplicaciones Web </p>
-      </div>
-      <div class="servicio">
-        <span class="icono"><i class="fa-solid fa-file-lines"></i></span>
-        <h4>Análisis de Historias de Usuario y Casos de Uso</h4>
-        <hr>
-        <ul class="servicios-tag">
-          <li lang="en">Test Case</li>
-          <li lang="en">Test</li>
-          <li lang="en">Bugs</li>
-        </ul>
-        <hr>
-        <p>Análisis de Historias de Usuario con criterios de aceptación y Casos de Uso</p>
-      </div>
-      <div class="servicio">
-        <span class="icono"><i class="fa-solid fa-magnifying-glass"></i></span>
-        <h4>Testing Funcional y Manual</h4>
-        <hr>
-        <ul class="servicios-tag">
-          <li lang="en">Test Case</li>
-          <li lang="en">Test</li>
-          <li lang="en">Bugs</li>
-        </ul>
-        <hr>
-        <p>Testing Funcional y Manual de Aplicaciones Web, utilizando JIRA para el diseño de Casos de Prueba y Zephyr
-          para la ejecución de Pruebas</p>
-      </div>
-    </div>
-    <div class="fila">
-      <div class="servicio">
-        <span class="icono"><i class="fa-solid fa-code"></i></span>
-        <h4>Testing Funcional y Automatizado</h4>
-        <hr>
-        <ul class="servicios-tag">
-          <li lang="en">Test Case</li>
-          <li lang="en">Test</li>
-          <li lang="en">Bugs</li>
-        </ul>
-        <hr>
-        <p>Testing Automatizado de Aplicaciones Web utilizando como Framework de automatización: Java, Maven, Seleniuum
-          WebDriver, JUnit y TestNG, Eclipse</p>
-      </div>
-      <div class="servicio">
-        <span class="icono"><i class="fa-solid fa-database"></i></span>
-        <h4>Testing de Bases de Datos Relacionales</h4>
-        <hr>
-        <ul class="servicios-tag">
-          <li lang="en">MySQL</li>
-          <li lang="en">MySQL Workbench</li>
-          <li lang="en">SQL</li>
-        </ul>
-        <hr>
-        <p>Testing Funcional de Integración de Bases de Datos relacionales</p>
-      </div>
-      <div class="servicio">
-        <span class="icono"><i class="fa-solid fa-server"></i></span>
-        <h4>Testing de APIs o Servicios Web</h4>
-        <hr>
-        <ul class="servicios-tag">
-          <li lang="en">SOAP UI</li>
-          <li lang="en">SOAP</li>
-          <li lang="en">REST</li>
-        </ul>
-        <hr>
-        <p>Testing Funcional y No funcional de Servidores Web con la Herramienta SOAP UI y servicios SOAP y REST</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECCION HABILIDADES -->
-  <div class="contenedor-skills" id="skills">
-    <h3>HABILIDADES BLANDAS</h3>
-    <div class="skill">
-      <div class="info">
-        <p> <span class="lista"> </span>Compromiso</p>
-        <span class="porcentaje">100%</span>
-      </div>
-
-      <div class="barra">
-        <div class="" id="co"></div>
-      </div>
-    </div>
-    <div class="skill">
-      <div class="info">
-        <p> <span class="lista"> </span>Responsabilidad</p>
-        <span class="porcentaje">100%</span>
-      </div>
-
-      <div class="barra">
-        <div class="" id="res"></div>
-      </div>
-    </div>
-    <div class="skill">
-      <div class="info">
-        <p> <span class="lista"> </span>Curiosidad</p>
-        <span class="porcentaje">90%</span>
-      </div>
-
-      <div class="barra">
-        <div class="" id="cur"></div>
-      </div>
-    </div>
-    <div class="skill">
-      <div class="info">
-        <p> <span class="lista"> </span>Detalle</p>
-        <span class="porcentaje">90%</span>
-      </div>
-
-      <div class="barra">
-        <div class="" id="det"></div>
-      </div>
-    </div>
-
-    <div class="skill">
-      <div class="info">
-        <p> <span class="lista"> </span>Trabajo en Equipo</p>
-        <span class="porcentaje">85%</span>
-      </div>
-
-      <div class="barra">
-        <div class="" id="tra"></div>
-      </div>
-    </div>
-
-    <div class="skill">
-      <div class="info">
-        <p> <span class="lista"> </span>Comunicación</p>
-        <span class="porcentaje">85%</span>
-      </div>
-
-      <div class="barra">
-        <div class="" id="com"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="contenedor-skills" id="skills2">
-    <h3>HABILIDADES TÉCNICAS</h3>
-    <div class="skill">
-      <div class="info">
-        <p> <span class="lista"> </span>Testing Funcional y Manual</p>
-        <span class="porcentaje">100%</span>
-      </div>
-
-      <div class="barra">
-        <div class="" id="tm"></div>
-      </div>
-    </div>
-    <div class="skill">
-      <div class="info">
-        <p> <span class="lista"> </span>Testing de Base de Datos</p>
-        <span class="porcentaje">85%</span>
-      </div>
-
-      <div class="barra">
-        <div class="" id="tb"></div>
-      </div>
-    </div>
-    <div class="skill">
-      <div class="info">
-        <p> <span class="lista"> </span>HTML & CSS</p>
-        <span class="porcentaje">85%</span>
-      </div>
-
-      <div class="barra">
-        <div class="" id="html"></div>
-      </div>
-    </div>
-    <div class="skill">
-      <div class="info">
-        <p> <span class="lista"> </span>Testing Funcional y Automatizado</p>
-        <span class="porcentaje">70%</span>
-      </div>
-
-      <div class="barra">
-        <div class="" id="ta"></div>
-      </div>
-    </div>
-
-    <div class="skill">
-      <div class="info">
-        <p> <span class="lista"> </span>Java</p>
-        <span class="porcentaje">70%</span>
-      </div>
-
-      <div class="barra">
-        <div class="" id="jv"></div>
-      </div>
-    </div>
-
-    <div class="skill">
-      <div class="info">
-        <p> <span class="lista"> </span>Testing de APIs/Servidores Web</p>
-        <span class="porcentaje">70%</span>
-      </div>
-
-      <div class="barra">
-        <div class="" id="ap"></div>
-      </div>
-    </div>
-  </div>
-
-
-
-
-  <!-- SECCION PROYECTOS -->
-  <section id="portfolio">
-    <h3 class="titulo-seccion">Mis Proyectos</h3>
-    <div class="fila">
-      <div class="proyecto">
-        <div class="overlay"></div>
-        <img src="./img/jira.png" alt="Logo de Jira" title="Logo de Jira">
-        <div class="info">
-          <h4>Diseño de Casos de Pruebas, Ejecución de Pruebas y Reporte de defectos</h4>
+        <div class="proyecto">
+          <div class="overlay"></div>
+          <img src="./img/github.jpeg" alt="Logo de GitHub" title="Logo de GitHub">
+          <div class="info">
+            <h4>Repositorio con los proyectos de Testing Automatizado</h4>
+          </div>
         </div>
       </div>
-      <div class="proyecto">
-        <div class="overlay"></div>
-        <img src="./img/github.jpeg" alt="Logo de GitHub" title="Logo de GitHub">
-        <div class="info">
-          <h4>Repositorio con los proyectos de Testing Automatizado</h4>
-        </div>
-      </div>
-    </div>
 
-    <div class="fila">
-      <div class="proyecto">
-        <div class="overlay"></div>
-        <img src="./img/proyectos.png" alt="Proyectos de Jira" title="Proyectos de Jira">
-        <div class="info">
-          <h4>Proyectos de JIRA</h4>
+      <div class="fila">
+        <div class="proyecto">
+          <div class="overlay"></div>
+          <img src="./img/proyectos.png" alt="Proyectos de Jira" title="Proyectos de Jira">
+          <div class="info">
+            <h4>Proyectos de JIRA</h4>
+          </div>
+        </div>
+        <div class="proyecto">
+          <div class="overlay"></div>
+          <img src="./img/proyectos2.png" alt="Incidencias en JIRA" title="Incidencias en JIRA">
+          <div class="info">
+            <h4>Incidencias en JIRA</h4>
+          </div>
         </div>
       </div>
-      <div class="proyecto">
-        <div class="overlay"></div>
-        <img src="./img/proyectos2.png" alt="Incidencias en JIRA" title="Incidencias en JIRA">
-        <div class="info">
-          <h4>Incidencias en JIRA</h4>
-        </div>
-      </div>
-    </div>
 
-    <div class="fila">
-      <div class="proyecto">
-        <div class="overlay"></div>
-        <img src="./img/jira-proyectos.png" alt="Incidencias en JIRA" title="Incidencias en JIRA">
-        <div class="info">
-          <h4>Incidencias en JIRA</h4>
+      <div class="fila">
+        <div class="proyecto">
+          <div class="overlay"></div>
+          <img src="./img/jira-proyectos.png" alt="Incidencias en JIRA" title="Incidencias en JIRA">
+          <div class="info">
+            <h4>Incidencias en JIRA</h4>
+          </div>
+        </div>
+        <div class="proyecto">
+          <div class="overlay"></div>
+          <img src="./img/github-repositorios.png" alt="Repositorios de GitHub" title="Repositorios de GitHub">
+          <div class="info">
+            <h4>Repositorios de GitHub</h4>
+          </div>
         </div>
       </div>
-      <div class="proyecto">
-        <div class="overlay"></div>
-        <img src="./img/github-repositorios.png" alt="Repositorios de GitHub" title="Repositorios de GitHub">
-        <div class="info">
-          <h4>Repositorios de GitHub</h4>
+
+      <div class="fila">
+        <div class="proyecto">
+          <div class="overlay"></div>
+          <img src="./img/Tablero.png" alt="Tablero Scrum" title="Tablero Scrum">
+          <div class="info">
+            <h4>Tablero Scrum en JIRA</h4>
+          </div>
+        </div>
+        <div class="proyecto">
+          <div class="overlay"></div>
+          <img src="./img/proyectos3.png" alt="Incidencias en JIRA" title="Incidencias en JIRA">
+          <div class="info">
+            <h4>Incidencias en JIRA</h4>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="fila">
-      <div class="proyecto">
-        <div class="overlay"></div>
-        <img src="./img/Tablero.png" alt="Tablero Scrum" title="Tablero Scrum">
-        <div class="info">
-          <h4>Tablero Scrum en JIRA</h4>
-        </div>
       </div>
-      <div class="proyecto">
-        <div class="overlay"></div>
-        <img src="./img/proyectos3.png" alt="Incidencias en JIRA" title="Incidencias en JIRA">
-        <div class="info">
-          <h4>Incidencias en JIRA</h4>
-        </div>
-      </div>
-    </div>
+    </section>
 
-    </div>
-  </section>
-
-  <!-- SECCION FOOTER -->
-  <footer>
-    <p>Tandil, Buenos Aires, Argentina - 2023</p>
-  </footer>
-
+    <!-- SECCION FOOTER -->
+    <footer>
+      <p>Tandil, Buenos Aires, Argentina - 2023</p>
+    </footer>
+  </main>
 </body>
 
 </html>
