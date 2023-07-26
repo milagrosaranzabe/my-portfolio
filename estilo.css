@@ -157,7 +157,7 @@
 
         #sobremi .contenedor-foto img {
           padding: 10px;
-          width: 110%;
+          width: 100%;
           border-radius: 15px;
           box-shadow: 5px 5px 10px #565353, -5px -5px 10px #c3c2c2;
           background-color: #f5d8fb;
