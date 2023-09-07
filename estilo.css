@@ -245,24 +245,16 @@
           margin: 10px;
         }
 
-        .educacion,
-        .experiencia {
-          box-shadow: 5px 5px 10px #a241cc, -5px -5px 10px #e0bcf9;
-          border-radius: 10px;
-          padding: 20px;
-          margin-bottom: 25px;
-        }
 
-        #educacion,
-        #experiencia {
+
+        #educacion,#experiencia {
           display: flex;
           flex-direction: column;
           align-items: center;
           padding: 5px 35px;
         }
 
-        .educacion,
-        .experiencia {
+        .educacion,.experiencia {
           box-shadow: 5px 5px 10px #a241cc, -5px -5px 10px #e0bcf9;
           border-radius: 10px;
           padding: 20px;
@@ -271,8 +263,7 @@
           width: 100%;
         }
 
-        .educacion:hover,
-        .experiencia:hover {
+        .educacion:hover, .experiencia:hover {
           background-color: rgb(248, 230, 246);
         }
 
