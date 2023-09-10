@@ -195,13 +195,12 @@
           text-transform: uppercase;
           margin-bottom: 20px;
           letter-spacing: 1px;
-
         }
 
         #sobremi .sobremi p {
-          font-size: 14px;
+          text-align: justify;
+          font-size: 16px;
           line-height: 25px;
-          color: #565656;
           margin-bottom: 12px;
         }
 
@@ -234,18 +233,18 @@
 
         #educacion h3,
         #experiencia h3 {
-          margin-top: 40px;
+          margin-top: 30px;
           margin-bottom: 25px;
         }
 
-        #educacion h5,
-        h6,
-        #experiencia h5,
-        h6 {
-          margin: 10px;
+        #educacion h5, #experiencia h5 {
+          text-align: justify;
+          margin: 12px;
         }
 
-
+        .resaltado {
+          font-family: Arial, Helvetica, sans-serif;
+        }
 
         #educacion,#experiencia {
           display: flex;
@@ -258,13 +257,13 @@
           box-shadow: 5px 5px 10px #a241cc, -5px -5px 10px #e0bcf9;
           border-radius: 10px;
           padding: 20px;
-          margin-bottom: 25px;
+          margin-bottom: 45px;
           max-width: 880px;
           width: 100%;
         }
 
         .educacion:hover, .experiencia:hover {
-          background-color: rgb(248, 230, 246);
+          background-color: rgb(255, 242, 209);
         }
 
         .educacion span {
