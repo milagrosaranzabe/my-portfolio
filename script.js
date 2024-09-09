@@ -40,7 +40,7 @@ function efectoHabilidades() {
         document.getElementById("tra").classList.add("barra-progreso5");
         document.getElementById("com").classList.add("barra-progreso6");
         document.getElementById("html").classList.add("barra-progreso7");
-        document.getElementById("jv").classList.add("barra-progreso8");
+        document.getElementById("an").classList.add("barra-progreso8");
         document.getElementById("tm").classList.add("barra-progreso9");
         document.getElementById("ta").classList.add("barra-progreso10");
         document.getElementById("tb").classList.add("barra-progreso11");
