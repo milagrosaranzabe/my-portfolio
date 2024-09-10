@@ -41,9 +41,9 @@
         }
 
         #inicio .contenido header .contenido-header h1 {
-          font-family: Georgia, 'Times New Roman', Times, serif;
+          font-family: cursive;
           text-align: center;
-          color: #ff5080;
+          color: #eb406e;
         }
 
         #inicio .contenido header .contenido-header nav ul {
@@ -61,7 +61,7 @@
         }
 
         #inicio .contenido header .contenido-header nav ul li a:hover {
-          color: #ff5080;
+          color: #d33760;
         }
 
         #inicio .contenido header .contenido-header .redes a {
@@ -73,11 +73,11 @@
         }
 
         #inicio .contenido header .contenido-header .redes a:hover {
-          color: #ff5080;
+          color: #af3253;
         }
 
         #inicio .contenido header .contenido-header .seleccionado {
-          color: #ff5080;
+          color: #da3f68;
         }
 
         #inicio .contenido .presentacion {
@@ -106,7 +106,7 @@
 
         #inicio .contenido .presentacion h2 span {
           font-size: 25px;
-          color: #ff5080;
+          color: #ca375f;
         }
 
         #inicio .contenido .presentacion .descripcion {
@@ -130,7 +130,7 @@
         }
 
         #inicio .contenido .presentacion a:hover {
-          background-color: #ff5080;
+          background-color: #9b2746;
         }
 
         #icono-nav {
@@ -186,7 +186,7 @@
         #sobremi .sobremi h2 span {
           font-family: cursive;
           font-size: 40px;
-          color: #ff5080;
+          color: #b93156;
         }
 
         #sobremi .sobremi h3 {
@@ -263,7 +263,7 @@
         }
 
         .educacion:hover, .experiencia:hover {
-          background-color: rgb(255, 242, 209);
+          background-color: rgb(248, 217, 243);
         }
 
         .educacion span {
@@ -320,7 +320,7 @@
         /* *********************/
 
         #servicios {
-          padding: 100px 15px;
+          padding: 80px 40px;
           text-align: center;
           background-color: #f0d7fb;
         }
@@ -331,14 +331,14 @@
           font-size: 22px;
           font-family: cursive;
           text-transform: uppercase;
-          color: #111135;
+          color: #050505;
         }
 
         #servicios .fila {
           display: flex;
           justify-content: space-between;
           max-width: 1150px;
-          margin: 30px auto;
+          margin: 40px auto;
         }
 
         #servicios .fila .servicio {
@@ -392,23 +392,33 @@
           text-align: justify;
         }
 
+        #habilidades h3, #habilidades2 h3 {
+          color: #fff;
+          text-align: center;
+          font-size: 22px;
+          font-family: cursive;
+          text-transform: uppercase;
+        }
+
+
+
         /* *********************/
         /* seccion HABILIDADES */
         /* *********************/
 
-        .contenedor-skills {
-          background: linear-gradient(#a52fc0cc, rgba(33, 16, 16, 0.8)), url("./img/qa-testing.jpg");
+        #habilidades, .contenedor-skills {
+          background: linear-gradient(#6a448acc, rgba(51, 1, 80, 0.8)), url("./img/qa-testing.jpg");
           background-attachment: fixed;
           background-repeat: no-repeat;
           background-size: cover;
           color: #fff;
           background-position: center center;
-          padding: 100px 0;
+          padding: 50px 0;
           text-align: center;
         }
 
         .contenedor-skills .skill {
-          max-width: 600px;
+          max-width: 700px;
           margin: 30px auto;
         }
 
@@ -433,6 +443,11 @@
         }
 
         /* Habilidades Blandas */
+        .habilidades {
+          color: #000;
+          font-family: cursive;
+        }
+        
         .contenedor-skills .skill .barra .barra-progreso1 {
           background-color: #fff;
           width: 100%;
@@ -463,14 +478,14 @@
 
         .contenedor-skills .skill .barra .barra-progreso5 {
           background-color: #fff;
-          width: 85%;
+          width: 100%;
           height: 6px;
           animation: progreso5 2s forwards;
         }
 
         .contenedor-skills .skill .barra .barra-progreso6 {
           background-color: #fff;
-          width: 85%;
+          width: 100%;
           height: 6px;
           animation: progreso6 2s forwards;
         }
@@ -478,14 +493,14 @@
         /* Habilidades Técnicas */
         .contenedor-skills .skill .barra .barra-progreso7 {
           background-color: #fff;
-          width: 85%;
+          width: 100%;
           height: 6px;
           animation: progreso7 2s forwards;
         }
 
         .contenedor-skills .skill .barra .barra-progreso8 {
           background-color: #fff;
-          width: 70%;
+          width: 100%;
           height: 6px;
           animation: progreso8 2s forwards;
         }
@@ -499,21 +514,21 @@
 
         .contenedor-skills .skill .barra .barra-progreso10 {
           background-color: #fff;
-          width: 70%;
+          width: 100%;
           height: 6px;
           animation: progreso10 2s forwards;
         }
 
         .contenedor-skills .skill .barra .barra-progreso11 {
           background-color: #fff;
-          width: 85%;
+          width: 100%;
           height: 6px;
           animation: progreso11 2s forwards;
         }
 
         .contenedor-skills .skill .barra .barra-progreso12 {
           background-color: #fff;
-          width: 70%;
+          width: 100%;
           height: 6px;
           animation: progreso12 2s forwards;
         }
@@ -585,7 +600,7 @@
           }
 
           100% {
-            width: 90%;
+            width: 100%;
           }
         }
 
@@ -605,7 +620,7 @@
           }
 
           100% {
-            width: 100%;
+            width: 80%;
           }
         }
 
@@ -619,25 +634,6 @@
           }
         }
 
-        @keyframes progreso11 {
-          0% {
-            width: 0;
-          }
-
-          100% {
-            width: 90%;
-          }
-        }
-
-        @keyframes progreso12 {
-          0% {
-            width: 0;
-          }
-
-          100% {
-            width: 100%;
-          }
-        }
 
         /* *********************/
         /* seccion PORTFOLIO */
@@ -645,7 +641,7 @@
 
         #portfolio {
           max-width: 1100px;
-          padding: 100px 0;
+          padding: 50px 0;
           margin: auto;
         }
 
@@ -654,7 +650,7 @@
           font-size: 22px;
           font-family: cursive;
           text-transform: uppercase;
-          color: #111135;
+          color: #f9f7fa;
         }
 
         #portfolio .fila {
@@ -700,10 +696,10 @@
         /* *********************/
 
         footer {
-          background-color: #000;
+          background-color: #2e0175;
           color: #fff;
           text-align: center;
-          padding: 30px 0;
+          padding: 30px 30px;
         }
 
         footer a {
