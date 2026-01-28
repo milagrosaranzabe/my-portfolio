@@ -563,3 +563,45 @@ body.dark header {
     display: block;
   }
 }
+
+/* =========================
+   MOBILE MENU – SHOW ALL
+========================= */
+
+@media screen and (max-width: 768px) {
+
+  nav.responsive ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav.responsive ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Links */
+  nav.responsive ul li a {
+    display: block;
+    padding: 12px 0;
+    width: 100%;
+  }
+
+  /* Actions (email, linkedin, buttons) */
+  nav.responsive .nav-action {
+    margin-top: 10px;
+  }
+
+  /* Buttons inside menu */
+  nav.responsive .nav-btn {
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px 0;
+    background-color: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+  }
+}
