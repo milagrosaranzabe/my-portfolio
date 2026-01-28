@@ -5,393 +5,416 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
-  <title>Milagros - Analista QA</title>
+  <title>Milagros - QA Analyst</title>
   <link rel="icon" href="./img/favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="estilo.css">
+  <link rel="stylesheet" href="style.css">
   <script src="script.js"></script>
 </head>
 
 <body>
-  <main>
-    <!-- SECCION INICIO -->
-    <section id="inicio">
-      <div class="contenido">
-        <header>
-          <div class="contenido-header">
-            <h1>MILAGROS</h1>
-            <nav id="nav" class="">
-              <ul id="links">
-                <li><a href="#inicio" class="seleccionado" onclick="seleccionar(this)">INICIO</a></li>
-                <li><a href="#sobremi" onclick="seleccionar(this)">SOBRE MI</a></li>
-                <li><a href="#servicios" onclick="seleccionar(this)">SERVICIOS</a></li>
-                <li><a href="#skills" onclick="seleccionar(this)">HABILIDADES</a></li>
-                <li><a href="#portfolio" onclick="seleccionar(this)">PROYECTOS</a></li>
-              </ul>
-            </nav>
 
-            <!-- Icono del menu responsive -->
-            <div id="icono-nav" onclick="responsiveMenu()">
-              <i class="fa-solid fa-bars"></i>
-            </div>
+  <!-- ================= INICIO ================= -->
+  <section id="inicio">
+    <div class="contenido">
 
+      <header>
+        <div class="contenido-header">
+          <h1>Milagros</h1>
+<nav id="nav">
+  <ul>
+    <li><a href="#experiencia" data-i18n="nav_experience">EXPERIENCIA</a></li>
+    <li><a href="#servicios" data-i18n="nav_services">SERVICIOS</a></li>
+    <li><a href="#habilidades" data-i18n="nav_skills">HABILIDADES</a></li>
 
-            <div class="redes">
-              <a href="https://www.linkedin.com/in/milagros-aranzabe-alonso-qa/"><i
-                  class="fa-brands fa-linkedin"></i></a>
-              <a href="https://github.com/milagrosaranzabe?tab=repositories"><i class="fa-brands fa-github"></i></a>
-              <a href="mailto: milagrosaranzabe@gmail.com"><i class="fa-regular fa-envelope"></i></a>
-            </div>
-          </div>
-        </header>
-        <div class="presentacion">
-          <p class="bienvenida">Bienvenidos</p>
-          <h2>Milagros A. Aranzabe Alonso</h2>
-          <h3 class="descripcion">Analista QA</h3>
-          <a href="#servicios">Ir a Portfolio</a>
-        </div>
-      </div>
-    </section>
+    <!-- CONTACTO -->
+    <li class="contact">
+      <a href="mailto:milagrosaranzabe@gmail.com">
+        <i class="fa-solid fa-envelope"></i>
+        <span class="label">Email</span>
+      </a>
+    </li>
 
-    <!-- SECCION SOBRE MI -->
-    <section id="sobremi">
-      <div class="contenedor-foto">
-        <img src="./img/mifoto.jpg" alt="Foto de perfil" title="Foto de perfil">
-      </div>
+    <li>
+      <a
+        href="https://www.linkedin.com/in/milagros-aranzabe-alonso-qa/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fa-brands fa-linkedin"></i>
+        <span class="label">LinkedIn</span>
+      </a>
+    </li>
+    <li>
+  <button id="toggle-theme" class="nav-btn" aria-label="Toggle dark mode">
+    🌙
+  </button>
+</li>
 
-      <div class="sobremi">
-        <p class="titulo-seccion">Sobre Mí</p>
-        <h2>Hola, Soy <span>Milagros A. Aranzabe Alonso</span> </h2>
-        <h3>Analista QA/ Tester</h3>
-        <p>Hola soy Milagros, Analista QA. Hcae más de 2 años que me encuentro trabajando en el área del Aseguramiento de la Calidad tanto para aplicaviones web como móviles.
+<li>
+  <button id="toggle-lang" class="nav-btn" aria-label="Change language">
+    ES / EN
+  </button>
+</li>
+
+  </ul>
+</nav>
+      </header>
+
+      <div class="presentacion">
+        <p class="bienvenida" data-i18n="welcome">Bienvenida</p>
+
+        <h2>
+          Milagros A. Aranzabe Alonso <br>
+          <span data-i18n="role">QA Analyst | Web y Mobile</span>
+        </h2>
+
+        <p class="descripcion" data-i18n="hero_text">
+          Analista QA con más de 3 años de experiencia en testing manual de aplicaciones web y mobile, trabajando en
+          productos digitales y equipos ágiles.
+          Mi enfoque está en asegurar la calidad funcional, la estabilidad de los releases y minimizar riesgos en
+          producción.
         </p>
-        <p>Me considero una persona responsable, comprometida, proactiva, detallista y curiosa. Constantemente estoy
-          indagando e incorporando nuevos conocimientos y habilidades. </p>
-        <hr>
-        <br>
-        <p><strong>Descarga de CVs:</strong></p>
-        <a href="https://drive.google.com/drive/folders/1DlKkkItLmkJm_qJmjNMfwWgHK3cGPaQL">CV Español</a>
-        <a href="https://drive.google.com/drive/folders/1EdJi0aIB_jAVVn6Az_RXW-6xAVv6QH-X">English CV</a>
-      </div>
-    </section>
-
-    <!-- Intereses -->
-    <section id="intereses">
-      <div class="contenedor-intereses">
-        <h3>INTERESES</h3>
-
-        <div class="interes">
-          <i class="fa-solid fa-headphones"></i>
-          <span>Música</span>
-        </div>
-        <div class="interes">
-          <i class="fa-solid fa-chalkboard-user"></i>
-          <span>Educación</span>
-        </div>
-        <div class="interes">
-          <i class="fa-solid fa-book"></i>
-          <span>Lectura</span>
-        </div>
-        <div class="interes">
-          <i class="fa-solid fa-palette"></i>
-          <span>Arte</span>
-        </div>
-        <div class="interes">
-          <i class="fa-solid fa-book"></i>
-          <span>Psicología</span>
-        </div>
-      </div>
-      </div>
-    </section>
-
-    <section id="educacion">
-      <h3>FORMACIÓN</h3>
-      <div class="educacion">
-        <i class="fa-solid fa-award"><span>TESTING QA</span></i>
-        <h5>EducaciónIT - Buenos Aires</h5>
-        <h5>Agosto 2022 - Marzo 2023</h5>
-      </div>
-    </section>
-
-    <!-- SECCION EXPERIENCIA -->
-    <section id="experiencia">
-      <h3>EXPERIENCIA PROFESIONAL</h3>
-
-      <div class="experiencia">
-        <h4>ANALISTA QA - TEMPERIES</h4>
-        <h5 class="resaltado">Híbrido - Noviembre 2023 - Actualidad</h5>
-        <h5>Analista QA y tester de aplicaciones web y móviles.</h5>
-        <h5>Entre mis tareas se encuentran: Análisis de Requerimientos e Historias de Usuario. Testing Manual, Funcional, de APIs, Bases de Datos SQL, Pruebas de Usabilidad, UX/UI de aplicaciones web como móvil. Reportes de Mejoras y Bugs en Jira. Framework Scrumban.</h5>
       </div>
 
-      <div class="experiencia">
-        <h4>PROFESORA DE INFORMÁTICA</h4>
-        <h5 class="resaltado">Independiente - Agosto 2023 - Noviembre 2023 </h5>
-        <h5>Introducción a la informática. Publicación de contenido en Redes Sociales. Creación de publicaciones,
-          anuncios, folletos y contenido publicitario en Canva.</h5>
-      </div>
-
-      <div class="experiencia">
-        <h4>ANALISTA QA - ID FOR IDEAS</h4>
-        <h5 class="resaltado">Pasantía y Práctica - Agosto 2023 - Noviembre 2023</h5>
-        <h5>Proyecto de Desarrollo de una Aplicación web "Crustopia" de venta online de productos: pizzas, empanadas,
-          bebidas y postres.</h5>
-        <h5>Mis tareas fueron: Analizar la documentación y las Historias de Usuario, Realizar Pruebas
-          Estáticas para revisar la documentación, Realizar Testing Exploratorio, Funcional y Manual, Diseñar y Ejecutar
-          Casos de Pruebas, Generar Reporte de Fallas, Hacer seguimiento de las Fallas, Realizar Informes de Avance y
-          Cierre de las Pruebas, Gestionar y liderar al equipo de Testing y a los compañeros del proyecto en general,
-          Organizar y Coordinar las reuniones de Equipo, Estructurar y Organizar la información y escritura de las
-          documentos, Capacitar a los compañeros acerca de Testing, gestión y organización del Proyecto.</h5>
-      </div>
-
-      <div class="experiencia">
-        <h4>ANALISTA QA TRAINEE - AUTÓNOMA</h4>
-        <h5 class="resaltado"> Freelance - Septiembre 2022 - Agosto 2023</h5>
-        <h5>Proyecto colaborativo y grupal de Testing Manual</h5>
-        <h5>Mis tareas fueron: Testing Funcional y Manual de aplicaciones web. Gestión del proyecto y Equipo. Organización y estructuración de la información, coordinación de las reuniones, supervisión de las tareas.</h5>
-    </section>
-
-    <!-- SECCION SERVICIOS -->
-    <section id="servicios">
-      <h3>MIS SERVICIOS</h3>
-      <div class="fila">
-        <div class="servicio">
-          <span class="icono"><i class="fa-solid fa-magnifying-glass"></i></span>
-          <h4>Testing de Usabilidad </h4>
-          <hr>
-          <p> Testing de Usabilidad y detección de mejoras en la Experiencia del Usuario de Aplicaciones Web y Móviles </p>
-        </div>
-        <div class="servicio">
-          <span class="icono"><i class="fa-solid fa-file-lines"></i></span>
-          <h4>Análisis de Requerimientos e Historias de Usuario </h4>
-          <hr>
-          <p>Análisis de Documentción con los requerimientos e Historias de Usuario con criterios de aceptación y Casos de Uso</p>
-        </div>
-        <div class="servicio">
-          <span class="icono"><i class="fa-solid fa-magnifying-glass"></i></span>
-          <h4>Testing Funcional y Manual</h4>
-          <hr>
-          <p>Testing Funcional y Manual de Aplicaciones Web y Móviles, utilizando JIRA para la docmuenatción de Test Cases y Test Scenarios, Bugs e Improvements</p>
-        </div>
-      </div>
-      <div class="fila">
-        <div class="servicio">
-          <span class="icono"><i class="fa-solid fa-code"></i></span>
-          <h4>Testing Funcional y Automatizado</h4>
-          <hr>
-          <p>Testing Automatizado de Aplicaciones Web utilizando como Framework de Automatización: Java, Maven,
-            Selenium
-            WebDriver, JUnit y TestNG, Eclipse</p>
-        </div>
-        <div class="servicio">
-          <span class="icono"><i class="fa-solid fa-database"></i></span>
-          <h4>Testing de Bases de Datos Relacionales</h4>
-          <hr>
-          <p>Testing Funcional de Integración de Bases de Datos relacionales</p>
-        </div>
-        <div class="servicio">
-          <span class="icono"><i class="fa-solid fa-server"></i></span>
-          <h4>Testing de APIs o Servicios Web</h4>
-          <hr>
-          <p>Testing Funcional y No funcional de Servidores Web con la Herramienta SOAP UI y servicios SOAP y REST</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECCION HABILIDADES -->
-    <div class="contenedor-skills" id="skills">
-      <h3 id="habilidades">HABILIDADES BLANDAS</h3>
-      <div class="skill">
-        <div class="info">
-          <p> <span class="lista"> </span>Compromiso</p>
-          <span class="porcentaje">100%</span>
-        </div>
-
-        <div class="barra">
-          <div class="" id="com"></div>
-        </div>
-      </div>
-      <div class="skill">
-        <div class="info">
-          <p> <span class="lista"> </span>Responsabilidad</p>
-          <span class="porcentaje">100%</span>
-        </div>
-
-        <div class="barra">
-          <div class="" id="res"></div>
-        </div>
-      </div>
-      <div class="skill">
-        <div class="info">
-          <p> <span class="lista"> </span>Atención al Detalle</p>
-          <span class="porcentaje">100%</span>
-        </div>
-
-        <div class="barra">
-          <div class="" id="atd"></div>
-        </div>
-      </div>
-      <div class="skill">
-        <div class="info">
-          <p> <span class="lista"> </span>Curiosidad</p>
-          <span class="porcentaje">100%</span>
-        </div>
-
-        <div class="barra">
-          <div class="" id="cur"></div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <div class="info">
-          <p> <span class="lista"> </span>Trabajo en Equipo</p>
-          <span class="porcentaje">100%</span>
-        </div>
-
-        <div class="barra">
-          <div class="" id="tra"></div>
-        </div>
-      </div>
+    </div>
+  </section>
 
 
-    <div class="contenedor-skills" id="skills2">
-      <h3 id="habilidades2">HABILIDADES TÉCNICAS</h3>
-      <div class="skill">
-        <div class="info">
-          <p> <span class="lista"> </span>Testing Funcional y Manual</p>
-          <span class="porcentaje">100%</span>
-        </div>
+  <!-- ================= EXPERIENCIA ================= -->
+  <section id="experiencia">
+    <h3>Experiencia Profesional</h3>
 
-        <div class="barra">
-          <div class="" id="man"></div>
-        </div>
-      </div>
-      <div class="skill">
-        <div class="info">
-          <p> <span class="lista"> </span>Testing de Base de Datos</p>
-          <span class="porcentaje">100%</span>
-        </div>
+    <!-- TEMPERIES – LEAD -->
+    <div class="experiencia">
+      <h4>QA Lead / QA Analyst – Temperies</h4>
+      <span>Jul 2024 – Actualidad</span>
 
-        <div class="barra">
-          <div class="" id="bd"></div>
-        </div>
-      </div>
-      <div class="skill">
-        <div class="info">
-          <p> <span class="lista"> </span>Testing de Usabilidad</p>
-          <span class="porcentaje">100%</span>
-        </div>
+      <h5>
+        Productos web y mobile (fitness, CMS, CRM).
+        Definición de estrategias de testing alineadas a releases y riesgos.
+        Planificación de ciclos de QA, validaciones pre-UAT y pre-producción.
+        Coordinación con producto y desarrollo.
+      </h5>
 
-        <div class="barra">
-          <div class="" id="usb"></div>
-        </div>
-      </div>
-      <div class="skill">
-        <div class="info">
-          <p> <span class="lista"> </span>Testing Funcional y Automatizado</p>
-          <span class="porcentaje">80%</span>
-        </div>
-
-        <div class="barra">
-          <div class="" id="aut"></div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <div class="info">
-          <p> <span class="lista"> </span>Testing de APIs</p>
-          <span class="porcentaje">100%</span>
-        </div>
-
-        <div class="barra">
-          <div class="" id="api"></div>
-        </div>
-      </div>
+      <ul>
+        <li>
+          Diseño de estrategia de testing para flujos críticos
+          (usuarios, contenidos, funcionalidades core).
+        </li>
+        <li>
+          Ejecución de smoke tests y regresión para asegurar
+          estabilidad post-release.
+        </li>
+        <li>
+          Validación funcional de APIs y datos en bases PostgreSQL.
+        </li>
+      </ul>
     </div>
 
+    <!-- TEMPERIES – ANALYST -->
+    <div class="experiencia">
+      <h4>QA Analyst – Temperies</h4>
+      <span>Nov 2023 – Jul 2024</span>
+
+      <h5>
+        Testing funcional y exploratorio de aplicaciones web y mobile.
+        Validación de datos y resolución de bugs críticos previos a releases.
+      </h5>
+
+      <ul>
+        <li>
+          Testing de flujos principales y edge cases.
+        </li>
+        <li>
+          Ejecución de regresión manual.
+        </li>
+        <li>
+          Validación de APIs mediante Swagger y Postman.
+        </li>
+      </ul>
+    </div>
+
+    <!-- ID FOR IDEAS -->
+    <div class="experiencia">
+      <h4>QA Analyst – ID For Ideas</h4>
+      <span>Jun 2023 – Nov 2023</span>
+
+      <h5>
+        Proyectos de e-commerce y productos digitales.
+        Gestión del área de QA y diseño de casos de prueba.
+      </h5>
+
+      <ul>
+        <li>
+          Testing funcional de flujos de compra, usuarios y catálogo.
+        </li>
+        <li>
+          Diseño y ejecución de casos de prueba.
+        </li>
+        <li>
+          Testing de APIs y bases de datos relacionales.
+        </li>
+      </ul>
+    </div>
+
+    <!-- FREELANCE -->
+    <div class="experiencia">
+      <h4>QA Analyst – Freelance</h4>
+      <span>Sep 2022 – Jun 2023</span>
+
+      <h5>
+        Testing manual y exploratorio en proyectos de
+        e-commerce y publicidad digital.
+      </h5>
+
+      <ul>
+        <li>
+          Validación funcional de features y flujos principales.
+        </li>
+        <li>
+          Diseño de casos de prueba y reporte de bugs.
+        </li>
+      </ul>
+    </div>
+
+  </section>
 
 
-    <!-- SECCION PROYECTOS -->
-    <section id="portfolio">
-      <h3 class="titulo-seccion">Mis Proyectos</h3>
-      <div class="fila">
-        <div class="proyecto">
-          <div class="overlay"></div>
-          <img src="./img/jira.png" alt="Logo de Jira" title="Logo de Jira">
-          <div class="info">
-            <h4>Diseño de Casos de Pruebas, Ejecución de Pruebas y Reporte de defectos</h4>
-          </div>
-        </div>
-        <div class="proyecto">
-          <div class="overlay"></div>
-          <img src="./img/github.jpeg" alt="Logo de GitHub" title="Logo de GitHub">
-          <div class="info">
-            <h4>Repositorio con los proyectos de Testing Automatizado</h4>
-          </div>
-        </div>
+  <!-- SECCION SERVICIOS -->
+  <section id="servicios">
+    <h3 class="titulo-seccion">Qué hago como QA</h3>
+
+    <div class="fila">
+
+      <div class="servicio">
+        <span class="icono"><i class="fa-solid fa-list-check"></i></span>
+        <h4>Validación Funcional del Producto</h4>
+        <p>
+          Validación de funcionalidades, criterios de aceptación
+          y flujos críticos en aplicaciones web y mobile.
+        </p>
       </div>
 
-      <div class="fila">
-        <div class="proyecto">
-          <div class="overlay"></div>
-          <img src="./img/proyectos.png" alt="Proyectos de Jira" title="Proyectos de Jira">
-          <div class="info">
-            <h4>Proyectos de JIRA</h4>
-          </div>
-        </div>
-        <div class="proyecto">
-          <div class="overlay"></div>
-          <img src="./img/proyectos2.png" alt="Incidencias en JIRA" title="Incidencias en JIRA">
-          <div class="info">
-            <h4>Incidencias en JIRA</h4>
-          </div>
-        </div>
+      <div class="servicio">
+        <span class="icono"><i class="fa-solid fa-repeat"></i></span>
+        <h4>Pruebas de Regresión y Smoke</h4>
+        <p>
+          Ejecución de pruebas de regresión y smoke tests
+          para asegurar estabilidad antes y después de cada release.
+        </p>
       </div>
 
-      <div class="fila">
-        <div class="proyecto">
-          <div class="overlay"></div>
-          <img src="./img/jira-proyectos.png" alt="Incidencias en JIRA" title="Incidencias en JIRA">
-          <div class="info">
-            <h4>Incidencias en JIRA</h4>
-          </div>
-        </div>
-        <div class="proyecto">
-          <div class="overlay"></div>
-          <img src="./img/github-repositorios.png" alt="Repositorios de GitHub" title="Repositorios de GitHub">
-          <div class="info">
-            <h4>Repositorios de GitHub</h4>
-          </div>
-        </div>
+    </div>
+
+    <div class="fila">
+
+      <div class="servicio">
+        <span class="icono"><i class="fa-solid fa-database"></i></span>
+        <h4>Validación de APIs y Datos</h4>
+        <p>
+          Validación funcional de APIs y verificación de datos
+          en bases de datos relacionales.
+        </p>
       </div>
 
-      <div class="fila">
-        <div class="proyecto">
-          <div class="overlay"></div>
-          <img src="./img/Tablero.png" alt="Tablero Scrum" title="Tablero Scrum">
-          <div class="info">
-            <h4>Tablero Scrum en JIRA</h4>
-          </div>
-        </div>
-        <div class="proyecto">
-          <div class="overlay"></div>
-          <img src="./img/proyectos3.png" alt="Incidencias en JIRA" title="Incidencias en JIRA">
-          <div class="info">
-            <h4>Incidencias en JIRA</h4>
-          </div>
-        </div>
+      <div class="servicio">
+        <span class="icono"><i class="fa-solid fa-triangle-exclamation"></i></span>
+        <h4>Análisis de Riesgos y Calidad</h4>
+        <p>
+          Identificación temprana de riesgos funcionales
+          para prevenir errores críticos en producción.
+        </p>
       </div>
 
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- SECCION FOOTER -->
-    <footer>
-      <p>Tandil, Buenos Aires, Argentina - 2025</p>
-    </footer>
-  </main>
+
+
+  <!-- SECCION HABILIDADES -->
+  <section id="habilidades">
+    <div id="skills">
+      <h3>Competencias QA</h3>
+
+      <div class="contenedor-skills">
+
+        <div class="skill">
+          <div class="info">
+            <strong>
+              <p>Testing Manual & Exploratorio</p>
+            </strong>
+          </div>
+          <p>
+            Enfoque detallado en la validación de comportamientos esperados,
+            edge cases y escenarios no evidentes.
+          </p>
+        </div>
+
+        <div class="skill">
+          <div class="info">
+            <strong>
+              <p>Diseño de Casos de Prueba</p>
+            </strong>
+          </div>
+          <p>
+            Creación de casos de prueba claros, reutilizables y alineados
+            a criterios de aceptación y riesgos del producto.
+          </p>
+        </div>
+
+        <div class="skill">
+          <div class="info">
+            <strong>
+              <p>Análisis de Riesgos</p>
+            </strong>
+          </div>
+          <p>
+            Evaluación de impacto y probabilidad para priorizar pruebas
+            y enfocar el esfuerzo de QA donde más valor aporta.
+          </p>
+        </div>
+
+        <div class="skill">
+          <div class="info">
+            <strong>
+              <p>Comunicación y Colaboración</p>
+            </strong>
+          </div>
+          <p>
+            Trabajo colaborativo con equipos de desarrollo y producto para detectar problemas de forma temprana.
+          </p>
+        </div>
+
+        <div class="skill">
+          <div class="info">
+            <strong>
+              <p>Agile QA</p>
+            </strong>
+          </div>
+          <p>
+            Experiencia trabajando en equipos ágiles,
+            adaptando el proceso de QA a ciclos iterativos y cambios constantes.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= QA ARTIFACTS ================= -->
+  <section id="qa-artifacts">
+    <i><p class="intro">
+      A continuación se muestran ejemplos de casos de prueba diseñados
+      para validar funcionalidades reales de este portfolio.
+    </p></i>
+    <br>
+    <h3>Test Cases & Quality Checks</h3>
+
+    <!-- ================= DARK MODE ================= -->
+    <div class="experiencia">
+      <h4>Feature: Dark Mode</h4>
+      <h5>Objective</h5>
+      <p>
+        Validate theme switching behavior, visual consistency
+        and persistence across sessions.
+      </p>
+
+      <h5>Test Cases</h5>
+      <ul>
+        <li>
+          <strong>TC-DM-01 – Enable Dark Mode</strong><br>
+          Click on the dark mode toggle.<br>
+          <em>Expected:</em> Dark theme is applied and styles update correctly.
+        </li>
+
+        <li>
+          <strong>TC-DM-02 – Disable Dark Mode</strong><br>
+          Click on the toggle again.<br>
+          <em>Expected:</em> Light theme is restored.
+        </li>
+
+        <li>
+          <strong>TC-DM-03 – Theme Persistence</strong><br>
+          Refresh the page after enabling dark mode.<br>
+          <em>Expected:</em> Dark mode remains active using localStorage.
+        </li>
+      </ul>
+    </div>
+
+    <!-- ================= LANGUAGE SWITCH ================= -->
+    <div class="experiencia">
+      <h4>Feature: Language Switch (ES / EN)</h4>
+      <h5>Objective</h5>
+      <p>
+        Validate correct text translation, consistency
+        and full coverage of visible content.
+      </p>
+
+      <h5>Test Cases</h5>
+      <ul>
+        <li>
+          <strong>TC-LANG-01 – Switch to English</strong><br>
+          Click on the language toggle.<br>
+          <em>Expected:</em> All texts change to English.
+        </li>
+
+        <li>
+          <strong>TC-LANG-02 – Switch back to Spanish</strong><br>
+          Click on the toggle again.<br>
+          <em>Expected:</em> All texts return to Spanish.
+        </li>
+
+        <li>
+          <strong>TC-LANG-03 – Translation Coverage</strong><br>
+          Review the page after language change.<br>
+          <em>Expected:</em> No mixed languages or missing translations.
+        </li>
+      </ul>
+    </div>
+
+    <!-- ================= ACCESSIBILITY ================= -->
+    <div class="experiencia">
+      <h4>Accessibility (a11y) Checks</h4>
+
+      <ul>
+        <li>HTML semantic structure (header, nav, main, section, footer).</li>
+        <li>Color contrast validation for light and dark modes.</li>
+        <li>Keyboard navigation using Tab and Shift + Tab.</li>
+        <li>Visible focus indicator for interactive elements.</li>
+        <li>ARIA labels for icon-only buttons.</li>
+        <li>Document language defined and updated dynamically.</li>
+      </ul>
+    </div>
+
+  </section>
+
+
+  <!-- ================= EDUCACION ================= -->
+  <section id="educacion">
+    <h3>Formación</h3>
+
+    <div class="educacion">
+      <h4>Testing QA – Educación IT</h4>
+      <span>2022 – 2023</span>
+
+      <h5>
+        Formación orientada a Testing Manual, Automatizado, Diseño de Casos de Prueba,
+        Testing Funcional y No Funcional, APIs (Postman y SOAP UI) y bases de datos SQL. Análisis Funcional, UX-UI, HTML
+        y CSS
+      </h5>
+    </div>
+  </section>
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    &copy; 2025 Milagros A. Aranzabe Alonso |
+    <strong><span><a href="https://github.com/milagrosaranzabe" target="_blank">GitHub</a></strong></span>
+  </footer>
 </body>
 
 </html>
