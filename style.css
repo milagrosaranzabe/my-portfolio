@@ -470,3 +470,51 @@ header {
 body.dark header {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
+.btn-cv {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 26px;
+  background-color: var(--primary);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 500;
+}
+
+.btn-cv:hover {
+  background-color: var(--secondary);
+}
+
+#icono-nav {
+  display: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: var(--primary);
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    display: none;
+  }
+
+  nav.responsive {
+    display: block;
+    background-color: var(--bg-header);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+  }
+
+  nav.responsive ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
+  #icono-nav {
+    display: block;
+  }
+   }
