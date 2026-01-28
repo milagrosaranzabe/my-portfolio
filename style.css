@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
-
 /* =========================
-   VARIABLES
+   VARIABLES DE TEMA
 ========================= */
 :root {
   --bg-main: #f7f7fb;
@@ -24,16 +22,14 @@ body.dark {
   --bg-footer: #0f1220;
 
   --text-main: #f1f1f1;
-  --text-muted: #b5b5c9;
+  --text-muted: #c7c9ff;
 
   --primary: #7b73ff;
   --secondary: #5e56e8;
 }
 
-
-
 /* =========================
-   RESET
+   RESET BÁSICO
 ========================= */
 * {
   margin: 0;
@@ -42,41 +38,27 @@ body.dark {
   font-family: 'Montserrat', sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
-  background-color: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-}
-
-/* =========================
-   HEADER / INICIO
-========================= */
-
-header {
-  background-color: var(--bg-header);
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-}
-
-body.dark header {
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-}
-
-
-#inicio {
-   min-height: 100vh;
   background-color: var(--bg-main);
   color: var(--text-main);
 }
 
+/* =========================
+   HEADER / NAV
+========================= */
+header {
+  background-color: var(--bg-header);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
 
 .contenido-header {
   max-width: 1100px;
   margin: auto;
-  padding: 20px;
+  padding: 12px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -84,400 +66,87 @@ body.dark header {
 
 .contenido-header h1 {
   color: var(--primary);
-  font-weight: 600;
-}
-
-nav ul li a i {
-  margin-right: 6px;
-  font-size: 14px;
-}
-
-/* Opcional: destacar contacto */
-nav ul li a[href^="mailto"],
-nav ul li a[href*="linkedin"] {
-  color: var(--secondary);
-  font-weight: 500;
-}
-
-
-nav ul {
-  list-style: none;
-  display: flex;
-}
-
-nav ul li a {
-  color: #141212;
-  text-decoration: none;
-  margin: 0 12px;
-  font-weight: 500;
-}
-
-nav ul li a:hover,
-.seleccionado {
-  color: var(--secondary);
-}
-
-.redes button {
-  margin-left: 10px;
-}
-
-.presentacion {
-  max-width: 900px;
-  margin: auto;
-  padding: 100px 20px;
-  text-align: center;
-}
-
-.presentacion h2 {
-  font-size: 42px;
-  margin-bottom: 20px;
-}
-
-.presentacion h2 span {
-  color: var(--secondary);
   font-size: 22px;
 }
 
-.descripcion {
-  color: var(--text-muted);
-  max-width: 800px;
-  margin: 20px auto 0;
-  line-height: 1.6;
-  font-size: 18px;
-}
-
-body.dark .descripcion {
-  color: #d1d3ff; /* claro pero no blanco puro */
-}
-
-
-
-/* =========================
-   BOTONES
-========================= */
-button {
-  background-color: var(--primary);
-  color: #fff;
-  border: none;
-  border-radius: 20px;
-  padding: 8px 16px;
-  cursor: pointer;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-button:hover {
-  background-color: var(--secondary);
-}
-
-/* =========================
-   SECCIONES GENERALES
-========================= */
-section {
-  max-width: 1100px;
-  margin: 80px auto;
-  padding: 0 20px;
-}
-
-h3 {
-  font-size: 26px;
-  color: var(--primary);
-  margin-bottom: 25px;
-  position: relative;
-}
-
-h3::after {
-  content: "";
-  width: 50px;
-  height: 4px;
-  background-color: var(--secondary);
-  display: block;
-  margin-top: 8px;
-  border-radius: 4px;
-}
-
-/* =========================
-   SOBRE MI
-========================= */
-#sobremi {
-  text-align: center;
-}
-
-#sobremi h2 {
-  margin-bottom: 15px;
-}
-
-/* =========================
-   CARDS (EXPERIENCIA / SERVICIOS / QA)
-========================= */
-.experiencia,
-.servicio,
-#skills,
-
-/* =========================
-   QA ARTIFACTS – ALIGN FIX
-========================= */
-#qa-artifacts {
-  max-width: 1100px;
-  margin: 80px auto;
-  padding: 0 20px;
-}
-
-#qa-artifacts .intro {
-  margin-bottom: 20px;
-  color: var(--muted);
-  font-size: 15px;
-}
-
-/* Ajuste para que las cards no “floten” */
-#qa-artifacts .experiencia {
-  margin-top: 30px;
-}
-
-
-.experiencia h4,
-.servicio h4 {
-  color: var(--primary);
-  margin-bottom: 10px;
-}
-
-.experiencia span {
-  font-size: 14px;
-  color: var(--muted);
-}
-
-/* =========================
-   SERVICIOS
-========================= */
-#servicios .fila {
+/* NAV DESKTOP */
+nav ul {
+  list-style: none;
   display: flex;
+  align-items: center;
   gap: 20px;
 }
 
-.servicio {
-  flex: 1;
-  text-align: left;
-}
-
-/* =========================
-   HABILIDADES (COMPETENCIAS QA)
-========================= */
-.contenedor-skills .skill {
-  margin-bottom: 20px;
-}
-
-.contenedor-skills .skill p {
-  color: var(--muted);
-}
-
-/* =========================
-   QA ARTIFACTS
-========================= */
-#qa-artifacts ul {
-  margin-left: 20px;
-}
-
-#qa-artifacts li {
-  margin-bottom: 10px;
-}
-
-/* =========================
-   FOOTER
-========================= */
-footer {
-  background-color: var(--bg-footer);
-  color: var(--text-main);
-  text-align: center;
-  padding: 40px 20px;
-}
-
-footer a {
-  color: var(--primary);
-  text-decoration: none;
-  margin: 0 8px;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-
-footer a {
-  color: var(--secondary);
-  margin: 0 10px;
-  text-decoration: none;
-}
-
-section {
-  background-color: var(--bg-section);
-  color: var(--text-main);
-}
-
-
-/* =========================
-   DARK MODE
-========================= */
-body.dark {
-  background-color: #121225;
-  color: #eaeaf0;
-}
-
-body.dark .experiencia,
-body.dark .servicio,
-body.dark #skills,
-body.dark #qa-artifacts {
-  background-color: #1e1e3f;
-}
-
-body.dark footer {
-  background-color: #000;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-@media screen and (max-width: 768px) {
-  nav {
-    display: none;
-  }
-
-  nav.responsive {
-    display: block;
-    background-color: #000;
-    padding: 10px;
-  }
-
-  #servicios .fila {
-    flex-direction: column;
-  }
-
-  .presentacion h2 {
-    font-size: 32px;
-  }
-}
-
-/* =========================
-   NAV – BOTONES DE CONTACTO
-========================= */
-
-/* Convertimos Email y LinkedIn en botones */
-nav ul li a[href^="mailto"],
-nav ul li a[href*="linkedin"] {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-
-  background-color: var(--primary);
-  color: #fff !important;
-
-  padding: 8px 14px;
-  border-radius: 20px;
-  font-size: 14px;
-  font-weight: 500;
-
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-/* Hover consistente con los otros botones */
-nav ul li a[href^="mailto"]:hover,
-nav ul li a[href*="linkedin"]:hover {
-  background-color: var(--secondary);
-  transform: translateY(-1px);
-}
-
-/* Íconos alineados */
-nav ul li a i {
-  font-size: 14px;
-}
-
-/* =========================
-   NAV – ALIGN RIGHT
-========================= */
-nav ul {
-  display: flex;
-  align-items: center;
-}
-
-/* Empuja los botones de contacto a la derecha */
-nav ul li.contact {
-  margin-left: auto;
-}
-
-@media screen and (max-width: 768px) {
-  nav ul li a .label {
-    display: none;
-  }
-
-  nav ul li a {
-    padding: 8px 10px;
-  }
-}
-
-/* =========================
-   NAV BUTTONS (DARK / LANG)
-========================= */
-.nav-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  background-color: var(--primary);
-  color: #fff;
-  border: none;
-
-  padding: 8px 14px;
-  border-radius: 20px;
-
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-.nav-btn:hover {
-  background-color: var(--secondary);
-  transform: translateY(-1px);
-}
-
-/* =========================
-   NAV LINKS – BASE
-========================= */
 nav ul li a {
+  text-decoration: none;
   color: var(--text-main);
-  transition: color 0.3s;
+  font-weight: 500;
 }
 
 nav ul li a:hover {
   color: var(--primary);
 }
 
-/* =========================
-   NAV LINKS – DARK MODE
-========================= */
-body.dark nav ul li a {
-  color: #e6e8ff;
+/* BOTONES NAV */
+.nav-btn {
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
 }
 
-body.dark nav ul li a:hover {
+.nav-btn:hover {
+  background-color: var(--secondary);
+}
+
+/* =========================
+   ICONO HAMBURGUESA
+========================= */
+#icono-nav {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
   color: var(--primary);
 }
 
-header {
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+/* =========================
+   SECCIÓN INICIO
+========================= */
+#inicio {
+  padding-top: 120px;
+  text-align: center;
 }
 
-body.dark header {
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+.bienvenida {
+  letter-spacing: 2px;
+  margin-bottom: 10px;
 }
-.btn-cv {
-  display: inline-block;
+
+.descripcion {
+  max-width: 800px;
+  margin: 20px auto;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* BOTÓN CV */
+.cv-actions {
   margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn-cv {
   padding: 12px 26px;
   background-color: var(--primary);
   color: #fff;
-  text-decoration: none;
   border-radius: 25px;
+  text-decoration: none;
   font-weight: 500;
 }
 
@@ -485,60 +154,46 @@ body.dark header {
   background-color: var(--secondary);
 }
 
-#icono-nav {
-  display: none;
-  font-size: 22px;
-  cursor: pointer;
-  color: var(--primary);
+/* =========================
+   SECCIONES GENERALES
+========================= */
+section {
+  background-color: var(--bg-section);
+  padding: 80px 20px;
 }
 
+section h3 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background-color: var(--bg-footer);
+  text-align: center;
+  padding: 40px 20px;
+}
+
+footer a {
+  color: var(--primary);
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+/* =========================
+   RESPONSIVE MENU – ÚNICO
+========================= */
 @media screen and (max-width: 768px) {
-  nav {
-    display: none;
-  }
-
-  nav.responsive {
-    display: block;
-    background-color: var(--bg-header);
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    padding: 15px 0;
-  }
-
-  nav.responsive ul {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 12px;
-  }
 
   #icono-nav {
     display: block;
   }
-   }
-/* =========================
-   HAMBURGER MENU FIX
-========================= */
-
-#icono-nav {
-  display: none;
-  font-size: 26px;
-  cursor: pointer;
-  color: var(--primary);
-}
-
-/* MOBILE */
-@media screen and (max-width: 768px) {
-  .contenido-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
 
   nav {
     display: none;
+    width: 100%;
   }
 
   nav.responsive {
@@ -546,34 +201,14 @@ body.dark header {
     position: absolute;
     top: 70px;
     left: 0;
-    width: 100%;
     background-color: var(--bg-header);
-    z-index: 999;
     padding: 15px 0;
   }
 
   nav.responsive ul {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    text-align: center;
-  }
-
-  #icono-nav {
-    display: block;
-  }
-}
-
-/* =========================
-   MOBILE MENU – SHOW ALL
-========================= */
-
-@media screen and (max-width: 768px) {
-
-  nav.responsive ul {
-    display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 14px;
   }
 
   nav.responsive ul li {
@@ -581,27 +216,9 @@ body.dark header {
     text-align: center;
   }
 
-  /* Links */
-  nav.responsive ul li a {
-    display: block;
-    padding: 12px 0;
+  nav.responsive ul li a,
+  nav.responsive ul li button {
     width: 100%;
-  }
-
-  /* Actions (email, linkedin, buttons) */
-  nav.responsive .nav-action {
-    margin-top: 10px;
-  }
-
-  /* Buttons inside menu */
-  nav.responsive .nav-btn {
-    width: 80%;
-    margin: 0 auto;
-    padding: 10px 0;
-    background-color: var(--primary);
-    color: #fff;
-    border: none;
-    border-radius: 20px;
-    font-size: 14px;
+    padding: 12px 0;
   }
 }
