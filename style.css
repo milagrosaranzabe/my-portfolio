@@ -518,3 +518,48 @@ body.dark header {
     display: block;
   }
    }
+/* =========================
+   HAMBURGER MENU FIX
+========================= */
+
+#icono-nav {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: var(--primary);
+}
+
+/* MOBILE */
+@media screen and (max-width: 768px) {
+  .contenido-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav {
+    display: none;
+  }
+
+  nav.responsive {
+    display: block;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-header);
+    z-index: 999;
+    padding: 15px 0;
+  }
+
+  nav.responsive ul {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    text-align: center;
+  }
+
+  #icono-nav {
+    display: block;
+  }
+}
