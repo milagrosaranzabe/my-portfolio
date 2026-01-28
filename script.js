@@ -1,48 +1,87 @@
-//Función que me aplica el estilo a la opciòn seleccionada y quita la previamente seleccionada
-function seleccionar(link) {
-    var opciones = document.querySelectorAll('#links  a');
-    opciones[0].className = "";
-    opciones[1].className = "";
-    opciones[2].className = "";
-    opciones[3].className = "";
-    opciones[4].className = "";
-    opciones[5].className = "";
-    link.className = "seleccionado";
+document.addEventListener("DOMContentLoaded", () => {
 
-    //Hacemos desaparecer el menu una vez que se ha seleccionado una opcion
-    //en modo responsive
-    var x = document.getElementById("nav");
-    x.className = "";
-}
-
-//función que muestra el menu responsive
-function responsiveMenu() {
-    var x = document.getElementById("nav");
-    if (x.className === "") {
-        x.className = "responsive";
-    } else {
-        x.className = "";
+  /* =====================
+     MENU RESPONSIVE
+  ===================== */
+  window.responsiveMenu = function () {
+    const nav = document.getElementById("nav");
+    if (nav) {
+      nav.className = nav.className === "" ? "responsive" : "";
     }
-}
+  };
 
-//detecto el scrolling para aplicar la animación del la barra de habilidades
-window.onscroll = function() { efectoHabilidades() };
+  /* =====================
+     DARK MODE
+  ===================== */
+  const themeBtn = document.getElementById("toggle-theme");
 
-//funcion que aplica la animación de la barra de habilidades
-function efectoHabilidades() {
-    var skills = document.getElementById("skills");
-    var distancia_skills = window.innerHeight - skills.getBoundingClientRect().top;
-    if (distancia_skills >= 300) {
-        document.getElementById("com").classList.add("barra-progreso1");
-        document.getElementById("res").classList.add("barra-progreso2");
-        document.getElementById("atd").classList.add("barra-progreso3");
-        document.getElementById("cur").classList.add("barra-progreso4");
-        document.getElementById("tra").classList.add("barra-progreso5");
-        document.getElementById("man").classList.add("barra-progreso6");
-        document.getElementById("bd").classList.add("barra-progreso7");
-        document.getElementById("usb").classList.add("barra-progreso8");
-        document.getElementById("aut").classList.add("barra-progreso9");
-        document.getElementById("api").classList.add("barra-progreso10");
+  if (themeBtn) {
+    // Estado inicial
+    if (localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark");
     }
 
-}
+    themeBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      document.body.classList.toggle("dark");
+
+      localStorage.setItem(
+        "theme",
+        document.body.classList.contains("dark") ? "dark" : "light"
+      );
+    });
+  } else {
+    console.warn("Botón toggle-theme no encontrado");
+  }
+
+  /* =====================
+     LANGUAGE SWITCH
+  ===================== */
+  const langBtn = document.getElementById("toggle-lang");
+  let currentLang = localStorage.getItem("lang") || "es";
+
+  const texts = {
+    es: {
+      welcome: "Bienvenida",
+      role: "QA Analyst | Web y Mobile",
+      hero_text:
+        "Analista QA con más de 3 años de experiencia en testing manual de aplicaciones web y mobile, trabajando en productos digitales y equipos ágiles. Mi enfoque está en asegurar la calidad funcional, la estabilidad de los releases y minimizar riesgos en producción."
+    },
+    en: {
+      welcome: "Welcome",
+      role: "QA Analyst | Web & Mobile",
+      hero_text:
+        "QA Analyst with over 3 years of experience in manual testing of web and mobile applications, working on digital products and agile teams. My focus is on ensuring functional quality, release stability, and minimizing production risks."
+    }
+  };
+
+  function applyLanguage(lang) {
+    document.documentElement.lang = lang;
+
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.dataset.i18n;
+      if (texts[lang][key]) {
+        el.textContent = texts[lang][key];
+      }
+    });
+  }
+
+  // Estado inicial
+  applyLanguage(currentLang);
+
+  if (langBtn) {
+    langBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      currentLang = currentLang === "es" ? "en" : "es";
+      localStorage.setItem("lang", currentLang);
+      applyLanguage(currentLang);
+    });
+  } else {
+    console.warn("Botón toggle-lang no encontrado");
+    }
+}); 
+    
