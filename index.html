@@ -20,38 +20,60 @@
   <section id="inicio">
     <div class="contenido">
 
-      <header>
-      <div class="contenido-header">
-        <h1>Milagros</h1>
+      
+<header>
+  <div class="contenido-header">
+    <!-- LOGO / NOMBRE -->
+    <h1>Milagros</h1>
 
-      <nav id="nav">
-  <ul>
-    <li><a href="#experiencia">Experiencia</a></li>
-    <li><a href="#servicios">Servicios</a></li>
-    <li><a href="#habilidades">Habilidades</a></li>
+    <!-- BOTÓN HAMBURGUESA (MOBILE) -->
+    <i
+      class="fa-solid fa-bars"
+      id="icono-nav"
+      onclick="responsiveMenu()"
+      aria-label="Abrir menú"
+      role="button"
+      tabindex="0"
+    ></i>
 
-    <li class="nav-action">
-      <a href="mailto:milagrosaranzabe@gmail.com">
-        <i class="fa-solid fa-envelope"></i> Email
-      </a>
-    </li>
+    <!-- MENÚ -->
+    <nav id="nav">
+      <ul>
+        <li><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
 
-    <li class="nav-action">
-      <a href="https://www.linkedin.com/in/milagros-aranzabe-alonso-qa/" target="_blank">
-        <i class="fa-brands fa-linkedin"></i> LinkedIn
-      </a>
-    </li>
+        <li>
+          <a href="mailto:milagrosaranzabe@gmail.com">
+            <i class="fa-solid fa-envelope"></i> Email
+          </a>
+        </li>
 
-    <li class="nav-action">
-      <button id="toggle-theme" class="nav-btn">🌙</button>
-    </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/milagros-aranzabe-alonso-qa/"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
+        </li>
 
-    <li class="nav-action">
-      <button id="toggle-lang" class="nav-btn">ES / EN</button>
-    </li>
-  </ul>
-</nav>
-      </header>
+        <li>
+          <button id="toggle-theme" class="nav-btn" aria-label="Modo oscuro">
+            🌙
+          </button>
+        </li>
+
+        <li>
+          <button id="toggle-lang" class="nav-btn" aria-label="Cambiar idioma">
+            ES / EN
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
       <div class="presentacion">
         <p class="bienvenida" data-i18n="welcome">Bienvenida</p>
