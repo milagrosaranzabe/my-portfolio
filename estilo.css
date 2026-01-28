@@ -1,807 +1,472 @@
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap');
-
-        * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-          font-family: 'Montserrat';
-        }
-
-        html {
-          scroll-behavior: smooth;
-          cursor: default;
-        }
-
-        /* *********************/
-        /* seccion INICIO */
-        /* *********************/
-
-        #inicio {
-          background: linear-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)), url("./img/fondo.jpg");
-          background-size: cover;
-          background-position: center center;
-          height: 100vh;
-        }
-
-        #inicio .contenido header {
-          background-color: rgba(0, 0, 0, .8);
-          position: fixed;
-          width: 100%;
-          z-index: 100;
-          top: 0;
-        }
-
-        #inicio .contenido header .contenido-header {
-          max-width: 1100px;
-          margin: auto;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 10px 20px;
-        }
-
-        #inicio .contenido header .contenido-header h1 {
-          font-family: cursive;
-          text-align: center;
-          color: #eb406e;
-        }
-
-        #inicio .contenido header .contenido-header nav ul {
-          list-style: none;
-          display: flex;
-          align-items: center;
-        }
-
-        #inicio .contenido header .contenido-header nav ul li a {
-          text-decoration: none;
-          color: #fff;
-          margin: 0 12px;
-          font-weight: 500;
-          transition: .5s;
-        }
-
-        #inicio .contenido header .contenido-header nav ul li a:hover {
-          color: #d33760;
-        }
-
-        #inicio .contenido header .contenido-header .redes a {
-          text-decoration: none;
-          color: #fff;
-          display: inline-block;
-          margin-left: 10px;
-          transition: .5s;
-        }
-
-        #inicio .contenido header .contenido-header .redes a:hover {
-          color: #af3253;
-        }
-
-        #inicio .contenido header .contenido-header .seleccionado {
-          color: #da3f68;
-        }
-
-        #inicio .contenido .presentacion {
-          max-width: 1100px;
-          height: 100vh;
-          margin: auto;
-          color: #fff;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-        }
-
-        #inicio .contenido .presentacion .bienvenida {
-          font-size: 16px;
-          margin-bottom: 20px;
-          text-transform: uppercase;
-          letter-spacing: 5px;
-        }
-
-        #inicio .contenido .presentacion h2 {
-          font-size: 55px;
-          margin-bottom: 25px;
-          text-align: center;
-        }
-
-        #inicio .contenido .presentacion h2 span {
-          font-size: 25px;
-          color: #ca375f;
-        }
-
-        #inicio .contenido .presentacion .descripcion {
-          max-width: 700px;
-          margin: 25px auto;
-          font-size: 25px;
-          text-align: center;
-        }
-
-        #inicio .contenido .presentacion a {
-          text-decoration: none;
-          display: inline-block;
-          margin: 25px;
-          padding: 20px 25px;
-          border: 2px solid #fff;
-          border-radius: 25px;
-          color: #fff;
-          font-weight: bold;
-          text-transform: uppercase;
-          transition: .5s;
-        }
-
-        #inicio .contenido .presentacion a:hover {
-          background-color: #9b2746;
-        }
-
-        #icono-nav {
-          color: #fff;
-          display: none;
-        }
-
-        /* *********************/
-        /* seccion SOBRE MI */
-        /* *********************/
-
-        #sobremi {
-          max-width: 1100px;
-          margin: auto;
-          padding: 100px 15px;
-          color: #111135;
-          display: flex;
-        }
-
-        #sobremi .contenedor-foto {
-          max-width: 400px;
-          margin-right: 80px;
-        }
-
-        #sobremi .contenedor-foto img {
-          padding: 10px;
-          width: 100%;
-          border-radius: 15px;
-          box-shadow: 5px 5px 10px #565353, -5px -5px 10px #c3c2c2;
-          background-color: #f5d8fb;
-        }
-
-        #sobremi .sobremi {
-          margin: 0 40px;
-        }
-
-        #sobremi .sobremi .titulo-seccion {
-          font-family: cursive;
-          font-size: 22px;
-          font-weight: 600;
-          text-transform: uppercase;
-          color: #111135;
-          text-decoration-thickness: 3px;
-        }
-
-        #sobremi .sobremi h2 {
-          font-size: 34px;
-          font-weight: bold;
-          margin: 20px 0;
-          letter-spacing: 2px;
-        }
-
-        #sobremi .sobremi h2 span {
-          font-family: cursive;
-          font-size: 40px;
-          color: #b93156;
-        }
-
-        #sobremi .sobremi h3 {
-          font-size: 18px;
-          font-weight: 700;
-          text-transform: uppercase;
-          margin-bottom: 20px;
-          letter-spacing: 1px;
-        }
-
-        #sobremi .sobremi p {
-          text-align: justify;
-          font-size: 16px;
-          line-height: 25px;
-          margin-bottom: 12px;
-        }
-
-        #sobremi .sobremi a {
-          display: inline-block;
-          font-weight: 700;
-          text-decoration: none;
-          color: #000;
-          border-radius: 25px;
-          border: 1px solid #000;
-          padding: 20px;
-          margin-top: 30px;
-          margin-right: 30px;
-          transition: .5s;
-        }
-
-        #sobremi .sobremi a:hover {
-          background-color: #ff5080;
-          color: #fff;
-        }
-
-        /* *********************/
-        /* secciones EDUCACION y EXPERIENCIA */
-        /* *********************/
-
-        #educacion,
-        #experiencia {
-          padding: 5px;
-        }
-
-        #educacion h3,
-        #experiencia h3 {
-          margin-top: 30px;
-          margin-bottom: 25px;
-        }
-
-        #educacion h5, #experiencia h5 {
-          text-align: justify;
-          margin: 12px;
-        }
-
-        .resaltado {
-          font-family: Arial, Helvetica, sans-serif;
-        }
-
-        #educacion,#experiencia {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          padding: 5px 35px;
-        }
-
-        .educacion,.experiencia {
-          box-shadow: 5px 5px 10px #a241cc, -5px -5px 10px #e0bcf9;
-          border-radius: 10px;
-          padding: 20px;
-          margin-bottom: 45px;
-          max-width: 880px;
-          width: 100%;
-        }
-
-        .educacion:hover, .experiencia:hover {
-          background-color: rgb(248, 217, 243);
-        }
-
-        .educacion span {
-          margin-left: 15px;
-          margin-bottom: 10px;
-        }
-
-        #experiencia h3 {
-          text-align: center;
-        }
-
-
-        /* *********************/
-        /* seccion INTERESES */
-        /* *********************/
-
-        #intereses {
-          display: inline;
-          text-align: center;
-        }
-
-        #intereses h3,
-        #experiencia h3 {
-          font-family: cursive;
-          margin-bottom: 50px;
-        }
-
-        .contenedor-intereses .interes {
-          display: inline;
-          padding: 20px;
-          background-color: #f9b7e4;
-          border: 2px solid #580282;
-          border-radius: 10px;
-          margin: 20px 15px 15px 20px;
-          transition: .3s;
-        }
-
-        .contenedor-intereses .interes:hover {
-          background-color: #f9daef;
-        }
-
-        .contenedor-intereses span {
-          font-weight: 700;
-        }
-
-        .contenedor-intereses .interes i {
-          font-size: 30px;
-          margin-bottom: 100px;
-        }
-
-
-        /* *********************/
-        /* seccion SERVICIOS */
-        /* *********************/
-
-        #servicios {
-          padding: 80px 40px;
-          text-align: center;
-          background-color: #f0d7fb;
-        }
-
-        #servicios .titulo-seccion,
-        #educacion h3 {
-          text-align: center;
-          font-size: 22px;
-          font-family: cursive;
-          text-transform: uppercase;
-          color: #050505;
-        }
-
-        #servicios .fila {
-          display: flex;
-          justify-content: space-between;
-          max-width: 1150px;
-          margin: 40px auto;
-        }
-
-        #servicios .fila .servicio {
-          max-width: 350px;
-          background-color: #fff;
-          padding: 30px;
-          margin: 0 5px;
-          border-radius: 10px;
-          transition: .5s;
-        }
-
-        #servicios .fila .servicio {
-          box-shadow: 5px 5px 10px #565656, -5px -5px 10px #8a8a8a;
-        }
-
-        #servicios .fila .servicio .icono {
-          display: inline-block;
-          width: 70px;
-          height: 70px;
-          border-radius: 50%;
-          background-color: #f2cef9;
-          padding: 20px;
-          margin-bottom: 25px;
-        }
-
-        #servicios .fila .servicio h4 {
-          font-size: 22px;
-          margin-bottom: 10px;
-        }
-
-        #servicios .fila .servicio hr {
-          width: 100%;
-          margin: auto;
-          color: #000;
-          margin-bottom: 25px;
-        }
-
-        #servicios .fila .servicio .servicios-tag {
-          list-style: none;
-          display: flex;
-          justify-content: space-between;
-          margin-bottom: 10px;
-        }
-
-        #servicios .fila .servicio p {
-          font-size: 14px;
-          line-height: 22px;
-        }
-
-        .servicio p {
-          text-align: justify;
-        }
-
-        #habilidades h3, #habilidades2 h3 {
-          color: #fff;
-          text-align: center;
-          font-size: 22px;
-          font-family: cursive;
-          text-transform: uppercase;
-        }
-
-
-
-        /* *********************/
-        /* seccion HABILIDADES */
-        /* *********************/
-
-        #habilidades, .contenedor-skills {
-          background: linear-gradient(#6a448acc, rgba(51, 1, 80, 0.8)), url("./img/qa-testing.jpg");
-          background-attachment: fixed;
-          background-repeat: no-repeat;
-          background-size: cover;
-          color: #fff;
-          background-position: center center;
-          padding: 50px 0;
-          text-align: center;
-        }
-
-        .contenedor-skills .skill {
-          max-width: 700px;
-          margin: 30px auto;
-        }
-
-        .contenedor-skills .skill .info {
-          display: flex;
-          justify-content: space-between;
-        }
-
-        .contenedor-skills .skill .lista {
-          display: inline-block;
-          margin-right: 20px;
-          height: 10px;
-          width: 10px;
-          background-color: #fff;
-        }
-
-        .contenedor-skills .skill .barra {
-          background-color: #919191;
-          width: 100%;
-          height: 6px;
-          margin: 10px 0px;
-        }
-
-        /* Habilidades Blandas */
-        .habilidades {
-          color: #000;
-          font-family: cursive;
-        }
-        
-        .contenedor-skills .skill .barra .barra-progreso1 {
-          background-color: #fff;
-          width: 100%;
-          height: 6px;
-          animation: progreso1 2s forwards;
-        }
-
-        .contenedor-skills .skill .barra .barra-progreso2 {
-          background-color: #fff;
-          width: 100%;
-          height: 6px;
-          animation: progreso2 2s forwards;
-        }
-
-        .contenedor-skills .skill .barra .barra-progreso3 {
-          background-color: #fff;
-          width: 100%;
-          height: 6px;
-          animation: progreso3 2s forwards;
-        }
-
-        .contenedor-skills .skill .barra .barra-progreso4 {
-          background-color: #fff;
-          width: 100%;
-          height: 6px;
-          animation: progreso4 2s forwards;
-        }
-
-        .contenedor-skills .skill .barra .barra-progreso5 {
-          background-color: #fff;
-          width: 100%;
-          height: 6px;
-          animation: progreso5 2s forwards;
-        }
-
-        .contenedor-skills .skill .barra .barra-progreso6 {
-          background-color: #fff;
-          width: 100%;
-          height: 6px;
-          animation: progreso6 2s forwards;
-        }
-
-        /* Habilidades Técnicas */
-        .contenedor-skills .skill .barra .barra-progreso7 {
-          background-color: #fff;
-          width: 100%;
-          height: 6px;
-          animation: progreso7 2s forwards;
-        }
-
-        .contenedor-skills .skill .barra .barra-progreso8 {
-          background-color: #fff;
-          width: 100%;
-          height: 6px;
-          animation: progreso8 2s forwards;
-        }
-
-        .contenedor-skills .skill .barra .barra-progreso9 {
-          background-color: #fff;
-          width: 100%;
-          height: 6px;
-          animation: progreso9 2s forwards;
-        }
-
-        .contenedor-skills .skill .barra .barra-progreso10 {
-          background-color: #fff;
-          width: 100%;
-          height: 6px;
-          animation: progreso10 2s forwards;
-        }
-
-        .contenedor-skills .skill .barra .barra-progreso11 {
-          background-color: #fff;
-          width: 100%;
-          height: 6px;
-          animation: progreso11 2s forwards;
-        }
-
-        .contenedor-skills .skill .barra .barra-progreso12 {
-          background-color: #fff;
-          width: 100%;
-          height: 6px;
-          animation: progreso12 2s forwards;
-        }
-
-        @keyframes progreso1 {
-          0% {
-            width: 0;
-          }
-
-          100% {
-            width: 100%;
-          }
-        }
-
-        @keyframes progreso2 {
-          0% {
-            width: 0;
-          }
-
-          100% {
-            width: 100%;
-          }
-        }
-
-        @keyframes progreso3 {
-          0% {
-            width: 0;
-          }
-
-          100% {
-            width: 100%;
-          }
-        }
-
-        @keyframes progreso4 {
-          0% {
-            width: 0;
-          }
-
-          100% {
-            width: 100%;
-          }
-        }
-
-        @keyframes progreso5 {
-          0% {
-            width: 0;
-          }
-
-          100% {
-            width: 100%;
-          }
-        }
-
-        @keyframes progreso6 {
-          0% {
-            width: 0;
-          }
-
-          100% {
-            width: 100%;
-          }
-        }
-
-
-        @keyframes progreso7 {
-          0% {
-            width: 0;
-          }
-
-          100% {
-            width: 100%;
-          }
-        }
-
-        @keyframes progreso8 {
-          0% {
-            width: 0;
-          }
-
-          100% {
-            width: 100%;
-          }
-        }
-
-        @keyframes progreso9 {
-          0% {
-            width: 0;
-          }
-
-          100% {
-            width: 80%;
-          }
-        }
-
-        @keyframes progreso10 {
-          0% {
-            width: 0;
-          }
-
-          100% {
-            width: 100%;
-          }
-        }
-
-
-        /* *********************/
-        /* seccion PORTFOLIO */
-        /* *********************/
-
-        #portfolio {
-          max-width: 1100px;
-          padding: 50px 0;
-          margin: auto;
-        }
-
-        #portfolio .titulo-seccion {
-          text-align: center;
-          font-size: 22px;
-          font-family: cursive;
-          text-transform: uppercase;
-          color: #f9f7fa;
-        }
-
-        #portfolio .fila {
-          display: flex;
-          justify-content: space-around;
-          margin: 40px 0;
-        }
-
-        #portfolio .fila .proyecto {
-          max-width: 450px;
-          border: 1px solid #8d09b1;
-          margin: 0 10px;
-          position: relative;
-          overflow: hidden;
-          box-shadow: 5px 5px 10px #565353, -5px -5px 10px #c3c2c2;
-        }
-
-        #portfolio .fila .proyecto img {
-          width: 100%;
-          height: 100%;
-        }
-
-        #portfolio .fila .proyecto .info {
-          font-size: 15px;
-          position: absolute;
-          left: 0px;
-          background-color: rgba(68, 2, 135, 0.9);
-          color: #f9f8f8;
-          width: 100%;
-          padding: 10px;
-          opacity: 0;
-          bottom: -40px;
-          transition: .5s;
-        }
-
-        #portfolio .fila .proyecto:hover .info {
-          opacity: 1;
-          bottom: 0;
-        }
-
-        /* *********************/
-        /* seccion FOOTER */
-        /* *********************/
-
-        footer {
-          background-color: #2e0175;
-          color: #fff;
-          text-align: center;
-          padding: 30px 30px;
-        }
-
-        footer a {
-          text-decoration: none;
-          color: #fff;
-          display: inline-block;
-          margin: 5px;
-          font-size: 26px;
-        }
-
-        /* *********************/
-        /* seccion RESPONSIVE */
-        /* *********************/
-
-        @media screen and (max-width: 800px) {
-          .redes {
-            display: none;
-          }
-
-          nav {
-            display: none;
-          }
-
-          nav.responsive {
-            display: block;
-            background-color: rgba(0, 0, 0, .8);
-            width: 100%;
-            position: absolute;
-            top: 48px;
-            left: 0;
-            padding: 10px 0;
-          }
-
-          nav.responsive ul {
-            display: block !important;
-            text-align: center;
-          }
-
-          nav.responsive ul li {
-            margin: 5px 0;
-          }
-
-          #icono-nav {
-            display: block;
-          }
-
-          #inicio .contenido .presentacion h2 {
-            font-size: 40px;
-          }
-
-          /* seccion SOBRE MI */
-          #sobremi {
-            padding: 50px 0;
-            display: block;
-          }
-
-          #sobremi .contenedor-foto {
-            max-width: 200px;
-            margin: auto;
-          }
-
-          #sobremi .contenedor-foto img {
-            padding: 8px;
-          }
-
-          #sobremi .sobremi .titulo-seccion {
-            text-align: center;
-          }
-
-          #sobremi .sobremi h2 {
-            font-size: 25px;
-            text-align: center;
-          }
-
-          /* seccion MIS SERVICIOS */
-          #servicios {
-            padding: 50px 15px;
-          }
-
-          #servicios .fila {
-            display: block;
-          }
-
-          #servicios .fila .servicio {
-            margin: 10px auto;
-          }
-
-          /* seccion HABLIDADES */
-          .contenedor-skills {
-            padding: 50px 20px;
-          }
-
-          /* seccion PORTFOLIO */
-          #portfolio {
-            padding: 50px 0;
-          }
-
-          #portfolio .fila {
-            display: block;
-          }
-
-          #portfolio .fila .proyecto {
-            margin: 10px auto;
-          }
-        }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+
+/* =========================
+   VARIABLES
+========================= */
+:root {
+  --bg-main: #f7f7fb;
+  --bg-section: #ffffff;
+  --bg-header: #ffffff;
+  --bg-footer: #f0f0f5;
+
+  --text-main: #1a1a1a;
+  --text-muted: #555;
+
+  --primary: #6c63ff;
+  --secondary: #4d46d1;
+}
+
+/* DARK MODE */
+body.dark {
+  --bg-main: #0f1220;
+  --bg-section: #15192d;
+  --bg-header: #15192d;
+  --bg-footer: #0f1220;
+
+  --text-main: #f1f1f1;
+  --text-muted: #b5b5c9;
+
+  --primary: #7b73ff;
+  --secondary: #5e56e8;
+}
+
+
+
+/* =========================
+   RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* =========================
+   HEADER / INICIO
+========================= */
+
+header {
+  background-color: var(--bg-header);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+body.dark header {
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+
+#inicio {
+   min-height: 100vh;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+}
+
+
+.contenido-header {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contenido-header h1 {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+nav ul li a i {
+  margin-right: 6px;
+  font-size: 14px;
+}
+
+/* Opcional: destacar contacto */
+nav ul li a[href^="mailto"],
+nav ul li a[href*="linkedin"] {
+  color: var(--secondary);
+  font-weight: 500;
+}
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li a {
+  color: #141212;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: 500;
+}
+
+nav ul li a:hover,
+.seleccionado {
+  color: var(--secondary);
+}
+
+.redes button {
+  margin-left: 10px;
+}
+
+.presentacion {
+  max-width: 900px;
+  margin: auto;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.presentacion h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.presentacion h2 span {
+  color: var(--secondary);
+  font-size: 22px;
+}
+
+.descripcion {
+  color: var(--text-muted);
+  max-width: 800px;
+  margin: 20px auto 0;
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+body.dark .descripcion {
+  color: #d1d3ff; /* claro pero no blanco puro */
+}
+
+
+
+/* =========================
+   BOTONES
+========================= */
+button {
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: var(--secondary);
+}
+
+/* =========================
+   SECCIONES GENERALES
+========================= */
+section {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+h3 {
+  font-size: 26px;
+  color: var(--primary);
+  margin-bottom: 25px;
+  position: relative;
+}
+
+h3::after {
+  content: "";
+  width: 50px;
+  height: 4px;
+  background-color: var(--secondary);
+  display: block;
+  margin-top: 8px;
+  border-radius: 4px;
+}
+
+/* =========================
+   SOBRE MI
+========================= */
+#sobremi {
+  text-align: center;
+}
+
+#sobremi h2 {
+  margin-bottom: 15px;
+}
+
+/* =========================
+   CARDS (EXPERIENCIA / SERVICIOS / QA)
+========================= */
+.experiencia,
+.servicio,
+#skills,
+
+/* =========================
+   QA ARTIFACTS – ALIGN FIX
+========================= */
+#qa-artifacts {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+#qa-artifacts .intro {
+  margin-bottom: 20px;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+/* Ajuste para que las cards no “floten” */
+#qa-artifacts .experiencia {
+  margin-top: 30px;
+}
+
+
+.experiencia h4,
+.servicio h4 {
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.experiencia span {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* =========================
+   SERVICIOS
+========================= */
+#servicios .fila {
+  display: flex;
+  gap: 20px;
+}
+
+.servicio {
+  flex: 1;
+  text-align: left;
+}
+
+/* =========================
+   HABILIDADES (COMPETENCIAS QA)
+========================= */
+.contenedor-skills .skill {
+  margin-bottom: 20px;
+}
+
+.contenedor-skills .skill p {
+  color: var(--muted);
+}
+
+/* =========================
+   QA ARTIFACTS
+========================= */
+#qa-artifacts ul {
+  margin-left: 20px;
+}
+
+#qa-artifacts li {
+  margin-bottom: 10px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background-color: var(--bg-footer);
+  color: var(--text-main);
+  text-align: center;
+  padding: 40px 20px;
+}
+
+footer a {
+  color: var(--primary);
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+
+footer a {
+  color: var(--secondary);
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+section {
+  background-color: var(--bg-section);
+  color: var(--text-main);
+}
+
+
+/* =========================
+   DARK MODE
+========================= */
+body.dark {
+  background-color: #121225;
+  color: #eaeaf0;
+}
+
+body.dark .experiencia,
+body.dark .servicio,
+body.dark #skills,
+body.dark #qa-artifacts {
+  background-color: #1e1e3f;
+}
+
+body.dark footer {
+  background-color: #000;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media screen and (max-width: 768px) {
+  nav {
+    display: none;
+  }
+
+  nav.responsive {
+    display: block;
+    background-color: #000;
+    padding: 10px;
+  }
+
+  #servicios .fila {
+    flex-direction: column;
+  }
+
+  .presentacion h2 {
+    font-size: 32px;
+  }
+}
+
+/* =========================
+   NAV – BOTONES DE CONTACTO
+========================= */
+
+/* Convertimos Email y LinkedIn en botones */
+nav ul li a[href^="mailto"],
+nav ul li a[href*="linkedin"] {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  background-color: var(--primary);
+  color: #fff !important;
+
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover consistente con los otros botones */
+nav ul li a[href^="mailto"]:hover,
+nav ul li a[href*="linkedin"]:hover {
+  background-color: var(--secondary);
+  transform: translateY(-1px);
+}
+
+/* Íconos alineados */
+nav ul li a i {
+  font-size: 14px;
+}
+
+/* =========================
+   NAV – ALIGN RIGHT
+========================= */
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
+/* Empuja los botones de contacto a la derecha */
+nav ul li.contact {
+  margin-left: auto;
+}
+
+@media screen and (max-width: 768px) {
+  nav ul li a .label {
+    display: none;
+  }
+
+  nav ul li a {
+    padding: 8px 10px;
+  }
+}
+
+/* =========================
+   NAV BUTTONS (DARK / LANG)
+========================= */
+.nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+
+  padding: 8px 14px;
+  border-radius: 20px;
+
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.nav-btn:hover {
+  background-color: var(--secondary);
+  transform: translateY(-1px);
+}
+
+/* =========================
+   NAV LINKS – BASE
+========================= */
+nav ul li a {
+  color: var(--text-main);
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: var(--primary);
+}
+
+/* =========================
+   NAV LINKS – DARK MODE
+========================= */
+body.dark nav ul li a {
+  color: #e6e8ff;
+}
+
+body.dark nav ul li a:hover {
+  color: var(--primary);
+}
+
+header {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+body.dark header {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
