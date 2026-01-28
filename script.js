@@ -84,4 +84,11 @@ document.addEventListener("DOMContentLoaded", () => {
     console.warn("Botón toggle-lang no encontrado");
     }
 }); 
+
+window.responsiveMenu = function () {
+  const nav = document.getElementById("nav");
+  if (nav) {
+    nav.classList.toggle("responsive");
+  }
+};
     
