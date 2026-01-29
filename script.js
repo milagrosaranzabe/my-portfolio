@@ -264,3 +264,57 @@ exp_4_date: "Sep 2022 – Jun 2023",
 
 edu_1_date: "2022 – 2023",
 
+  services_title: "Qué hago como QA",
+
+service_1_title: "Validación Funcional del Producto",
+service_1_desc:
+  "Validación de funcionalidades, criterios de aceptación y flujos críticos en aplicaciones web y mobile.",
+
+service_2_title: "Pruebas de Regresión y Smoke",
+service_2_desc:
+  "Ejecución de pruebas de regresión y smoke tests para asegurar estabilidad antes y después de cada release.",
+
+service_3_title: "Validación de APIs y Datos",
+service_3_desc:
+  "Validación funcional de APIs y verificación de datos en bases de datos relacionales.",
+
+service_4_title: "Análisis de Riesgos y Calidad",
+service_4_desc:
+  "Identificación temprana de riesgos funcionales para prevenir errores críticos en producción.",
+services_title: "What I do as a QA",
+
+service_1_title: "Functional Product Validation",
+service_1_desc:
+  "Validation of functionalities, acceptance criteria and critical flows in web and mobile applications.",
+
+service_2_title: "Regression & Smoke Testing",
+service_2_desc:
+  "Execution of regression and smoke tests to ensure stability before and after each release.",
+
+service_3_title: "API & Data Validation",
+service_3_desc:
+  "Functional validation of APIs and data verification in relational databases.",
+
+service_4_title: "Risk Analysis & Quality",
+service_4_desc:
+  "Early identification of functional risks to prevent critical production issues.",
+
+document.addEventListener("DOMContentLoaded", () => {
+  const menuBtn = document.getElementById("icono-nav");
+  const nav = document.getElementById("nav");
+
+  if (menuBtn && nav) {
+    menuBtn.addEventListener("click", () => {
+      nav.classList.toggle("responsive");
+    });
+  }
+});
+
+document.querySelectorAll("#nav a, #toggle-theme, #toggle-lang")
+  .forEach(el => {
+    el.addEventListener("click", () => {
+      document.getElementById("nav").classList.remove("responsive");
+    });
+  });
+
+
