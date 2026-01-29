@@ -112,6 +112,33 @@ nav ul li a:hover {
   color: var(--primary);
 }
 
+@media screen and (max-width: 768px) {
+  #icono-nav {
+    display: block;
+  }
+
+  nav {
+    display: none;
+  }
+
+  nav.responsive {
+    display: block;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-header);
+    padding: 20px 0;
+  }
+
+  nav.responsive ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+}
+
+
 /* =========================
    SECCIÓN INICIO
 ========================= */
@@ -180,67 +207,6 @@ footer a {
   color: var(--primary);
   text-decoration: none;
   margin: 0 10px;
-}
-
-/* =========================
-   RESPONSIVE MENU – ÚNICO
-========================= */
-@media screen and (max-width: 768px) {
-
-  #icono-nav {
-    display: block;
-  }
-
-  nav {
-    display: none;
-    width: 100%;
-  }
-
-  nav.responsive {
-    display: block;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    background-color: var(--bg-header);
-    padding: 15px 0;
-  }
-
-  nav.responsive ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 14px;
-  }
-
-  nav.responsive ul li {
-    width: 100%;
-    text-align: center;
-  }
-
-  nav.responsive ul li a,
-  nav.responsive ul li button {
-    width: 100%;
-    padding: 12px 0;
-  }
-}
-#icono-nav {
-  display: none;
-  font-size: 26px;
-  cursor: pointer;
-  color: var(--primary);
-  margin-left: 12px;   /* separa del logo */
-  margin-right: 12px;   /* lo despega del borde */
-}
-
-@media screen and (max-width: 768px) {
-
-  nav.responsive ul li button {
-    width: auto;
-    min-width: 160px;
-    padding: 8px 16px;
-    font-size: 14px;
-    border-radius: 20px;
-    margin: 6px auto;
-  }
 }
 
 /* =========================
