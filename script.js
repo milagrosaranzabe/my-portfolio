@@ -249,3 +249,18 @@ document.addEventListener("DOMContentLoaded", () => {
     link.addEventListener("click", closeMenuOnClick);
   });
 });
+
+exp_1_date: "Jul 2024 – Actualidad",
+exp_2_date: "Nov 2023 – Jul 2024",
+exp_3_date: "Jun 2023 – Nov 2023",
+exp_4_date: "Sep 2022 – Jun 2023",
+
+edu_1_date: "2022 – 2023",
+
+exp_1_date: "Jul 2024 – Present",
+exp_2_date: "Nov 2023 – Jul 2024",
+exp_3_date: "Jun 2023 – Nov 2023",
+exp_4_date: "Sep 2022 – Jun 2023",
+
+edu_1_date: "2022 – 2023",
+
