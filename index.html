@@ -90,83 +90,38 @@
   </div>
 </section>
 
-<!-- ================= EXPERIENCIA ================= -->
-<section id="experiencia">
-  <h3 data-i18n="experience_title">Experiencia Profesional</h3>
+<div class="card">
+  <h4>QA Lead / QA Analyst – Temperies</h4>
+  <span data-i18n="exp_1_date">Jul 2024 – Actualidad</span>
+  <p data-i18n="exp_1_desc">
+    Liderazgo del área de QA, definición de estrategia de testing y validaciones pre-release.
+  </p>
+</div>
 
-  <div class="cards-grid">
+<div class="card">
+  <h4>QA Analyst – Temperies</h4>
+  <span data-i18n="exp_2_date">Nov 2023 – Jul 2024</span>
+  <p data-i18n="exp_2_desc">
+    Testing funcional y exploratorio, regresión manual y validación de APIs.
+  </p>
+</div>
 
-    <div class="card">
-      <h4>QA Lead / QA Analyst – Temperies</h4>
-      <span>Jul 2024 – Actualidad</span>
-      <p data-i18n="exp_1_desc">
-        Liderazgo del área de QA, definición de estrategia de testing y validaciones pre-release.
-      </p>
-    </div>
+<div class="card">
+  <h4>QA Analyst – ID For Ideas</h4>
+  <span data-i18n="exp_3_date">Jun 2023 – Nov 2023</span>
+  <p data-i18n="exp_3_desc">
+    Proyectos de e-commerce, diseño de casos de prueba y testing funcional.
+  </p>
+</div>
 
-    <div class="card">
-      <h4>QA Analyst – Temperies</h4>
-      <span>Nov 2023 – Jul 2024</span>
-      <p data-i18n="exp_2_desc">
-        Testing funcional y exploratorio, regresión manual y validación de APIs.
-      </p>
-    </div>
+<div class="card">
+  <h4>QA Analyst – Freelance</h4>
+  <span data-i18n="exp_4_date">Sep 2022 – Jun 2023</span>
+  <p data-i18n="exp_4_desc">
+    Testing manual en proyectos de e-commerce y publicidad digital.
+  </p>
+</div>
 
-    <div class="card">
-      <h4>QA Analyst – ID For Ideas</h4>
-      <span>Jun 2023 – Nov 2023</span>
-      <p data-i18n="exp_3_desc">
-        Proyectos de e-commerce, diseño de casos de prueba y testing funcional.
-      </p>
-    </div>
-
-    <div class="card">
-      <h4>QA Analyst – Freelance</h4>
-      <span>Sep 2022 – Jun 2023</span>
-      <p data-i18n="exp_4_desc">
-        Testing manual en proyectos de e-commerce y publicidad digital.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<!-- ================= SERVICIOS ================= -->
-<section id="servicios">
-  <h3 data-i18n="services_title">Qué hago como QA</h3>
-
-  <div class="cards-grid">
-
-    <div class="card">
-      <h4 data-i18n="service_1_title">Validación Funcional</h4>
-      <p data-i18n="service_1_text">
-        Validación de funcionalidades, criterios de aceptación y flujos críticos.
-      </p>
-    </div>
-
-    <div class="card">
-      <h4 data-i18n="service_2_title">Regresión y Smoke</h4>
-      <p data-i18n="service_2_text">
-        Ejecución de pruebas de regresión para asegurar estabilidad.
-      </p>
-    </div>
-
-    <div class="card">
-      <h4 data-i18n="service_3_title">APIs y Datos</h4>
-      <p data-i18n="service_3_text">
-        Validación funcional de APIs y bases de datos relacionales.
-      </p>
-    </div>
-
-    <div class="card">
-      <h4 data-i18n="service_4_title">Análisis de Riesgos</h4>
-      <p data-i18n="service_4_text">
-        Identificación temprana de riesgos funcionales.
-      </p>
-    </div>
-
-  </div>
-</section>
 
 <!-- ================= HABILIDADES ================= -->
 <section id="habilidades">
@@ -202,35 +157,159 @@
   </div>
 </section>
 
-<!-- ================= QA ARTIFACTS ================= -->
+  <!-- ================= QA ARTIFACTS ================= -->
 <section id="qa-artifacts">
+  <p class="intro" data-i18n="qa_intro">
+    A continuación se muestran ejemplos de casos de prueba diseñados
+    para validar funcionalidades reales de este portfolio.
+  </p>
+
   <h3 data-i18n="qa_title">Casos de Prueba y Controles de Calidad</h3>
 
   <div class="cards-grid">
 
+    <!-- ================= DARK MODE ================= -->
     <div class="card">
-      <h4 data-i18n="qa_dark_title">Modo Oscuro</h4>
-      <p data-i18n="qa_dark_desc">
-        Validación del cambio de tema y persistencia.
+      <h4 data-i18n="qa_dm_title">Funcionalidad: Modo Oscuro</h4>
+
+      <h5 data-i18n="qa_objective">Objetivo</h5>
+      <p data-i18n="qa_dm_objective">
+        Validar el comportamiento del cambio de tema,
+        la consistencia visual y la persistencia de la configuración
+        entre sesiones.
+      </p>
+
+      <h5 data-i18n="qa_testcases">Casos de Prueba</h5>
+
+      <p>
+        <strong data-i18n="qa_dm_tc1_title">TC-DM-01 – Activar Modo Oscuro</strong><br>
+        <span data-i18n="qa_dm_tc1_steps">
+          Hacer clic en el botón de modo oscuro.
+        </span><br>
+        <em data-i18n="qa_expected">Resultado esperado:</em>
+        <span data-i18n="qa_dm_tc1_expected">
+          Se aplica el tema oscuro y los estilos se actualizan correctamente.
+        </span>
+      </p>
+
+      <p>
+        <strong data-i18n="qa_dm_tc2_title">TC-DM-02 – Desactivar Modo Oscuro</strong><br>
+        <span data-i18n="qa_dm_tc2_steps">
+          Hacer clic nuevamente en el botón.
+        </span><br>
+        <em data-i18n="qa_expected">Resultado esperado:</em>
+        <span data-i18n="qa_dm_tc2_expected">
+          Se restaura el tema claro.
+        </span>
+      </p>
+
+      <p>
+        <strong data-i18n="qa_dm_tc3_title">TC-DM-03 – Persistencia del Tema</strong><br>
+        <span data-i18n="qa_dm_tc3_steps">
+          Recargar la página luego de activar el modo oscuro.
+        </span><br>
+        <em data-i18n="qa_expected">Resultado esperado:</em>
+        <span data-i18n="qa_dm_tc3_expected">
+          El modo oscuro permanece activo utilizando localStorage.
+        </span>
       </p>
     </div>
 
+    <!-- ================= LANGUAGE SWITCH ================= -->
     <div class="card">
-      <h4 data-i18n="qa_lang_title">Cambio de Idioma</h4>
-      <p data-i18n="qa_lang_desc">
-        Validación de traducción completa del contenido.
+      <h4 data-i18n="qa_lang_title">Funcionalidad: Cambio de Idioma (ES / EN)</h4>
+
+      <h5 data-i18n="qa_objective">Objetivo</h5>
+      <p data-i18n="qa_lang_objective">
+        Validar la correcta traducción de los textos,
+        la consistencia del contenido y la cobertura total
+        de los elementos visibles.
+      </p>
+
+      <h5 data-i18n="qa_testcases">Casos de Prueba</h5>
+
+      <p>
+        <strong data-i18n="qa_lang_tc1_title">TC-LANG-01 – Cambiar a Inglés</strong><br>
+        <span data-i18n="qa_lang_tc1_steps">
+          Hacer clic en el botón de cambio de idioma.
+        </span><br>
+        <em data-i18n="qa_expected">Resultado esperado:</em>
+        <span data-i18n="qa_lang_tc1_expected">
+          Todos los textos se muestran en inglés.
+        </span>
+      </p>
+
+      <p>
+        <strong data-i18n="qa_lang_tc2_title">TC-LANG-02 – Volver a Español</strong><br>
+        <span data-i18n="qa_lang_tc2_steps">
+          Hacer clic nuevamente en el botón.
+        </span><br>
+        <em data-i18n="qa_expected">Resultado esperado:</em>
+        <span data-i18n="qa_lang_tc2_expected">
+          Todos los textos vuelven a mostrarse en español.
+        </span>
+      </p>
+
+      <p>
+        <strong data-i18n="qa_lang_tc3_title">TC-LANG-03 – Cobertura de Traducción</strong><br>
+        <span data-i18n="qa_lang_tc3_steps">
+          Revisar la página luego del cambio de idioma.
+        </span><br>
+        <em data-i18n="qa_expected">Resultado esperado:</em>
+        <span data-i18n="qa_lang_tc3_expected">
+          No existen textos mezclados ni traducciones faltantes.
+        </span>
       </p>
     </div>
 
+    <!-- ================= ACCESSIBILITY ================= -->
     <div class="card">
-      <h4 data-i18n="qa_a11y_title">Accesibilidad</h4>
-      <p data-i18n="qa_a11y_desc">
-        Controles de accesibilidad y navegación por teclado.
+      <h4 data-i18n="qa_a11y_title">Controles de Accesibilidad (a11y)</h4>
+
+      <p data-i18n="qa_a11y_desc_1">
+        Estructura HTML semántica (header, nav, main, section, footer).
+      </p>
+      <p data-i18n="qa_a11y_desc_2">
+        Validación del contraste de colores en modo claro y oscuro.
+      </p>
+      <p data-i18n="qa_a11y_desc_3">
+        Navegación mediante teclado usando Tab y Shift + Tab.
+      </p>
+      <p data-i18n="qa_a11y_desc_4">
+        Indicador de foco visible en elementos interactivos.
+      </p>
+      <p data-i18n="qa_a11y_desc_5">
+        Uso de etiquetas ARIA en botones con solo íconos.
+      </p>
+      <p data-i18n="qa_a11y_desc_6">
+        Idioma del documento definido y actualizado dinámicamente.
       </p>
     </div>
 
   </div>
 </section>
+
+
+
+  <!-- ================= EDUCACION ================= -->
+  <section id="educacion">
+    <h3 data-i18n="education_title">Formación</h3>
+
+  <div class="cards-grid">
+
+    <div class="card">
+      <h4 data-i18n="edu_1_title">Testing QA – Educación IT</h4>
+      <span data-i18n="edu_1_date">2022 – 2023</span>
+      <p data-i18n="edu_1_desc">
+        Formación orientada a Testing Manual, Automatizado, Diseño de Casos de Prueba,
+        Testing Funcional y No Funcional, APIs (Postman y SOAP UI), Bases de datos SQL, Análisis Funcional, UX/UI, HTML, CSS, introducción a Java.
+      </p>
+    </div>
+
+  </div>
+</section>
+     
+      
 
 <!-- ================= FOOTER ================= -->
 <footer>
