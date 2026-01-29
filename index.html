@@ -1,470 +1,219 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
-  <title>Milagros - QA Analyst</title>
-  <link rel="icon" href="./img/favicon.ico">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Milagros – QA Analyst</title>
+
+  <link rel="icon" href="./img/favicon.ico" />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-  <!-- ================= INICIO ================= -->
-  <section id="inicio">
-    <div class="contenido">
-
-      
+<!-- ================= HEADER ================= -->
 <header>
   <div class="contenido-header">
-    <!-- LOGO / NOMBRE -->
     <h1>Milagros</h1>
 
-    <!-- BOTÓN HAMBURGUESA (MOBILE) -->
+    <!-- Hamburguesa -->
     <i
       class="fa-solid fa-bars"
       id="icono-nav"
       onclick="responsiveMenu()"
       aria-label="Abrir menú"
-      role="button"
-      tabindex="0"
     ></i>
 
-    <!-- MENÚ -->
     <nav id="nav">
       <ul>
-        <li><a href="#experiencia">Experiencia</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#experiencia" data-i18n="nav_experience">Experiencia</a></li>
+        <li><a href="#servicios" data-i18n="nav_services">Servicios</a></li>
+        <li><a href="#habilidades" data-i18n="nav_skills">Habilidades</a></li>
 
         <li>
           <a href="mailto:milagrosaranzabe@gmail.com">
-            <i class="fa-solid fa-envelope"></i> Email
+            <i class="fa-solid fa-envelope"></i>
+            <span data-i18n="nav_email">Email</span>
           </a>
         </li>
 
         <li>
-          <a
-            href="https://www.linkedin.com/in/milagros-aranzabe-alonso-qa/"
-            target="_blank"
-            rel="noopener"
-          >
-            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          <a href="https://www.linkedin.com/in/milagros-aranzabe-alonso-qa/" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+            <span data-i18n="nav_linkedin">LinkedIn</span>
           </a>
         </li>
 
         <li>
-          <button id="toggle-theme" class="nav-btn" aria-label="Modo oscuro">
-            🌙
-          </button>
+          <button id="toggle-theme" class="nav-btn" aria-label="Tema">☀️</button>
         </li>
 
         <li>
-          <button id="toggle-lang" class="nav-btn" aria-label="Cambiar idioma">
-            ES / EN
-          </button>
+          <button id="toggle-lang" class="nav-btn" aria-label="Idioma">ES</button>
         </li>
       </ul>
     </nav>
   </div>
 </header>
 
-      <div class="presentacion">
-        <p class="bienvenida" data-i18n="welcome">Bienvenida</p>
+<!-- ================= INICIO ================= -->
+<section id="inicio">
+  <p class="bienvenida" data-i18n="welcome">Bienvenidos</p>
 
-        <h2>
-          Milagros A. Aranzabe Alonso <br>
-          <span data-i18n="role">QA Analyst | Web y Mobile</span>
-        </h2>
-        <p class="descripcion" data-i18n="hero_text">
-          Analista QA con más de 3 años de experiencia en testing manual de aplicaciones web y mobile, trabajando en
-          productos digitales y equipos ágiles.
-          Mi enfoque está en asegurar la calidad funcional, la estabilidad de los releases y minimizar riesgos en
-          producción.
-        </p>
-      </div>
+  <h2>
+    Milagros A. Aranzabe Alonso <br />
+    <span data-i18n="role">QA Analyst | Web y Mobile</span>
+  </h2>
 
-    <div class="cv-actions">
-  <a
-    href="Analista QA - Milagros Aranzabe - CV.pdf"
-    class="btn-cv"
-    data-lang="es"
-    download
-  >
-    Descargar CV
-  </a>
+  <p class="descripcion" data-i18n="hero_text">
+    Analista QA con más de 3 años de experiencia en testing manual…
+  </p>
 
-  <a
-    href="QA Analyst - Milagros Aranzabe - CV.pdf"
-    class="btn-cv"
-    data-lang="en"
-    download
-  >
-    Download CV
-  </a>
-</div>
+  <!-- CV -->
+  <div class="cv-actions">
+    <a
+      id="cv-download"
+      class="btn-cv"
+      href="Analista QA - Milagros Aranzabe - CV.pdf"
+      download
+      data-i18n="cv_download"
+    >
+      Descargar CV
+    </a>
+  </div>
+</section>
 
+<!-- ================= EXPERIENCIA ================= -->
+<section id="experiencia">
+  <h3 data-i18n="experience_title">Experiencia Profesional</h3>
 
-
-  <!-- ================= EXPERIENCIA ================= -->
-  <section id="experiencia">
-    <h3 data-i18n="experience_title">Experiencia Profesional</h3>
-
-
-    <!-- TEMPERIES – LEAD -->
-    <div class="experiencia">
-      <h4>QA Lead / QA Analyst – Temperies</h4>
-      <span>Jul 2024 – Actualidad</span>
-
-      <h5>
-        Productos web y mobile (fitness, CMS, CRM).
-        Definición de estrategias de testing alineadas a releases y riesgos.
-        Planificación de ciclos de QA, validaciones pre-UAT y pre-producción.
-        Coordinación con producto y desarrollo.
-      </h5>
-
-      <ul>
-        <li>
-          Diseño de estrategia de testing para flujos críticos
-          (usuarios, contenidos, funcionalidades core).
-        </li>
-        <li>
-          Ejecución de smoke tests y regresión para asegurar
-          estabilidad post-release.
-        </li>
-        <li>
-          Validación funcional de APIs y datos en bases PostgreSQL.
-        </li>
-      </ul>
-    </div>
-
-    <!-- TEMPERIES – ANALYST -->
-    <div class="experiencia">
-      <h4>QA Analyst – Temperies</h4>
-      <span>Nov 2023 – Jul 2024</span>
-
-      <h5>
-        Testing funcional y exploratorio de aplicaciones web y mobile.
-        Validación de datos y resolución de bugs críticos previos a releases.
-      </h5>
-
-      <ul>
-        <li>
-          Testing de flujos principales y edge cases.
-        </li>
-        <li>
-          Ejecución de regresión manual.
-        </li>
-        <li>
-          Validación de APIs mediante Swagger y Postman.
-        </li>
-      </ul>
-    </div>
-
-    <!-- ID FOR IDEAS -->
-    <div class="experiencia">
-      <h4>QA Analyst – ID For Ideas</h4>
-      <span>Jun 2023 – Nov 2023</span>
-
-      <h5>
-        Proyectos de e-commerce y productos digitales.
-        Gestión del área de QA y diseño de casos de prueba.
-      </h5>
-
-      <ul>
-        <li>
-          Testing funcional de flujos de compra, usuarios y catálogo.
-        </li>
-        <li>
-          Diseño y ejecución de casos de prueba.
-        </li>
-        <li>
-          Testing de APIs y bases de datos relacionales.
-        </li>
-      </ul>
-    </div>
-
-    <!-- FREELANCE -->
-    <div class="experiencia">
-      <h4>QA Analyst – Freelance</h4>
-      <span>Sep 2022 – Jun 2023</span>
-
-      <h5>
-        Testing manual y exploratorio en proyectos de
-        e-commerce y publicidad digital.
-      </h5>
-
-      <ul>
-        <li>
-          Validación funcional de features y flujos principales.
-        </li>
-        <li>
-          Diseño de casos de prueba y reporte de bugs.
-        </li>
-      </ul>
-    </div>
-
-  </section>
-
-
-  <!-- SECCION SERVICIOS -->
-  <section id="servicios">
-    <h3 class="titulo-seccion">Qué hago como QA</h3>
-
-    <div class="fila">
-
-      <div class="servicio">
-        <span class="icono"><i class="fa-solid fa-list-check"></i></span>
-        <h4>Validación Funcional del Producto</h4>
-        <p>
-          Validación de funcionalidades, criterios de aceptación
-          y flujos críticos en aplicaciones web y mobile.
-        </p>
-      </div>
-
-      <div class="servicio">
-        <span class="icono"><i class="fa-solid fa-repeat"></i></span>
-        <h4>Pruebas de Regresión y Smoke</h4>
-        <p>
-          Ejecución de pruebas de regresión y smoke tests
-          para asegurar estabilidad antes y después de cada release.
-        </p>
-      </div>
-
-    </div>
-
-    <div class="fila">
-
-      <div class="servicio">
-        <span class="icono"><i class="fa-solid fa-database"></i></span>
-        <h4>Validación de APIs y Datos</h4>
-        <p>
-          Validación funcional de APIs y verificación de datos
-          en bases de datos relacionales.
-        </p>
-      </div>
-
-      <div class="servicio">
-        <span class="icono"><i class="fa-solid fa-triangle-exclamation"></i></span>
-        <h4>Análisis de Riesgos y Calidad</h4>
-        <p>
-          Identificación temprana de riesgos funcionales
-          para prevenir errores críticos en producción.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-
-
-  <!-- SECCION HABILIDADES -->
-  <section id="habilidades">
-    <div id="skills">
-      <h3>Competencias QA</h3>
-
-      <div class="contenedor-skills">
-
-        <div class="skill">
-          <div class="info">
-            <strong>
-              <p>Testing Manual & Exploratorio</p>
-            </strong>
-          </div>
-          <p>
-            Enfoque detallado en la validación de comportamientos esperados,
-            edge cases y escenarios no evidentes.
-          </p>
-        </div>
-
-        <div class="skill">
-          <div class="info">
-            <strong>
-              <p>Diseño de Casos de Prueba</p>
-            </strong>
-          </div>
-          <p>
-            Creación de casos de prueba claros, reutilizables y alineados
-            a criterios de aceptación y riesgos del producto.
-          </p>
-        </div>
-
-        <div class="skill">
-          <div class="info">
-            <strong>
-              <p>Análisis de Riesgos</p>
-            </strong>
-          </div>
-          <p>
-            Evaluación de impacto y probabilidad para priorizar pruebas
-            y enfocar el esfuerzo de QA donde más valor aporta.
-          </p>
-        </div>
-
-        <div class="skill">
-          <div class="info">
-            <strong>
-              <p>Comunicación y Colaboración</p>
-            </strong>
-          </div>
-          <p>
-            Trabajo colaborativo con equipos de desarrollo y producto para detectar problemas de forma temprana.
-          </p>
-        </div>
-
-        <div class="skill">
-          <div class="info">
-            <strong>
-              <p>Agile QA</p>
-            </strong>
-          </div>
-          <p>
-            Experiencia trabajando en equipos ágiles,
-            adaptando el proceso de QA a ciclos iterativos y cambios constantes.
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ================= QA ARTIFACTS ================= -->
-  <section id="qa-artifacts">
-    <i><p class="intro">
-      A continuación se muestran ejemplos de casos de prueba diseñados
-      para validar funcionalidades reales de este portfolio.
-    </p></i>
-    <br>
-    <h3>Test Cases & Quality Checks</h3>
-
-  <!-- ================= QA ARTIFACTS ================= -->
-<section id="qa-artifacts">
-  <i>
-    <p class="intro">
-      A continuación se muestran ejemplos de casos de prueba diseñados
-      para validar funcionalidades reales de este portfolio.
+  <div class="experiencia">
+    <h4>QA Lead / QA Analyst – Temperies</h4>
+    <span>Jul 2024 – Actualidad</span>
+    <p>
+      Productos web y mobile (fitness, CMS, CRM). Estrategia de testing,
+      validaciones pre-release y coordinación con producto y desarrollo.
     </p>
-  </i>
-  <br>
+  </div>
 
-  <h3>Casos de Prueba y Controles de Calidad</h3>
+  <div class="experiencia">
+    <h4>QA Analyst – Temperies</h4>
+    <span>Nov 2023 – Jul 2024</span>
+    <p>Testing funcional, regresión manual y validación de APIs.</p>
+  </div>
+</section>
 
-  <!-- ================= DARK MODE ================= -->
+<!-- ================= SERVICIOS ================= -->
+<section id="servicios">
+  <h3 data-i18n="services_title">Qué hago como QA</h3>
+
+  <div class="servicio">
+    <h4 data-i18n="service_1_title">Validación Funcional</h4>
+    <p data-i18n="service_1_text">
+      Validación de funcionalidades, criterios de aceptación y flujos críticos.
+    </p>
+  </div>
+
+  <div class="servicio">
+    <h4 data-i18n="service_2_title">Regresión y Smoke</h4>
+    <p data-i18n="service_2_text">
+      Ejecución de pruebas de regresión para asegurar estabilidad.
+    </p>
+  </div>
+
+  <div class="servicio">
+    <h4 data-i18n="service_3_title">APIs y Datos</h4>
+    <p data-i18n="service_3_text">
+      Validación funcional de APIs y bases de datos relacionales.
+    </p>
+  </div>
+
+  <div class="servicio">
+    <h4 data-i18n="service_4_title">Análisis de Riesgos</h4>
+    <p data-i18n="service_4_text">
+      Identificación temprana de riesgos funcionales.
+    </p>
+  </div>
+</section>
+
+<!-- ================= HABILIDADES ================= -->
+<section id="habilidades">
+  <h3 data-i18n="skills_title">Competencias QA</h3>
+
+  <div class="skill">
+    <p data-i18n="skill_1_title">Testing Manual y Exploratorio</p>
+    <p data-i18n="skill_1_text">Validación de escenarios y edge cases.</p>
+  </div>
+
+  <div class="skill">
+    <p data-i18n="skill_2_title">Diseño de Casos de Prueba</p>
+    <p data-i18n="skill_2_text">Casos claros, reutilizables y trazables.</p>
+  </div>
+
+  <div class="skill">
+    <p data-i18n="skill_3_title">Análisis de Riesgos</p>
+    <p data-i18n="skill_3_text">Priorización basada en impacto.</p>
+  </div>
+
+  <div class="skill">
+    <p data-i18n="skill_4_title">Comunicación</p>
+    <p data-i18n="skill_4_text">Trabajo colaborativo con producto y devs.</p>
+  </div>
+
+  <div class="skill">
+    <p data-i18n="skill_5_title">Agile QA</p>
+    <p data-i18n="skill_5_text">QA integrada a equipos ágiles.</p>
+  </div>
+</section>
+
+<!-- ================= QA ARTIFACTS ================= -->
+<section id="qa-artifacts">
+  <p class="intro" data-i18n="qa_intro">
+    Ejemplos de casos de prueba aplicados a funcionalidades reales del portfolio.
+  </p>
+
+  <h3 data-i18n="qa_title">Casos de Prueba y Controles de Calidad</h3>
+
   <div class="experiencia">
     <h4>Funcionalidad: Modo Oscuro</h4>
-
-    <h5>Objetivo</h5>
     <p>
-      Validar el correcto funcionamiento del cambio de tema,
-      la consistencia visual y la persistencia de la configuración
-      entre sesiones.
+      Validar el cambio de tema, consistencia visual y persistencia.
     </p>
-
-    <h5>Casos de Prueba</h5>
-    <ul>
-      <li>
-        <strong>TC-DM-01 – Activar Modo Oscuro</strong><br>
-        Hacer clic en el botón de modo oscuro.<br>
-        <em>Resultado esperado:</em>
-        Se aplica el tema oscuro y los estilos se actualizan correctamente.
-      </li>
-
-      <li>
-        <strong>TC-DM-02 – Desactivar Modo Oscuro</strong><br>
-        Hacer clic nuevamente en el botón.<br>
-        <em>Resultado esperado:</em>
-        Se restaura el tema claro.
-      </li>
-
-      <li>
-        <strong>TC-DM-03 – Persistencia del Tema</strong><br>
-        Recargar la página luego de activar el modo oscuro.<br>
-        <em>Resultado esperado:</em>
-        El modo oscuro permanece activo utilizando localStorage.
-      </li>
-    </ul>
   </div>
 
-  <!-- ================= LANGUAGE SWITCH ================= -->
   <div class="experiencia">
-    <h4>Funcionalidad: Cambio de Idioma (ES / EN)</h4>
-
-    <h5>Objetivo</h5>
+    <h4>Funcionalidad: Cambio de Idioma</h4>
     <p>
-      Validar la correcta traducción de los textos,
-      la consistencia del contenido y la cobertura total
-      de los elementos visibles.
+      Validar traducción completa y consistencia de textos.
     </p>
-
-    <h5>Casos de Prueba</h5>
-    <ul>
-      <li>
-        <strong>TC-LANG-01 – Cambiar a Inglés</strong><br>
-        Hacer clic en el botón de cambio de idioma.<br>
-        <em>Resultado esperado:</em>
-        Todos los textos se muestran en inglés.
-      </li>
-
-      <li>
-        <strong>TC-LANG-02 – Volver a Español</strong><br>
-        Hacer clic nuevamente en el botón.<br>
-        <em>Resultado esperado:</em>
-        Todos los textos vuelven a mostrarse en español.
-      </li>
-
-      <li>
-        <strong>TC-LANG-03 – Cobertura de Traducción</strong><br>
-        Revisar la página luego del cambio de idioma.<br>
-        <em>Resultado esperado:</em>
-        No existen textos mezclados ni traducciones faltantes.
-      </li>
-    </ul>
   </div>
 
-  <!-- ================= ACCESSIBILITY ================= -->
   <div class="experiencia">
-    <h4>Controles de Accesibilidad (a11y)</h4>
-
+    <h4>Accesibilidad (a11y)</h4>
     <ul>
-      <li>Estructura HTML semántica (header, nav, main, section, footer).</li>
-      <li>Validación del contraste de colores en modo claro y oscuro.</li>
-      <li>Navegación mediante teclado usando Tab y Shift + Tab.</li>
-      <li>Indicador de foco visible en elementos interactivos.</li>
-      <li>Uso de etiquetas ARIA en botones con solo íconos.</li>
-      <li>Idioma del documento definido y actualizado dinámicamente.</li>
+      <li>Estructura HTML semántica.</li>
+      <li>Contraste de colores.</li>
+      <li>Navegación por teclado.</li>
     </ul>
   </div>
 </section>
 
-  <!-- ================= EDUCACION ================= -->
-  <section id="educacion">
-    <h3>Formación</h3>
+<!-- ================= FOOTER ================= -->
+<footer>
+  &copy; 2025 Milagros A. Aranzabe Alonso |
+  <a href="https://github.com/milagrosaranzabe" target="_blank">
+    <span data-i18n="footer_github">GitHub</span>
+  </a>
+</footer>
 
-    <div class="educacion">
-      <h4>Testing QA – Educación IT</h4>
-      <span>2022 – 2023</span>
-
-      <h5>
-        Formación orientada a Testing Manual, Automatizado, Diseño de Casos de Prueba,
-        Testing Funcional y No Funcional, APIs (Postman y SOAP UI) y bases de datos SQL. Análisis Funcional, UX-UI, HTML
-        y CSS
-      </h5>
-    </div>
-  </section>
-
-
-  <!-- ================= FOOTER ================= -->
-  <footer>
-    &copy; 2025 Milagros A. Aranzabe Alonso |
-    <strong><span><a href="https://github.com/milagrosaranzabe" target="_blank">GitHub</a></strong></span>
-  </footer>
+<script src="script.js"></script>
 </body>
-
 </html>
