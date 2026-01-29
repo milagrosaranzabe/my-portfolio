@@ -344,84 +344,104 @@
     <br>
     <h3>Test Cases & Quality Checks</h3>
 
-    <!-- ================= DARK MODE ================= -->
-    <div class="experiencia">
-      <h4>Feature: Dark Mode</h4>
-      <h5>Objective</h5>
-      <p>
-        Validate theme switching behavior, visual consistency
-        and persistence across sessions.
-      </p>
+  <!-- ================= QA ARTIFACTS ================= -->
+<section id="qa-artifacts">
+  <i>
+    <p class="intro">
+      A continuación se muestran ejemplos de casos de prueba diseñados
+      para validar funcionalidades reales de este portfolio.
+    </p>
+  </i>
+  <br>
 
-      <h5>Test Cases</h5>
-      <ul>
-        <li>
-          <strong>TC-DM-01 – Enable Dark Mode</strong><br>
-          Click on the dark mode toggle.<br>
-          <em>Expected:</em> Dark theme is applied and styles update correctly.
-        </li>
+  <h3>Casos de Prueba y Controles de Calidad</h3>
 
-        <li>
-          <strong>TC-DM-02 – Disable Dark Mode</strong><br>
-          Click on the toggle again.<br>
-          <em>Expected:</em> Light theme is restored.
-        </li>
+  <!-- ================= DARK MODE ================= -->
+  <div class="experiencia">
+    <h4>Funcionalidad: Modo Oscuro</h4>
 
-        <li>
-          <strong>TC-DM-03 – Theme Persistence</strong><br>
-          Refresh the page after enabling dark mode.<br>
-          <em>Expected:</em> Dark mode remains active using localStorage.
-        </li>
-      </ul>
-    </div>
+    <h5>Objetivo</h5>
+    <p>
+      Validar el correcto funcionamiento del cambio de tema,
+      la consistencia visual y la persistencia de la configuración
+      entre sesiones.
+    </p>
 
-    <!-- ================= LANGUAGE SWITCH ================= -->
-    <div class="experiencia">
-      <h4>Feature: Language Switch (ES / EN)</h4>
-      <h5>Objective</h5>
-      <p>
-        Validate correct text translation, consistency
-        and full coverage of visible content.
-      </p>
+    <h5>Casos de Prueba</h5>
+    <ul>
+      <li>
+        <strong>TC-DM-01 – Activar Modo Oscuro</strong><br>
+        Hacer clic en el botón de modo oscuro.<br>
+        <em>Resultado esperado:</em>
+        Se aplica el tema oscuro y los estilos se actualizan correctamente.
+      </li>
 
-      <h5>Test Cases</h5>
-      <ul>
-        <li>
-          <strong>TC-LANG-01 – Switch to English</strong><br>
-          Click on the language toggle.<br>
-          <em>Expected:</em> All texts change to English.
-        </li>
+      <li>
+        <strong>TC-DM-02 – Desactivar Modo Oscuro</strong><br>
+        Hacer clic nuevamente en el botón.<br>
+        <em>Resultado esperado:</em>
+        Se restaura el tema claro.
+      </li>
 
-        <li>
-          <strong>TC-LANG-02 – Switch back to Spanish</strong><br>
-          Click on the toggle again.<br>
-          <em>Expected:</em> All texts return to Spanish.
-        </li>
+      <li>
+        <strong>TC-DM-03 – Persistencia del Tema</strong><br>
+        Recargar la página luego de activar el modo oscuro.<br>
+        <em>Resultado esperado:</em>
+        El modo oscuro permanece activo utilizando localStorage.
+      </li>
+    </ul>
+  </div>
 
-        <li>
-          <strong>TC-LANG-03 – Translation Coverage</strong><br>
-          Review the page after language change.<br>
-          <em>Expected:</em> No mixed languages or missing translations.
-        </li>
-      </ul>
-    </div>
+  <!-- ================= LANGUAGE SWITCH ================= -->
+  <div class="experiencia">
+    <h4>Funcionalidad: Cambio de Idioma (ES / EN)</h4>
 
-    <!-- ================= ACCESSIBILITY ================= -->
-    <div class="experiencia">
-      <h4>Accessibility (a11y) Checks</h4>
+    <h5>Objetivo</h5>
+    <p>
+      Validar la correcta traducción de los textos,
+      la consistencia del contenido y la cobertura total
+      de los elementos visibles.
+    </p>
 
-      <ul>
-        <li>HTML semantic structure (header, nav, main, section, footer).</li>
-        <li>Color contrast validation for light and dark modes.</li>
-        <li>Keyboard navigation using Tab and Shift + Tab.</li>
-        <li>Visible focus indicator for interactive elements.</li>
-        <li>ARIA labels for icon-only buttons.</li>
-        <li>Document language defined and updated dynamically.</li>
-      </ul>
-    </div>
+    <h5>Casos de Prueba</h5>
+    <ul>
+      <li>
+        <strong>TC-LANG-01 – Cambiar a Inglés</strong><br>
+        Hacer clic en el botón de cambio de idioma.<br>
+        <em>Resultado esperado:</em>
+        Todos los textos se muestran en inglés.
+      </li>
 
-  </section>
+      <li>
+        <strong>TC-LANG-02 – Volver a Español</strong><br>
+        Hacer clic nuevamente en el botón.<br>
+        <em>Resultado esperado:</em>
+        Todos los textos vuelven a mostrarse en español.
+      </li>
 
+      <li>
+        <strong>TC-LANG-03 – Cobertura de Traducción</strong><br>
+        Revisar la página luego del cambio de idioma.<br>
+        <em>Resultado esperado:</em>
+        No existen textos mezclados ni traducciones faltantes.
+      </li>
+    </ul>
+  </div>
+
+  <!-- ================= ACCESSIBILITY ================= -->
+  <div class="experiencia">
+    <h4>Controles de Accesibilidad (a11y)</h4>
+
+    <ul>
+      <li>Estructura HTML semántica (header, nav, main, section, footer).</li>
+      <li>Validación del contraste de colores en modo claro y oscuro.</li>
+      <li>Navegación mediante teclado usando Tab y Shift + Tab.</li>
+      <li>Indicador de foco visible en elementos interactivos.</li>
+      <li>Uso de etiquetas ARIA en botones con solo íconos.</li>
+      <li>Idioma del documento definido y actualizado dinámicamente.</li>
+    </ul>
+  </div>
+</section>
 
   <!-- ================= EDUCACION ================= -->
   <section id="educacion">
