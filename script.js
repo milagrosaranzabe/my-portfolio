@@ -140,6 +140,143 @@ const texts = {
   }
 };
 
+/* QA ARTIFACTS */
+qa_title: "Ejemplos de Casos de Prueba y Controles de Calidad",
+qa_objective: "Objetivo",
+qa_testcases: "Casos de Prueba",
+qa_expected: "Resultado esperado:",
+
+qa_dm_title: "Funcionalidad: Modo Oscuro",
+qa_dm_objective:
+  "Validar el comportamiento del cambio de tema, la consistencia visual y la persistencia de la configuración entre sesiones.",
+qa_dm_tc1_title: "TC-DM-01 – Activar Modo Oscuro",
+qa_dm_tc1_steps: "Hacer clic en el botón de modo oscuro.",
+qa_dm_tc1_expected:
+  "Se aplica el tema oscuro y los estilos se actualizan correctamente.",
+
+qa_dm_tc2_title: "TC-DM-02 – Desactivar Modo Oscuro",
+qa_dm_tc2_steps: "Hacer clic nuevamente en el botón.",
+qa_dm_tc2_expected: "Se restaura el tema claro.",
+
+qa_dm_tc3_title: "TC-DM-03 – Persistencia del Tema",
+qa_dm_tc3_steps:
+  "Recargar la página luego de activar el modo oscuro.",
+qa_dm_tc3_expected:
+  "El modo oscuro permanece activo utilizando localStorage.",
+
+qa_lang_title: "Funcionalidad: Cambio de Idioma (ES / EN)",
+qa_lang_objective:
+  "Validar la correcta traducción de los textos, la consistencia del contenido y la cobertura total de los elementos visibles.",
+
+qa_lang_tc1_title: "TC-LANG-01 – Cambiar a Inglés",
+qa_lang_tc1_steps:
+  "Hacer clic en el botón de cambio de idioma.",
+qa_lang_tc1_expected:
+  "Todos los textos se muestran en inglés.",
+
+qa_lang_tc2_title: "TC-LANG-02 – Volver a Español",
+qa_lang_tc2_steps:
+  "Hacer clic nuevamente en el botón.",
+qa_lang_tc2_expected:
+  "Todos los textos vuelven a mostrarse en español.",
+
+qa_lang_tc3_title: "TC-LANG-03 – Cobertura de Traducción",
+qa_lang_tc3_steps:
+  "Revisar la página luego del cambio de idioma.",
+qa_lang_tc3_expected:
+  "No existen textos mezclados ni traducciones faltantes.",
+
+qa_a11y_title: "Controles de Accesibilidad (a11y)",
+qa_a11y_desc_1:
+  "Estructura HTML semántica (header, nav, main, section, footer).",
+qa_a11y_desc_2:
+  "Validación del contraste de colores en modo claro y oscuro.",
+qa_a11y_desc_3:
+  "Navegación mediante teclado usando Tab y Shift + Tab.",
+qa_a11y_desc_4:
+  "Indicador de foco visible en elementos interactivos.",
+qa_a11y_desc_5:
+  "Uso de etiquetas ARIA en botones con solo íconos.",
+qa_a11y_desc_6:
+  "Idioma del documento definido y actualizado dinámicamente.",
+
+/* EDUCATION */
+education_title: "Formación",
+edu_1_title: "Testing QA – Educación IT",
+edu_1_date: "2022 – 2023",
+edu_1_desc:
+  "Formación orientada a Testing Manual, Automatizado, Diseño de Casos de Prueba, Testing Funcional y No Funcional, APIs (Postman y SOAP UI), Bases de datos SQL, Análisis Funcional, UX/UI, HTML, CSS e introducción a Java."
+
+/* QA ARTIFACTS */
+qa_title: "Test Cases & Quality Checks",
+qa_objective: "Objective",
+qa_testcases: "Test Cases",
+qa_expected: "Expected result:",
+
+qa_dm_title: "Feature: Dark Mode",
+qa_dm_objective:
+  "Validate theme switching behavior, visual consistency and configuration persistence across sessions.",
+
+qa_dm_tc1_title: "TC-DM-01 – Enable Dark Mode",
+qa_dm_tc1_steps: "Click on the dark mode button.",
+qa_dm_tc1_expected:
+  "Dark theme is applied and styles are updated correctly.",
+
+qa_dm_tc2_title: "TC-DM-02 – Disable Dark Mode",
+qa_dm_tc2_steps: "Click the button again.",
+qa_dm_tc2_expected: "Light theme is restored.",
+
+qa_dm_tc3_title: "TC-DM-03 – Theme Persistence",
+qa_dm_tc3_steps:
+  "Reload the page after enabling dark mode.",
+qa_dm_tc3_expected:
+  "Dark mode remains active using localStorage.",
+
+qa_lang_title: "Feature: Language Switch (ES / EN)",
+qa_lang_objective:
+  "Validate correct text translation, content consistency and full coverage of visible elements.",
+
+qa_lang_tc1_title: "TC-LANG-01 – Switch to English",
+qa_lang_tc1_steps:
+  "Click the language switch button.",
+qa_lang_tc1_expected:
+  "All texts are displayed in English.",
+
+qa_lang_tc2_title: "TC-LANG-02 – Switch back to Spanish",
+qa_lang_tc2_steps:
+  "Click the button again.",
+qa_lang_tc2_expected:
+  "All texts return to Spanish.",
+
+qa_lang_tc3_title: "TC-LANG-03 – Translation Coverage",
+qa_lang_tc3_steps:
+  "Review the page after switching language.",
+qa_lang_tc3_expected:
+  "No mixed languages or missing translations.",
+
+qa_a11y_title: "Accessibility Checks (a11y)",
+qa_a11y_desc_1:
+  "Semantic HTML structure (header, nav, main, section, footer).",
+qa_a11y_desc_2:
+  "Color contrast validation for light and dark modes.",
+qa_a11y_desc_3:
+  "Keyboard navigation using Tab and Shift + Tab.",
+qa_a11y_desc_4:
+  "Visible focus indicator for interactive elements.",
+qa_a11y_desc_5:
+  "ARIA labels for icon-only buttons.",
+qa_a11y_desc_6:
+  "Document language defined and updated dynamically.",
+
+/* EDUCATION */
+education_title: "Education",
+edu_1_title: "QA Testing – Educación IT",
+edu_1_date: "2022 – 2023",
+edu_1_desc:
+  "Training focused on Manual and Automated Testing, Test Case Design, Functional and Non-Functional Testing, APIs (Postman and SOAP UI), SQL Databases, Functional Analysis, UX/UI, HTML, CSS and Java basics."
+
+
+
 /*********************************
  * FUNCIONES
  *********************************/
