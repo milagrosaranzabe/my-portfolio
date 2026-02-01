@@ -28,27 +28,37 @@ const texts = {
     skills_title: "Competencias QA",
 
     /* EXPERIENCIA */
+    exp_1_date: "Jul 2024 – Actualidad",
     exp_1_desc:
       "Liderazgo del área de QA, definición de estrategia de testing y validaciones pre-release.",
+
+    exp_2_date: "Nov 2023 – Jul 2024",
     exp_2_desc:
       "Testing funcional y exploratorio, regresión manual y validación de APIs.",
+
+    exp_3_date: "Jun 2023 – Nov 2023",
     exp_3_desc:
       "Proyectos de e-commerce, diseño de casos de prueba y testing funcional.",
+
+    exp_4_date: "Sep 2022 – Jun 2023",
     exp_4_desc:
       "Testing manual en proyectos de e-commerce y publicidad digital.",
 
     /* SERVICIOS */
     service_1_title: "Validación Funcional",
-    service_1_text:
+    service_1_desc:
       "Validación de funcionalidades, criterios de aceptación y flujos críticos.",
+
     service_2_title: "Regresión y Smoke",
-    service_2_text:
+    service_2_desc:
       "Ejecución de pruebas de regresión para asegurar estabilidad.",
+
     service_3_title: "APIs y Datos",
-    service_3_text:
+    service_3_desc:
       "Validación funcional de APIs y bases de datos relacionales.",
+
     service_4_title: "Análisis de Riesgos",
-    service_4_text:
+    service_4_desc:
       "Identificación temprana de riesgos funcionales.",
 
     /* SKILLS */
@@ -63,66 +73,58 @@ const texts = {
     skill_5_title: "Agile QA",
     skill_5_text: "QA integrada a equipos ágiles.",
 
-    /* QA */
-    qa_title: "Casos de Prueba y Controles de Calidad",
-    qa_dark_title: "Modo Oscuro",
-    qa_dark_desc:
-      "Validación del cambio de tema y persistencia de la configuración.",
-    qa_lang_title: "Cambio de Idioma",
-    qa_lang_desc:
-      "Validación de traducción completa del contenido.",
-    qa_a11y_title: "Accesibilidad",
-    qa_a11y_desc:
-      "Controles de accesibilidad y navegación por teclado.",
-
     footer_github: "GitHub"
   },
 
   en: {
-    /* NAV */
     nav_experience: "Experience",
     nav_services: "Services",
     nav_skills: "Skills",
     nav_email: "Email",
     nav_linkedin: "LinkedIn",
 
-    /* HERO */
     welcome: "Welcome",
     role: "QA Analyst | Web & Mobile",
     hero_text:
       "QA Analyst with over 3 years of experience in manual testing of web and mobile applications.",
     cv_download: "Download CV",
 
-    /* SECCIONES */
     experience_title: "Professional Experience",
     services_title: "What I do as a QA",
     skills_title: "QA Skills",
 
-    /* EXPERIENCIA */
+    exp_1_date: "Jul 2024 – Present",
     exp_1_desc:
       "QA leadership, test strategy definition and pre-release validations.",
+
+    exp_2_date: "Nov 2023 – Jul 2024",
     exp_2_desc:
       "Functional and exploratory testing, manual regression and API validation.",
+
+    exp_3_date: "Jun 2023 – Nov 2023",
     exp_3_desc:
       "E-commerce projects, test case design and functional testing.",
+
+    exp_4_date: "Sep 2022 – Jun 2023",
     exp_4_desc:
       "Manual testing for e-commerce and digital advertising projects.",
 
-    /* SERVICIOS */
     service_1_title: "Functional Validation",
-    service_1_text:
+    service_1_desc:
       "Validation of functionalities, acceptance criteria and critical flows.",
+
     service_2_title: "Regression & Smoke",
-    service_2_text:
+    service_2_desc:
       "Execution of regression tests to ensure stability.",
+
     service_3_title: "APIs & Data",
-    service_3_text:
+    service_3_desc:
       "Functional validation of APIs and relational databases.",
+
     service_4_title: "Risk Analysis",
-    service_4_text:
+    service_4_desc:
       "Early identification of functional risks.",
 
-    /* SKILLS */
     skill_1_title: "Manual & Exploratory Testing",
     skill_1_text: "Validation of scenarios and edge cases.",
     skill_2_title: "Test Case Design",
@@ -134,24 +136,12 @@ const texts = {
     skill_5_title: "Agile QA",
     skill_5_text: "QA integrated into agile teams.",
 
-    /* QA */
-    qa_title: "Test Cases & Quality Checks",
-    qa_dark_title: "Dark Mode",
-    qa_dark_desc:
-      "Theme switching and configuration persistence validation.",
-    qa_lang_title: "Language Switch",
-    qa_lang_desc:
-      "Full content translation validation.",
-    qa_a11y_title: "Accessibility",
-    qa_a11y_desc:
-      "Accessibility and keyboard navigation checks.",
-
     footer_github: "GitHub"
   }
 };
 
 /*********************************
- * APLICAR IDIOMA
+ * FUNCIONES
  *********************************/
 function applyLanguage(lang) {
   currentLang = lang;
@@ -164,13 +154,6 @@ function applyLanguage(lang) {
     }
   });
 
-  /* Botón idioma */
-  const langBtn = document.getElementById("toggle-lang");
-  if (langBtn) {
-    langBtn.textContent = lang.toUpperCase();
-  }
-
-  /* CV dinámico */
   const cvBtn = document.getElementById("cv-download");
   if (cvBtn) {
     cvBtn.href =
@@ -179,142 +162,44 @@ function applyLanguage(lang) {
         : "Analista QA - Milagros Aranzabe - CV.pdf";
     cvBtn.textContent = texts[lang].cv_download;
   }
+
+  document.getElementById("toggle-lang").textContent = lang.toUpperCase();
 }
 
-/*********************************
- * TEMA OSCURO / CLARO
- *********************************/
 function applyTheme(isDark) {
   document.body.classList.toggle("dark", isDark);
-
-  const themeBtn = document.getElementById("toggle-theme");
-  if (themeBtn) {
-    themeBtn.textContent = isDark ? "🌙" : "☀️";
-  }
-
+  document.getElementById("toggle-theme").textContent = isDark ? "🌙" : "☀️";
   localStorage.setItem("theme", isDark ? "dark" : "light");
 }
 
-/*********************************
- * MENÚ RESPONSIVE
- *********************************/
-function responsiveMenu() {
-  const nav = document.getElementById("nav");
-  if (nav) {
-    nav.classList.toggle("responsive");
-  }
+function toggleMenu() {
+  document.getElementById("nav").classList.toggle("responsive");
 }
 
-/*********************************
- * CERRAR MENÚ AL HACER CLICK
- *********************************/
-function closeMenuOnClick() {
-  const nav = document.getElementById("nav");
-  if (nav && nav.classList.contains("responsive")) {
-    nav.classList.remove("responsive");
-  }
+function closeMenu() {
+  document.getElementById("nav").classList.remove("responsive");
 }
 
 /*********************************
  * INIT
  *********************************/
 document.addEventListener("DOMContentLoaded", () => {
-  /* Idioma inicial */
   applyLanguage(currentLang);
+  applyTheme(localStorage.getItem("theme") === "dark");
 
-  /* Tema inicial */
-  const savedTheme = localStorage.getItem("theme");
-  applyTheme(savedTheme === "dark");
+  document.getElementById("toggle-lang").onclick = () => {
+    applyLanguage(currentLang === "es" ? "en" : "es");
+    closeMenu();
+  };
 
-  /* Botón idioma */
-  const langBtn = document.getElementById("toggle-lang");
-  if (langBtn) {
-    langBtn.addEventListener("click", () => {
-      applyLanguage(currentLang === "es" ? "en" : "es");
-      closeMenuOnClick();
-    });
-  }
+  document.getElementById("toggle-theme").onclick = () => {
+    applyTheme(!document.body.classList.contains("dark"));
+    closeMenu();
+  };
 
-  /* Botón tema */
-  const themeBtn = document.getElementById("toggle-theme");
-  if (themeBtn) {
-    themeBtn.addEventListener("click", () => {
-      applyTheme(!document.body.classList.contains("dark"));
-      closeMenuOnClick();
-    });
-  }
+  document.getElementById("icono-nav").onclick = toggleMenu;
 
-  /* Cerrar menú al tocar links */
-  document.querySelectorAll("#nav a").forEach(link => {
-    link.addEventListener("click", closeMenuOnClick);
-  });
+  document.querySelectorAll("#nav a").forEach(a =>
+    a.addEventListener("click", closeMenu)
+  );
 });
-
-exp_1_date: "Jul 2024 – Actualidad",
-exp_2_date: "Nov 2023 – Jul 2024",
-exp_3_date: "Jun 2023 – Nov 2023",
-exp_4_date: "Sep 2022 – Jun 2023",
-
-edu_1_date: "2022 – 2023",
-
-exp_1_date: "Jul 2024 – Present",
-exp_2_date: "Nov 2023 – Jul 2024",
-exp_3_date: "Jun 2023 – Nov 2023",
-exp_4_date: "Sep 2022 – Jun 2023",
-
-edu_1_date: "2022 – 2023",
-
-  services_title: "Qué hago como QA",
-
-service_1_title: "Validación Funcional del Producto",
-service_1_desc:
-  "Validación de funcionalidades, criterios de aceptación y flujos críticos en aplicaciones web y mobile.",
-
-service_2_title: "Pruebas de Regresión y Smoke",
-service_2_desc:
-  "Ejecución de pruebas de regresión y smoke tests para asegurar estabilidad antes y después de cada release.",
-
-service_3_title: "Validación de APIs y Datos",
-service_3_desc:
-  "Validación funcional de APIs y verificación de datos en bases de datos relacionales.",
-
-service_4_title: "Análisis de Riesgos y Calidad",
-service_4_desc:
-  "Identificación temprana de riesgos funcionales para prevenir errores críticos en producción.",
-services_title: "What I do as a QA",
-
-service_1_title: "Functional Product Validation",
-service_1_desc:
-  "Validation of functionalities, acceptance criteria and critical flows in web and mobile applications.",
-
-service_2_title: "Regression & Smoke Testing",
-service_2_desc:
-  "Execution of regression and smoke tests to ensure stability before and after each release.",
-
-service_3_title: "API & Data Validation",
-service_3_desc:
-  "Functional validation of APIs and data verification in relational databases.",
-
-service_4_title: "Risk Analysis & Quality",
-service_4_desc:
-  "Early identification of functional risks to prevent critical production issues.",
-
-document.addEventListener("DOMContentLoaded", () => {
-  const menuBtn = document.getElementById("icono-nav");
-  const nav = document.getElementById("nav");
-
-  if (menuBtn && nav) {
-    menuBtn.addEventListener("click", () => {
-      nav.classList.toggle("responsive");
-    });
-  }
-});
-
-document.querySelectorAll("#nav a, #toggle-theme, #toggle-lang")
-  .forEach(el => {
-    el.addEventListener("click", () => {
-      document.getElementById("nav").classList.remove("responsive");
-    });
-  });
-
-
