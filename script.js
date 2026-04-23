@@ -242,3 +242,5 @@ window.addEventListener("DOMContentLoaded", () => {
   applyTranslations(savedLang);
   applyTheme(savedTheme);
 });
+
+el.textContent = dict[key] || translations["es"][key] || "";
