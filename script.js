@@ -153,8 +153,49 @@ const translations = {
     edu_1_date: "2022 – 2023",
     edu_1_desc: "Training in Manual & Automated Testing, APIs, SQL, UX/UI, HTML and CSS.",
 
-    footer_copy: "© 2025 Milagros A. Aranzabe Alonso"
+    footer_copy: "© 2026 Milagros A. Aranzabe Alonso"
   }
+  // ===============================
+// ❌ FALTANTES EN INGLÉS
+// ===============================
+
+// EXPERIENCIA
+exp_3_desc: "Functional and exploratory testing, manual regression and API validation.",
+exp_4_desc: "E-commerce projects, test case design and functional testing.",
+exp_5_desc: "Manual testing in e-commerce and digital advertising projects.",
+
+// SERVICIOS
+services_title: "What I do as a QA",
+
+service_1_title: "Functional Product Validation",
+service_1_desc: "Validation of features, acceptance criteria and critical flows in web and mobile applications.",
+
+service_2_title: "Regression and Smoke Testing",
+service_2_desc: "Execution of regression and smoke tests to ensure stability before and after each release.",
+
+service_3_title: "API and Data Validation",
+service_3_desc: "Functional API validation and data verification in relational databases.",
+
+service_4_title: "Risk and Quality Analysis",
+service_4_desc: "Early identification of functional risks to prevent critical production issues.",
+
+// SKILLS
+skills_title: "QA Skills",
+
+skill_1_title: "Manual and Exploratory Testing",
+skill_1_text: "Validation of scenarios and edge cases.",
+
+skill_2_title: "Test Case Design",
+skill_2_text: "Clear, reusable and traceable test cases.",
+
+skill_3_title: "Risk Analysis",
+skill_3_text: "Impact-based prioritization.",
+
+skill_4_title: "Communication",
+skill_4_text: "Collaborative work with product and development teams.",
+
+skill_5_title: "Agile QA",
+skill_5_text: "QA integrated into agile teams."
 };
 
 // ===============================
@@ -244,3 +285,15 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 el.textContent = dict[key] || translations["es"][key] || "";
+
+document.querySelectorAll("[data-i18n]").forEach(el => {
+  const key = el.dataset.i18n;
+
+  if (!translations.en[key]) {
+    console.error("❌ Missing EN key:", key);
+  }
+
+  if (!translations.es[key]) {
+    console.error("❌ Missing ES key:", key);
+  }
+});
