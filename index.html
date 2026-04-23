@@ -29,6 +29,8 @@
       class="fa-solid fa-bars"
       id="icono-nav"
       aria-label="Abrir menú"
+      data-i18n="menu_open"
+      data-i18n-attr="aria-label"
     ></i>
 
     <nav id="nav">
@@ -52,11 +54,17 @@
         </li>
 
         <li>
-          <button id="toggle-theme" class="nav-btn" aria-label="Tema">☀️</button>
+          <button
+            id="toggle-theme"
+            class="nav-btn"
+            aria-label="Cambiar tema"
+            data-i18n="theme_toggle"
+            data-i18n-attr="aria-label"
+          >☀️</button>
         </li>
 
         <li>
-          <button id="toggle-lang" class="nav-btn" aria-label="Idioma">ES</button>
+          <button id="toggle-lang" class="nav-btn">ES</button>
         </li>
       </ul>
     </nav>
@@ -80,7 +88,7 @@
     <a
       id="cv-download"
       class="btn-cv"
-      href="Analista QA - Milagros Aranzabe - CV.pdf"
+      href="CV_ES.pdf"
       download
       data-i18n="cv_download"
     >
@@ -89,49 +97,48 @@
   </div>
 </section>
 
-  <!-- ================= EXPERIENCE ================= -->
-
+<!-- ================= EXPERIENCE ================= -->
 <section id="experiencia">
   <h3 data-i18n="experience_title">Experiencia Profesional</h3>
 
   <div class="cards-grid">
 
-     <div class="card experience-card">
-      <h4>QA Specialiast – Temperies</h4>
+    <div class="card experience-card">
+      <h4 data-i18n="exp_1_title">QA Specialist – Temperies</h4>
       <span class="date" data-i18n="exp_1_date">Feb 2026 – Actualidad</span>
       <p data-i18n="exp_1_desc">
-       Especialista en el testeo de aplicación Web, Móviles, retrocompatibilidad, regresión.
+        Especialista en el testeo de aplicaciones web y mobile, incluyendo regresión y retrocompatibilidad.
       </p>
     </div>
 
     <div class="card experience-card">
-      <h4>QA Lead / QA Analyst – Temperies</h4>
-      <span class="date" data-i18n="exp_1_date">Jul 2024 – Feb 2026</span>
-      <p data-i18n="exp_1_desc">
+      <h4 data-i18n="exp_2_title">QA Lead / QA Analyst – Temperies</h4>
+      <span class="date" data-i18n="exp_2_date">Jul 2024 – Feb 2026</span>
+      <p data-i18n="exp_2_desc">
         Liderazgo del área de QA, definición de estrategia de testing y validaciones pre-release.
       </p>
     </div>
 
     <div class="card experience-card">
-      <h4>QA Analyst – Temperies</h4>
-      <span class="date" data-i18n="exp_2_date">Nov 2023 – Jul 2024</span>
-      <p data-i18n="exp_2_desc">
+      <h4 data-i18n="exp_3_title">QA Analyst – Temperies</h4>
+      <span class="date" data-i18n="exp_3_date">Nov 2023 – Jul 2024</span>
+      <p data-i18n="exp_3_desc">
         Testing funcional y exploratorio, regresión manual y validación de APIs.
       </p>
     </div>
 
     <div class="card experience-card">
-      <h4>QA Analyst – ID For Ideas</h4>
-      <span class="date" data-i18n="exp_3_date">Jun 2023 – Nov 2023</span>
-      <p data-i18n="exp_3_desc">
+      <h4 data-i18n="exp_4_title">QA Analyst – ID For Ideas</h4>
+      <span class="date" data-i18n="exp_4_date">Jun 2023 – Nov 2023</span>
+      <p data-i18n="exp_4_desc">
         Proyectos de e-commerce, diseño de casos de prueba y testing funcional.
       </p>
     </div>
 
     <div class="card experience-card">
-      <h4>QA Analyst – Freelance</h4>
-      <span class="date" data-i18n="exp_4_date">Sep 2022 – Jun 2023</span>
-      <p data-i18n="exp_4_desc">
+      <h4 data-i18n="exp_5_title">QA Analyst – Freelance</h4>
+      <span class="date" data-i18n="exp_5_date">Sep 2022 – Jun 2023</span>
+      <p data-i18n="exp_5_desc">
         Testing manual en proyectos de e-commerce y publicidad digital.
       </p>
     </div>
@@ -139,61 +146,46 @@
   </div>
 </section>
 
-
-  <!-- ================= SERVICES ================= -->
+<!-- ================= SERVICES ================= -->
 <section id="servicios">
   <h3 data-i18n="services_title">Qué hago como QA</h3>
 
   <div class="cards-grid">
 
     <div class="card">
-      <span class="icono">
-        <i class="fa-solid fa-list-check"></i>
-      </span>
+      <span class="icono"><i class="fa-solid fa-list-check"></i></span>
       <h4 data-i18n="service_1_title">Validación Funcional del Producto</h4>
       <p data-i18n="service_1_desc">
-        Validación de funcionalidades, criterios de aceptación
-        y flujos críticos en aplicaciones web y mobile.
+        Validación de funcionalidades, criterios de aceptación y flujos críticos en aplicaciones web y mobile.
       </p>
     </div>
 
     <div class="card">
-      <span class="icono">
-        <i class="fa-solid fa-repeat"></i>
-      </span>
+      <span class="icono"><i class="fa-solid fa-repeat"></i></span>
       <h4 data-i18n="service_2_title">Pruebas de Regresión y Smoke</h4>
       <p data-i18n="service_2_desc">
-        Ejecución de pruebas de regresión y smoke tests
-        para asegurar estabilidad antes y después de cada release.
+        Ejecución de pruebas de regresión y smoke tests para asegurar estabilidad antes y después de cada release.
       </p>
     </div>
 
     <div class="card">
-      <span class="icono">
-        <i class="fa-solid fa-database"></i>
-      </span>
+      <span class="icono"><i class="fa-solid fa-database"></i></span>
       <h4 data-i18n="service_3_title">Validación de APIs y Datos</h4>
       <p data-i18n="service_3_desc">
-        Validación funcional de APIs y verificación de datos
-        en bases de datos relacionales.
+        Validación funcional de APIs y verificación de datos en bases de datos relacionales.
       </p>
     </div>
 
     <div class="card">
-      <span class="icono">
-        <i class="fa-solid fa-triangle-exclamation"></i>
-      </span>
+      <span class="icono"><i class="fa-solid fa-triangle-exclamation"></i></span>
       <h4 data-i18n="service_4_title">Análisis de Riesgos y Calidad</h4>
       <p data-i18n="service_4_desc">
-        Identificación temprana de riesgos funcionales
-        para prevenir errores críticos en producción.
+        Identificación temprana de riesgos funcionales para prevenir errores críticos en producción.
       </p>
     </div>
 
   </div>
 </section>
-
-
 
 <!-- ================= SKILLS ================= -->
 <section id="habilidades">
@@ -203,7 +195,7 @@
 
     <div class="card">
       <h4 data-i18n="skill_1_title">Testing Manual y Exploratorio</h4>
-      <p data-i18n="skill_1_text">Validación de escenarios y edge cases.</p>
+      <p data-i18n="skill_1_text">Validación de escenarios y casos borde.</p>
     </div>
 
     <div class="card">
@@ -229,163 +221,26 @@
   </div>
 </section>
 
-  <!-- ================= QA ARTIFACTS ================= -->
-<section id="qa-artifacts">
-
-  <h3 data-i18n="qa_title">Ejemplos de Casos de Prueba y Controles de Calidad</h3>
-
-  <div class="cards-grid">
-
-    <!-- ================= DARK MODE ================= -->
-    <div class="card">
-      <h4 data-i18n="qa_dm_title">Funcionalidad: Modo Oscuro</h4>
-
-      <h5 data-i18n="qa_objective">Objetivo</h5>
-      <p data-i18n="qa_dm_objective">
-        Validar el comportamiento del cambio de tema,
-        la consistencia visual y la persistencia de la configuración
-        entre sesiones.
-      </p>
-
-      <h5 data-i18n="qa_testcases">Casos de Prueba</h5>
-
-      <p>
-        <strong data-i18n="qa_dm_tc1_title">TC-DM-01 – Activar Modo Oscuro</strong><br>
-        <span data-i18n="qa_dm_tc1_steps">
-          Hacer clic en el botón de modo oscuro.
-        </span><br>
-        <em data-i18n="qa_expected">Resultado esperado:</em>
-        <span data-i18n="qa_dm_tc1_expected">
-          Se aplica el tema oscuro y los estilos se actualizan correctamente.
-        </span>
-      </p>
-
-      <p>
-        <strong data-i18n="qa_dm_tc2_title">TC-DM-02 – Desactivar Modo Oscuro</strong><br>
-        <span data-i18n="qa_dm_tc2_steps">
-          Hacer clic nuevamente en el botón.
-        </span><br>
-        <em data-i18n="qa_expected">Resultado esperado:</em>
-        <span data-i18n="qa_dm_tc2_expected">
-          Se restaura el tema claro.
-        </span>
-      </p>
-
-      <p>
-        <strong data-i18n="qa_dm_tc3_title">TC-DM-03 – Persistencia del Tema</strong><br>
-        <span data-i18n="qa_dm_tc3_steps">
-          Recargar la página luego de activar el modo oscuro.
-        </span><br>
-        <em data-i18n="qa_expected">Resultado esperado:</em>
-        <span data-i18n="qa_dm_tc3_expected">
-          El modo oscuro permanece activo utilizando localStorage.
-        </span>
-      </p>
-    </div>
-
-    <!-- ================= LANGUAGE SWITCH ================= -->
-    <div class="card">
-      <h4 data-i18n="qa_lang_title">Funcionalidad: Cambio de Idioma (ES / EN)</h4>
-
-      <h5 data-i18n="qa_objective">Objetivo</h5>
-      <p data-i18n="qa_lang_objective">
-        Validar la correcta traducción de los textos,
-        la consistencia del contenido y la cobertura total
-        de los elementos visibles.
-      </p>
-
-      <h5 data-i18n="qa_testcases">Casos de Prueba</h5>
-
-      <p>
-        <strong data-i18n="qa_lang_tc1_title">TC-LANG-01 – Cambiar a Inglés</strong><br>
-        <span data-i18n="qa_lang_tc1_steps">
-          Hacer clic en el botón de cambio de idioma.
-        </span><br>
-        <em data-i18n="qa_expected">Resultado esperado:</em>
-        <span data-i18n="qa_lang_tc1_expected">
-          Todos los textos se muestran en inglés.
-        </span>
-      </p>
-
-      <p>
-        <strong data-i18n="qa_lang_tc2_title">TC-LANG-02 – Volver a Español</strong><br>
-        <span data-i18n="qa_lang_tc2_steps">
-          Hacer clic nuevamente en el botón.
-        </span><br>
-        <em data-i18n="qa_expected">Resultado esperado:</em>
-        <span data-i18n="qa_lang_tc2_expected">
-          Todos los textos vuelven a mostrarse en español.
-        </span>
-      </p>
-
-      <p>
-        <strong data-i18n="qa_lang_tc3_title">TC-LANG-03 – Cobertura de Traducción</strong><br>
-        <span data-i18n="qa_lang_tc3_steps">
-          Revisar la página luego del cambio de idioma.
-        </span><br>
-        <em data-i18n="qa_expected">Resultado esperado:</em>
-        <span data-i18n="qa_lang_tc3_expected">
-          No existen textos mezclados ni traducciones faltantes.
-        </span>
-      </p>
-    </div>
-
-    <!-- ================= ACCESSIBILITY ================= -->
-    <div class="card">
-      <h4 data-i18n="qa_a11y_title">Controles de Accesibilidad (a11y)</h4>
-       <h5 data-i18n="qa_objective">Objetivo</h5>
-
-      <p data-i18n="qa_a11y_desc_1">
-        Estructura HTML semántica (header, nav, main, section, footer).
-      </p>
-      <p data-i18n="qa_a11y_desc_2">
-        Validación del contraste de colores en modo claro y oscuro.
-      </p>
-      <p data-i18n="qa_a11y_desc_3">
-        Navegación mediante teclado usando Tab y Shift + Tab.
-      </p>
-      <p data-i18n="qa_a11y_desc_4">
-        Indicador de foco visible en elementos interactivos.
-      </p>
-      <p data-i18n="qa_a11y_desc_5">
-        Uso de etiquetas ARIA en botones con solo íconos.
-      </p>
-      <p data-i18n="qa_a11y_desc_6">
-        Idioma del documento definido y actualizado dinámicamente.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-
-
-  <!-- ================= EDUCATION ================= -->
-  <section id="educacion">
-    <h3 data-i18n="education_title">Formación</h3>
+<!-- ================= EDUCATION ================= -->
+<section id="educacion">
+  <h3 data-i18n="education_title">Formación</h3>
 
   <div class="cards-grid">
-
     <div class="card">
       <h4 data-i18n="edu_1_title">Testing QA – Educación IT</h4>
       <span data-i18n="edu_1_date">2022 – 2023</span>
       <p data-i18n="edu_1_desc">
-        Formación orientada a Testing Manual, Automatizado, Diseño de Casos de Prueba,
-        Testing Funcional y No Funcional, APIs (Postman y SOAP UI), Bases de datos SQL, Análisis Funcional, UX/UI, HTML, CSS, introducción a Java.
+        Formación orientada a Testing Manual, Automatizado, APIs, SQL, UX/UI, HTML y CSS.
       </p>
     </div>
-
   </div>
 </section>
-     
-      
 
 <!-- ================= FOOTER ================= -->
 <footer>
-  &copy; 2025 Milagros A. Aranzabe Alonso |
-  <a href="https://github.com/milagrosaranzabe" target="_blank">
-    <span data-i18n="footer_github">GitHub</span>
-  </a>
+  <span data-i18n="footer_copy">
+    © 2025 Milagros A. Aranzabe Alonso
+  </span>
 </footer>
 
 <script src="script.js"></script>
