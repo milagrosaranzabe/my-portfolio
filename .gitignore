@@ -1,0 +1,11 @@
+# Config local de Claude Code (no compartir entre máquinas/usuarios)
+.claude/settings.local.json
+
+# Dependencias y builds (por si el sitio termina usando Node/tooling)
+node_modules/
+dist/
+build/
+
+# Archivos del sistema operativo / editor
+.DS_Store
+Thumbs.db
