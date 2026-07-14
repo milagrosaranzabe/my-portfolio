@@ -146,7 +146,7 @@ Un reclutador interesado contacta a la autora por LinkedIn o email, o descarga s
 ### Servicios
 
 - **FR-007**: El sitio SHALL listar en Servicios como mínimo: testing manual, testing de APIs, automatización con Playwright + JavaScript, y testing asistido por IA. *(Ubicuo)*
-- **FR-008**: Para cada servicio construido sobre una habilidad en aprendizaje activo (automatización con Playwright + JavaScript, testing asistido por IA), el sitio SHALL indicar visualmente que se trata de una capacidad en desarrollo. *(Ubicuo)*
+- **FR-008**: Para cada servicio construido sobre una habilidad en aprendizaje activo (automatización con Playwright + JavaScript, testing asistido por IA), el sitio SHALL indicar mediante una etiqueta textual (no solo color) que se trata de una capacidad en desarrollo. *(Ubicuo)*
 - **FR-009**: CUANDO un visitante hace hover o foco de teclado sobre una tarjeta de servicio, el sitio SHALL mostrar una descripción ampliada de ese servicio. *(Basado en evento)*
 
 ### Proyecto destacado — Biblioteca de Películas y Series
@@ -162,7 +162,7 @@ Un reclutador interesado contacta a la autora por LinkedIn o email, o descarga s
 
 - **FR-015**: El sitio SHALL organizar las habilidades técnicas por categoría, agrupando como mínimo: Testing Manual, Testing de APIs, Automatización, Bases de Datos, Gestión Ágil, e IA aplicada a testing. *(Ubicuo)*
 - **FR-016**: Dentro de cada categoría, el sitio SHALL listar las herramientas concretas asociadas (por ejemplo, Postman en Testing de APIs; SQL en Bases de Datos; Jira y Zephyr en Gestión Ágil; Playwright y JavaScript en Automatización). *(Ubicuo)*
-- **FR-017**: DONDE una habilidad esté en aprendizaje activo y no sea experiencia consolidada, el sitio SHALL distinguirla visualmente (por ejemplo, con una etiqueta "en aprendizaje") de las habilidades consolidadas. *(Característica opcional)*
+- **FR-017**: DONDE una habilidad esté en aprendizaje activo y no sea experiencia consolidada, el sitio SHALL distinguirla mediante una etiqueta textual (p. ej. "en aprendizaje"), no solo por color, de las habilidades consolidadas. *(Característica opcional)*
 
 ### Experiencia / Trayectoria
 

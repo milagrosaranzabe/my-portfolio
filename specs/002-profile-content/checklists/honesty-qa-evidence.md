@@ -18,8 +18,8 @@
 
 - [ ] CHK006 - ¿"Evidencia visible" (FR-002 de `001-site-structure`) está definida con ejemplos concretos de qué cuenta como suficiente, o el término queda abierto a interpretación? [Clarity, Spec §001-FR-002]
 - [ ] CHK007 - ¿"Síntesis representativa" (Assumptions, evidencia condensada del proyecto destacado) tiene algún límite medible (cantidad de ítems, extensión), o es puramente subjetivo? [Clarity, Spec §Assumptions]
-- [ ] CHK008 - FR-008 exige "indicar visualmente" que un servicio está en desarrollo — ¿exige explícitamente que ese indicador sea textual (no solo color), o deja abierta una implementación que dependería solo del color y entraría en conflicto con el principio II? [Ambiguity, Spec §FR-008]
-- [ ] CHK009 - FR-017 usa "por ejemplo, con una etiqueta 'en aprendizaje'" — ¿esa etiqueta textual es obligatoria, o el "por ejemplo" la deja como sugerencia no vinculante? [Ambiguity, Spec §FR-017]
+- [x] CHK008 - FR-008 exige "indicar visualmente" que un servicio está en desarrollo — ¿exige explícitamente que ese indicador sea textual (no solo color), o deja abierta una implementación que dependería solo del color y entraría en conflicto con el principio II? [Ambiguity, Spec §FR-008] — **Resuelto 2026-07-14**: FR-008 ahora exige explícitamente una etiqueta textual, no solo color (hallazgo C1 de `/speckit-analyze`).
+- [x] CHK009 - FR-017 usa "por ejemplo, con una etiqueta 'en aprendizaje'" — ¿esa etiqueta textual es obligatoria, o el "por ejemplo" la deja como sugerencia no vinculante? [Ambiguity, Spec §FR-017] — **Resuelto 2026-07-14**: FR-017 ahora exige explícitamente una etiqueta textual, no solo color (hallazgo C1 de `/speckit-analyze`).
 - [ ] CHK010 - FR-006 dice que "el sitio SHALL corregir el copy" ante una atribución indebida — dado que es un sitio estático sin lógica de autocorrección, ¿queda claro que esto es un paso editorial/de revisión humana y no un comportamiento en tiempo de ejecución? [Clarity, Spec §FR-006]
 
 ## Requirement Consistency

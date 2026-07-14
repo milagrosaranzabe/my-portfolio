@@ -159,10 +159,11 @@ Sitio estático de un solo proyecto (`index.html` en la raíz + `assets/`), seg�
 ### Implementation for User Story 7
 
 - [ ] T035 [US7] Construir el markup de `<section id="contacto">` con el enlace a LinkedIn, el enlace `mailto:` y el enlace de descarga de CV según FR-021
-- [ ] T036 [US7] Agregar la declaración de disponibilidad remota Argentina/LATAM en Contacto o Sobre mí según FR-022
-- [ ] T037 [US7] Agregar los PDF de CV optimizados (ES/EN) a `assets/cv/` y conectar el enlace de descarga al archivo del idioma activo según FR-023
-- [ ] T038 [US7] Estilar la sección Contacto en `assets/css/components.css`
-- [ ] T039 [US7] Asegurar que el markup del enlace de descarga de CV solo se incluya cuando el PDF correspondiente exista, según FR-025 (sin enlaces rotos)
+- [ ] T036 [US7] Agregar `target="_blank" rel="noopener"` al enlace de LinkedIn para que se abra sin perder el estado de la página del portfolio, según FR-024
+- [ ] T037 [US7] Agregar la declaración de disponibilidad remota Argentina/LATAM en Contacto o Sobre mí según FR-022
+- [ ] T038 [US7] Agregar los PDF de CV optimizados (ES/EN) a `assets/cv/` y conectar el enlace de descarga al archivo del idioma activo según FR-023
+- [ ] T039 [US7] Estilar la sección Contacto en `assets/css/components.css`
+- [ ] T040 [US7] Asegurar que el markup del enlace de descarga de CV solo se incluya cuando el PDF correspondiente exista, según FR-025 (sin enlaces rotos)
 
 **Checkpoint**: US7 completa — con esto, las 4 historias P1 (US1, US2, US3, US7) están listas y el sitio es un MVP publicable.
 
@@ -172,14 +173,14 @@ Sitio estático de un solo proyecto (`index.html` en la raíz + `assets/`), seg�
 
 **Purpose**: Verificación de calidad que abarca todas las historias (dogfooding QA, constitución)
 
-- [ ] T040 [P] Correr el W3C HTML Validator sobre `index.html` y corregir cualquier error (`quickstart.md` #12)
-- [ ] T041 [P] Verificar a mano el contraste AA de cada combinación texto/fondo de la paleta (`quickstart.md` #10)
-- [ ] T042 [P] Verificar a mano la navegación completa por teclado (nav, selector de idioma, tarjetas de servicio/habilidad, enlaces de contacto) (`quickstart.md` #3)
-- [ ] T043 [P] Verificar a mano el layout responsive a 375px/768px/1280px sin contenido roto ni oculto (`quickstart.md` #11)
-- [ ] T044 [P] Verificar que el peso total de página (HTML+CSS+JS, sin imágenes) se mantiene bajo 100 KB con las devtools del navegador (`quickstart.md` #13)
-- [ ] T045 Verificar que el selector de idioma conserva la posición de scroll al cambiar de idioma a mitad de sección (`quickstart.md` #7)
-- [ ] T046 Correr el checklist completo de `quickstart.md` de punta a punta antes del deploy
-- [ ] T047 Desplegar a GitHub Pages o Vercel según `plan.md` (sitio estático, sin cambios de configuración)
+- [ ] T041 [P] Correr el W3C HTML Validator sobre `index.html` y corregir cualquier error (`quickstart.md` #12)
+- [ ] T042 [P] Verificar a mano el contraste AA de cada combinación texto/fondo de la paleta (`quickstart.md` #10)
+- [ ] T043 [P] Verificar a mano la navegación completa por teclado (nav, selector de idioma, tarjetas de servicio/habilidad, enlaces de contacto) (`quickstart.md` #3)
+- [ ] T044 [P] Verificar a mano el layout responsive a 375px/768px/1280px sin contenido roto ni oculto (`quickstart.md` #11)
+- [ ] T045 [P] Verificar que el peso total de página (HTML+CSS+JS, sin imágenes) se mantiene bajo 100 KB con las devtools del navegador (`quickstart.md` #13)
+- [ ] T046 Verificar que el selector de idioma conserva la posición de scroll al cambiar de idioma a mitad de sección (`quickstart.md` #7)
+- [ ] T047 Correr el checklist completo de `quickstart.md` de punta a punta antes del deploy
+- [ ] T048 Desplegar a GitHub Pages o Vercel según `plan.md` (sitio estático, sin cambios de configuración)
 
 ---
 
@@ -209,7 +210,7 @@ Sitio estático de un solo proyecto (`index.html` en la raíz + `assets/`), seg�
 - T005, T006 y T007 en paralelo entre sí una vez terminado T004 (archivos distintos: `layout.css`, `nav.js`, `i18n.js`)
 - Con Foundational completo, un desarrollador puede tomar US1+US2+US3+US7 (P1) mientras otro toma US4+US5+US6 (P2), en paralelo
 - T022 (capturas del proyecto destacado) puede prepararse en paralelo al resto de US3 (archivo/artefacto distinto)
-- T040-T044 en Polish son verificaciones independientes entre sí y pueden correrse en paralelo
+- T041-T045 en Polish son verificaciones independientes entre sí y pueden correrse en paralelo
 
 ---
 
