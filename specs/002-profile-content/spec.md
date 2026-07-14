@@ -154,7 +154,8 @@ Un reclutador interesado contacta a la autora por LinkedIn o email, o descarga s
 - **FR-010**: El sitio SHALL presentar en Proyecto destacado el contexto, el objetivo y las funcionalidades clave del proyecto (Login, Registro, Búsqueda, Favoritos). *(Ubicuo)*
 - **FR-011**: El sitio SHALL mostrar en Proyecto destacado evidencia del proceso de QA manual aplicado, incluyendo casos de prueba representativos y bugs encontrados con su resolución. *(Ubicuo)*
 - **FR-012**: El sitio SHALL mostrar en Proyecto destacado evidencia concreta de automatización aplicada al proyecto (por ejemplo, resultados o alcance de pruebas con Playwright), no solo la mención de que existe. *(Ubicuo)*
-- **FR-013**: El sitio SHALL presentar la evidencia visual del proyecto destacado mediante [NEEDS CLARIFICATION: ¿capturas de pantalla estáticas, un demo embebido en vivo (iframe), un video walkthrough, o una combinación? cada formato tiene distinto costo de peso de página y mantenimiento]. *(Característica opcional)*
+- **FR-013**: El sitio SHALL presentar la evidencia visual del proyecto destacado mediante capturas de pantalla optimizadas del flujo (Login, Registro, Búsqueda, Favoritos) y de la evidencia de testing, embebidas directamente en la página. *(Ubicuo)*
+- **FR-013a**: DONDE exista un demo en vivo o un video walkthrough del proyecto destacado, el sitio SHALL enlazar a él como recurso externo en lugar de embeberlo directamente en la página. *(Característica opcional)*
 - **FR-014**: DONDE exista evidencia detallada adicional fuera del sitio principal (repositorio de automatización, reporte de bugs completo), el sitio SHALL enlazar a ella desde la sección de Proyecto destacado. *(Característica opcional)*
 
 ### Habilidades técnicas
@@ -199,7 +200,7 @@ Un reclutador interesado contacta a la autora por LinkedIn o email, o descarga s
 
 ## Assumptions
 
-- Esta feature expande el contenido de la estructura general ya definida en `001-site-structure` (sitio de una sola página con anclas, selector de idioma ES/EN); no la reemplaza. La relación entre ambas specs queda señalada para confirmación explícita del usuario.
+- Esta feature expande el contenido de la estructura general ya definida en `001-site-structure` (sitio de una sola página con anclas, selector de idioma ES/EN); no la reemplaza. Confirmado por el usuario el 2026-07-14: la sección genérica "Proyectos" de `001` se refina aquí como "Proyecto destacado" (caso de estudio único, no una lista), y se agregan las secciones Servicios, Habilidades técnicas y Experiencia que `001` no contemplaba.
 - El CV descargable es un archivo PDF; si existen versiones en español e inglés, el enlace de descarga usa el idioma activo del selector de idioma del sitio.
 - La evidencia exhaustiva del proyecto destacado (repositorio completo de casos de prueba, bug tracker completo, código de automatización) puede vivir fuera del sitio principal (por ejemplo, en un repositorio público); la sección de Proyecto destacado muestra una síntesis representativa y enlaza a esa evidencia ampliada cuando exista.
 - "Servicios" describe capacidades ofrecidas por la autora como profesional QA en búsqueda de empleo, no un catálogo comercial con tarifas ni un formulario de cotización.

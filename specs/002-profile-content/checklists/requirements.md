@@ -13,7 +13,7 @@
 
 ## Requirement Completeness
 
-- [ ] No [NEEDS CLARIFICATION] markers remain
+- [x] No [NEEDS CLARIFICATION] markers remain
 - [x] Requirements are testable and unambiguous
 - [x] Success criteria are measurable
 - [x] Success criteria are technology-agnostic (no implementation details)
@@ -31,5 +31,6 @@
 
 ## Notes
 
-- Queda 1 marcador [NEEDS CLARIFICATION] (FR-013, formato de evidencia visual del proyecto destacado) pendiente de resolver con el usuario.
-- Pendiente adicional (fuera del checklist formal): confirmar con el usuario la relación entre esta spec y `001-site-structure` (ver sección Assumptions).
+- Resuelto: evidencia visual del proyecto destacado = capturas embebidas + enlace externo opcional a demo/video (FR-013, FR-013a), decidido junto con el usuario el 2026-07-14 priorizando los principios II y V de la constitución.
+- Resuelto: relación con `001-site-structure` confirmada por el usuario — `002` expande y refina el detalle de contenido sobre esa estructura (ver Assumptions).
+- Checklist completo. Listo para `/speckit-plan`.
