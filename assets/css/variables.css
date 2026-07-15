@@ -1,15 +1,19 @@
 :root {
-  /* Paleta (verificada a mano contra WCAG AA — ver research.md §3) */
+  /* Paleta modo claro (verificada a mano contra WCAG AA — ver research.md §3) */
   --color-bg: #ffffff;
-  --color-bg-alt: #f5f3fa;
+  --color-bg-alt: #f5f3fa; /* tinte violeta */
+  --color-bg-alt-2: #e9f0f9; /* tinte azul */
   --color-text: #1a1f36;
   --color-text-muted: #4a4f6a;
-  --color-accent: #6c4fd6;
-  --color-accent-dark: #5636b0;
+  --color-accent: #6c4fd6; /* violeta de marca — SIEMPRE con texto blanco encima */
+  --color-accent-dark: #5636b0; /* variante rica, uso como fondo (hover de botones) */
+  --color-accent-text: #5636b0; /* violeta para texto/links sobre el fondo de página — ajusta por tema */
   --color-border: #e0dcef;
+  --shadow-color: rgba(26, 31, 54, 0.1);
 
-  /* Tipografía: pila del sistema, sin webfont externa (principio V) */
-  --font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  /* Tipografía: Manrope (Google Fonts, font-display: swap) con fallback
+     del sistema si la fuente no carga — ver <link> en index.html */
+  --font-family: 'Manrope', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-size-base: 1rem;
   --font-size-sm: 0.875rem;
   --font-size-lg: 1.25rem;
@@ -31,4 +35,25 @@
 
   --radius: 0.5rem;
   --max-width: 72rem;
+
+  /* Transiciones (respetan prefers-reduced-motion — ver base.css) */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.6s ease;
+}
+
+/* Paleta modo oscuro. Mismos tokens, valores nuevos — verificados a mano:
+   texto principal ~17:1, texto muted ~9:1, accent-text ~6.8:1 contra el
+   fondo oscuro (todos superan AA). --color-accent y --color-accent-dark
+   se mantienen iguales porque solo se usan como fondo de botones con
+   texto blanco encima (contraste independiente del tema). */
+:root[data-theme='dark'] {
+  --color-bg: #14121f;
+  --color-bg-alt: #201a35; /* tinte violeta oscuro */
+  --color-bg-alt-2: #141b2e; /* tinte azul oscuro */
+  --color-text: #f2f0f7;
+  --color-text-muted: #b8b4c9;
+  --color-accent-text: #a78bfa;
+  --color-border: #362f52;
+  --shadow-color: rgba(167, 139, 250, 0.18);
 }

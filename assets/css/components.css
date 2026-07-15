@@ -9,7 +9,7 @@
   gap: 0.35em;
   font-size: var(--font-size-sm);
   font-weight: 600;
-  color: var(--color-accent-dark);
+  color: var(--color-accent-text);
   background-color: var(--color-bg-alt);
   border: 1px solid var(--color-accent);
   border-radius: var(--radius);
@@ -48,6 +48,7 @@
   background-color: var(--color-bg);
   border-bottom: 1px solid var(--color-border);
   z-index: 10;
+  transition: background-color var(--transition-base), border-color var(--transition-base);
 }
 
 .site-nav {
@@ -78,17 +79,19 @@
 }
 
 .site-nav__list a[aria-current="location"] {
-  color: var(--color-accent-dark);
+  color: var(--color-accent-text);
   font-weight: 700;
   border-bottom: 2px solid var(--color-accent);
 }
 
-.lang-switch {
+.lang-switch,
+.theme-switch {
   display: flex;
   gap: 0.25rem;
 }
 
-.lang-switch button {
+.lang-switch button,
+.theme-switch button {
   font: inherit;
   font-size: var(--font-size-sm);
   padding: 0.25em 0.6em;
@@ -97,12 +100,25 @@
   color: var(--color-text);
   border-radius: var(--radius);
   cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
 }
 
-.lang-switch button[aria-pressed="true"] {
+.lang-switch button[aria-pressed="true"],
+.theme-switch button[aria-pressed="true"] {
   background: var(--color-accent);
   color: #fff;
   border-color: var(--color-accent);
+}
+
+.lang-switch button:hover,
+.theme-switch button:hover {
+  transform: translateY(-1px);
+}
+
+.header__controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
 }
 
 /* ============================================================
