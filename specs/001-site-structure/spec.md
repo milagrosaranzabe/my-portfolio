@@ -27,31 +27,31 @@ Un visitante (reclutador, lead de QA, colega) llega a la home del portfolio y en
 
 ### User Story 2 - Navegación accesible a las secciones principales (Priority: P1)
 
-Un visitante puede moverse entre Home, Sobre mí, Proyectos y Contacto desde cualquier punto del sitio, tanto con mouse/touch como exclusivamente con teclado.
+Un visitante puede moverse entre todas las secciones del sitio (Inicio, Sobre mí, Servicios, Proyecto destacado, Habilidades técnicas, Experiencia y Contacto) desde cualquier punto del sitio, tanto con mouse/touch como exclusivamente con teclado.
 
 **Why this priority**: Sin navegación confiable y accesible, el visitante no llega al contenido que sí importa (proyecto destacado, contacto). Es la base estructural del sitio.
 
-**Independent Test**: Se puede probar de forma aislada recorriendo el sitio solo con teclado (Tab/Shift+Tab/Enter) y confirmando que se puede llegar a las 4 secciones y que el foco es siempre visible.
+**Independent Test**: Se puede probar de forma aislada recorriendo el sitio solo con teclado (Tab/Shift+Tab/Enter) y confirmando que se puede llegar a las 7 secciones y que el foco es siempre visible.
 
 **Acceptance Scenarios**:
 
-1. **Given** un visitante en cualquier página del sitio, **When** usa la navegación, **Then** puede llegar a Home, Sobre mí, Proyectos y Contacto.
+1. **Given** un visitante en cualquier página del sitio, **When** usa la navegación, **Then** puede llegar a Inicio, Sobre mí, Servicios, Proyecto destacado, Habilidades técnicas, Experiencia y Contacto.
 2. **Given** un visitante que navega solo con teclado, **When** presiona Tab repetidamente, **Then** el orden de foco es lógico y el elemento enfocado siempre tiene un indicador visible.
 
 ---
 
-### User Story 3 - Sección de Proyectos con el destacado priorizado (Priority: P2)
+### User Story 3 - Proyecto destacado con tratamiento visual prominente (Priority: P2)
 
-Un visitante entra a la sección de Proyectos y de inmediato identifica cuál es el proyecto destacado (Biblioteca de Películas y Series) porque aparece primero y con mayor peso visual que el resto.
+Un visitante entra a la sección de Proyecto destacado (Biblioteca de Películas y Series) y de inmediato reconoce, por su tratamiento visual, que es el contenido central del portfolio — sin necesidad de leer el texto. (El contenido detallado de esta sección — casos de prueba, bugs, evidencia de automatización — se especifica en `002-profile-content`; esta historia cubre solo su tratamiento visual dentro de la estructura general del sitio.)
 
-**Why this priority**: El proyecto destacado es la pieza central de evidencia de QA del portfolio (constitución, principio III); si se pierde entre otros proyectos, se diluye su valor.
+**Why this priority**: El proyecto destacado es la pieza central de evidencia de QA del portfolio (constitución, principio III); si no se distingue del resto de las secciones, se diluye su valor.
 
-**Independent Test**: Se puede probar mostrando solo la sección de Proyectos con al menos dos proyectos cargados y verificando que el destacado aparece primero y visualmente distinguido (tamaño, color o posición) sin necesidad de leer el texto.
+**Independent Test**: Se puede probar mostrando solo esa sección y verificando que su tratamiento visual (tamaño, color o posición) la distingue de las demás secciones del sitio, sin necesidad de leer el texto.
 
 **Acceptance Scenarios**:
 
-1. **Given** la sección de Proyectos con varios proyectos, **When** el visitante la mira sin leer texto, **Then** puede señalar cuál es el proyecto destacado en menos de 5 segundos.
-2. **Given** la lista de proyectos, **When** se revisa el orden, **Then** el proyecto destacado aparece antes que cualquier otro proyecto.
+1. **Given** la sección de Proyecto destacado, **When** el visitante la mira sin leer texto, **Then** reconoce que es el contenido central del sitio en menos de 5 segundos.
+2. **Given** el resto de las secciones del sitio, **When** se comparan visualmente entre sí, **Then** Proyecto destacado tiene un tratamiento visiblemente más prominente que las secciones de contenido secundario.
 
 ---
 
@@ -75,8 +75,7 @@ Un visitante interesado encuentra al menos un medio de contacto real y funcional
 - ¿Qué pasa en anchos de pantalla extremos (320px de ancho o pantallas ultra-anchas)? El layout no debe romperse, ocultar contenido ni producir scroll horizontal no intencional.
 - ¿Qué pasa si el visitante usa modo de alto contraste o tiene el sistema en modo oscuro? El contenido debe seguir siendo legible y mantener el contraste mínimo requerido.
 - ¿Qué pasa si un visitante navega solo con teclado y llega al final de la navegación? Debe poder continuar hacia el contenido principal sin quedar atrapado en el menú (sin "trampas de foco").
-- ¿Qué pasa si todavía no hay más proyectos cargados además del destacado? La sección de Proyectos debe seguir siendo coherente mostrando solo el destacado, sin dar sensación de error o contenido faltante.
-- ¿Qué pasa si el visitante cambia de idioma estando en medio de una sección ancla (por ejemplo, en Proyectos)? Debe permanecer en la misma sección tras el cambio, no volver al inicio de la página.
+- ¿Qué pasa si el visitante cambia de idioma estando en medio de una sección ancla (por ejemplo, en Proyecto destacado)? Debe permanecer en la misma sección tras el cambio, no volver al inicio de la página.
 
 ## Requirements *(mandatory)*
 
@@ -84,39 +83,40 @@ Un visitante interesado encuentra al menos un medio de contacto real y funcional
 
 - **FR-001**: La home MUST presentar, en el primer bloque visible (sin necesidad de scroll en desktop), una descripción honesta del autor que comunique fortaleza en testing manual/proceso de QA y transición activa hacia automatización e IA.
 - **FR-002**: El copy del sitio MUST evitar afirmaciones de nivel de experiencia que no estén respaldadas por evidencia visible en el propio sitio (alineado con el principio IV de la constitución).
-- **FR-003**: El sitio MUST ofrecer una navegación persistente (landmark `nav`) con enlaces a Home, Sobre mí, Proyectos y Contacto, visible desde cualquier punto del sitio.
+- **FR-003**: El sitio MUST ofrecer una navegación persistente (landmark `nav`) con enlaces a las secciones ancladas del sitio (Inicio, Sobre mí, Servicios, Proyecto destacado, Habilidades técnicas, Experiencia y Contacto — ver `002-profile-content` para el detalle de contenido de cada una), visible desde cualquier punto del sitio.
 - **FR-004**: La navegación MUST ser completamente operable por teclado, con orden de foco lógico y un indicador de foco visible en todo momento.
-- **FR-005**: La sección de Proyectos MUST listar el proyecto destacado (Biblioteca de Películas y Series) en primer lugar y distinguido visualmente (por tamaño, posición o tratamiento) frente al resto de los proyectos.
+- **FR-005**: El sitio MUST presentar el proyecto destacado (Biblioteca de Películas y Series) como caso de estudio central, con un tratamiento visualmente prominente (por tamaño, posición o tratamiento) frente al resto de las secciones de contenido secundario del sitio.
 - **FR-006**: La sección de Contacto MUST incluir al menos un medio de contacto real y funcional (por ejemplo, un enlace `mailto:` a una dirección de correo válida del autor).
 - **FR-007**: Todas las páginas MUST usar HTML semántico (landmarks como `header`, `nav`, `main`, `footer`, y jerarquía de encabezados correcta) en vez de contenedores genéricos sin significado.
 - **FR-008**: El contraste de color de texto y componentes interactivos MUST cumplir como mínimo WCAG AA (4.5:1 para texto normal, 3:1 para texto grande y componentes de UI).
 - **FR-009**: El layout MUST adaptarse sin contenido roto u oculto en al menos tres anchos de referencia: móvil, tablet y desktop.
 - **FR-010**: El sitio MUST evitar frameworks o dependencias externas pesadas que no estén justificadas por una necesidad concreta no resuelta por HTML/CSS/JS nativo.
-- **FR-011**: El sitio MUST estructurarse como una sola página (one-page) con las secciones Home, Sobre mí, Proyectos y Contacto ancladas en la misma página; la navegación MUST desplazar (scroll) a cada ancla en lugar de cargar páginas separadas.
+- **FR-011**: El sitio MUST estructurarse como una sola página (one-page) con las 7 secciones (Inicio, Sobre mí, Servicios, Proyecto destacado, Habilidades técnicas, Experiencia y Contacto) ancladas en la misma página; la navegación MUST desplazar (scroll) a cada ancla en lugar de cargar páginas separadas.
 - **FR-012**: El contenido textual del sitio MUST estar disponible en español e inglés mediante un selector de idioma, con todo el copy (incluida la presentación honesta de FR-001 y el resto de las secciones) traducido de forma equivalente en ambos idiomas.
 - **FR-013**: El selector de idioma MUST ser operable por teclado y MUST indicar con claridad cuál de los dos idiomas está activo en cada momento.
 - **FR-014**: Un cambio de idioma MUST conservar la posición de scroll/sección en la que estaba el visitante, en vez de volver al inicio de la página.
 
 ### Key Entities
 
-- **Proyecto**: Representa un trabajo mostrado en la sección de Proyectos. Atributos clave: nombre, descripción breve, indicador de si es el proyecto destacado, enlace a su detalle.
-- **Enlace de navegación**: Representa un destino navegable del sitio (Home, Sobre mí, Proyectos, Contacto). Atributos clave: etiqueta visible, destino.
+- **Enlace de navegación**: Representa un destino navegable del sitio (Inicio, Sobre mí, Servicios, Proyecto destacado, Habilidades técnicas, Experiencia, Contacto). Atributos clave: etiqueta visible, destino.
+
+El proyecto destacado no es una lista de "Proyecto" genéricos — es un caso de estudio único cuyo modelo de contenido se define en `002-profile-content/data-model.md`.
 
 ## Success Criteria *(mandatory)*
 
 ### Measurable Outcomes
 
 - **SC-001**: Un visitante nuevo puede identificar el nivel real del autor (fortaleza en manual/QA + transición a automatización/IA) leyendo solo el primer bloque de la home, sin hacer scroll, tanto en desktop como en móvil.
-- **SC-002**: Un visitante puede llegar a cualquiera de las 3 secciones principales (Sobre mí, Proyectos, Contacto) desde cualquier otro punto del sitio en un máximo de 1 acción de navegación (clic o tap).
+- **SC-002**: Un visitante puede llegar a cualquiera de las 6 secciones principales (Sobre mí, Servicios, Proyecto destacado, Habilidades técnicas, Experiencia, Contacto) desde cualquier otro punto del sitio en un máximo de 1 acción de navegación (clic o tap).
 - **SC-003**: Un visitante que navega exclusivamente con teclado puede alcanzar y activar cada enlace de navegación y el proyecto destacado sin quedar bloqueado en ningún punto.
-- **SC-004**: En una prueba de vistazo rápido, el 90% de los observadores identifica correctamente cuál es el proyecto destacado dentro de los primeros 5 segundos de ver la sección de Proyectos.
+- **SC-004**: En una prueba de vistazo rápido recorriendo el sitio completo, el 90% de los observadores identifica correctamente cuál es la sección de proyecto destacado dentro de los primeros 5 segundos, sin necesidad de leer texto.
 - **SC-005**: Cada página del sitio pasa una verificación manual de contraste (AA) y de navegación por teclado antes de considerarse terminada.
 - **SC-006**: El peso total de cada página (HTML + CSS + JS, sin contar imágenes) se mantiene por debajo de 100 KB.
 
 ## Assumptions
 
 - El sitio es estático (sin backend ni CMS); el contenido se edita directamente en los archivos fuente.
-- Al momento de esta feature, la sección de Proyectos puede incluir solo el proyecto destacado como entrada real, con el resto como marcadores de posición hasta que existan más proyectos documentados.
+- La sección de proyecto destacado presenta un único caso de estudio (Biblioteca de Películas y Series), no una lista de proyectos con marcadores de posición; su modelo de contenido detallado se especifica en `002-profile-content`.
 - Un único medio de contacto real (correo electrónico) es suficiente para cumplir el requisito de Contacto; enlaces adicionales (por ejemplo, LinkedIn) son opcionales y no bloquean esta feature.
 - El detalle interno de la página del proyecto destacado (evidencia de QA, casos de prueba, etc.) es una feature separada y no se especifica aquí.
 - La traducción al inglés no necesita ser palabra por palabra; alcanza con transmitir el mismo mensaje honesto (principio IV) en ambos idiomas.
