@@ -117,7 +117,7 @@ Un reclutador interesado contacta a la autora por LinkedIn o email, o descarga s
 
 ### Edge Cases
 
-- ¿Qué pasa si una habilidad marcada como "en aprendizaje" no tiene ninguna evidencia asociada en el proyecto destacado ni en otra sección? No debe presentarse junto a las habilidades consolidadas sin esa distinción, para no sobrevender (principio IV de la constitución).
+- ¿Qué pasa si una habilidad marcada como "en aprendizaje" no tiene ninguna evidencia asociada en el proyecto destacado ni en otra sección? Se omite del sitio hasta contar con evidencia (ver FR-026), para no sobrevender (principio IV de la constitución).
 - ¿Qué pasa si el archivo de CV no está disponible en el momento de publicar? El enlace de descarga debe ocultarse en lugar de mostrar un enlace roto.
 - ¿Qué pasa si un reclutador entra directo a una sección por un enlace ancla compartido (por ejemplo, `#proyecto-destacado`)? Debe llegar directo a esa sección sin perder la navegación general del sitio.
 - ¿Qué pasa si la sección de Experiencia todavía tiene pocas o ninguna entrada de experiencia laboral formal en QA? Debe mostrarse igual con la información real disponible (formación, proyectos, prácticas) en lugar de quedar vacía o con contenido de relleno.
@@ -141,7 +141,7 @@ Un reclutador interesado contacta a la autora por LinkedIn o email, o descarga s
 
 - **FR-004**: El sitio SHALL presentar en Sobre mí una bio breve que describa la experiencia consolidada de la autora en testing manual (web y mobile), pruebas de API con Postman, validación de bases de datos SQL, y metodologías ágiles (Jira, Zephyr). *(Ubicuo)*
 - **FR-005**: El sitio SHALL declarar en Sobre mí, de forma explícita y separada de la experiencia consolidada, que la autora está en transición activa hacia un perfil de QA Automation + AI, nombrando las tecnologías en aprendizaje (JavaScript, Playwright, automatización de APIs, herramientas de IA aplicadas a testing). *(Ubicuo)*
-- **FR-006**: SI el copy de cualquier sección atribuye a la autora dominio consolidado de una tecnología declarada en aprendizaje activo (por ejemplo, Playwright), ENTONCES el sitio SHALL corregir el copy para reflejar el nivel real de transición. *(Comportamiento no deseado)*
+- **FR-006**: SI, en la revisión editorial previa a la publicación, el copy de cualquier sección atribuye a la autora dominio consolidado de una tecnología declarada en aprendizaje activo (por ejemplo, Playwright), ENTONCES el copy SHALL corregirse antes de publicar para reflejar el nivel real de transición (autorrevisión manual — ver Assumptions; no es una corrección en tiempo de ejecución, dado que el sitio es estático). *(Comportamiento no deseado)*
 
 ### Servicios
 
@@ -152,8 +152,8 @@ Un reclutador interesado contacta a la autora por LinkedIn o email, o descarga s
 ### Proyecto destacado — Biblioteca de Películas y Series
 
 - **FR-010**: El sitio SHALL presentar en Proyecto destacado el contexto, el objetivo y las funcionalidades clave del proyecto (Login, Registro, Búsqueda, Favoritos). *(Ubicuo)*
-- **FR-011**: El sitio SHALL mostrar en Proyecto destacado evidencia del proceso de QA manual aplicado, incluyendo casos de prueba representativos y bugs encontrados con su resolución. *(Ubicuo)*
-- **FR-012**: El sitio SHALL mostrar en Proyecto destacado evidencia concreta de automatización aplicada al proyecto (por ejemplo, resultados o alcance de pruebas con Playwright), no solo la mención de que existe. *(Ubicuo)*
+- **FR-011**: El sitio SHALL mostrar en Proyecto destacado evidencia del proceso de QA manual aplicado, incluyendo un mínimo de 3 casos de prueba representativos y 2 bugs encontrados con su resolución. *(Ubicuo)*
+- **FR-012**: El sitio SHALL mostrar en Proyecto destacado al menos una pieza de evidencia tangible de automatización aplicada al proyecto (por ejemplo, un fragmento de script de prueba, una captura del resultado de una ejecución, o un resumen de alcance con funcionalidades específicas cubiertas), no solo la mención de que existe. El alcance descripto MUST corresponder exactamente al trabajo de automatización realmente completado al momento de publicar (p. ej., si cubre 2 de las 4 funcionalidades clave, el copy lo indica explícitamente) — no se extrapola a un dominio de automatización mayor al alcanzado. *(Ubicuo)*
 - **FR-013**: El sitio SHALL presentar la evidencia visual del proyecto destacado mediante capturas de pantalla optimizadas del flujo (Login, Registro, Búsqueda, Favoritos) y de la evidencia de testing, embebidas directamente en la página. *(Ubicuo)*
 - **FR-013a**: DONDE exista un demo en vivo o un video walkthrough del proyecto destacado, el sitio SHALL enlazar a él como recurso externo en lugar de embeberlo directamente en la página. *(Característica opcional)*
 - **FR-014**: DONDE exista evidencia detallada adicional fuera del sitio principal (repositorio de automatización, reporte de bugs completo), el sitio SHALL enlazar a ella desde la sección de Proyecto destacado. *(Característica opcional)*
@@ -178,6 +178,13 @@ Un reclutador interesado contacta a la autora por LinkedIn o email, o descarga s
 - **FR-024**: CUANDO un visitante hace clic en el enlace de LinkedIn o en el de email, el sitio SHALL abrir el destino correspondiente sin perder el estado de la página actual del portfolio. *(Basado en evento)*
 - **FR-025**: SI el archivo de CV no está disponible, ENTONCES el sitio SHALL ocultar el enlace de descarga en lugar de mostrar un enlace roto. *(Comportamiento no deseado)*
 
+### Reglas transversales de honestidad
+
+Estas reglas aplican a Sobre mí, Servicios, Proyecto destacado y Habilidades técnicas por igual. Son la aplicación específica, sección por sección, de la regla general de honestidad (FR-002 de `001-site-structure`).
+
+- **FR-026**: SI una habilidad o servicio se clasifica como "en aprendizaje" y no cuenta con evidencia asociada visible en el sitio (en Proyecto destacado u otra sección), ENTONCES el sitio SHALL omitir esa habilidad/servicio hasta contar con esa evidencia. *(Comportamiento no deseado)*
+- **FR-027**: El indicador "en aprendizaje" (texto + tratamiento visual) SHALL ser el mismo componente reutilizado en Sobre mí (FR-005), Servicios (FR-008) y Habilidades (FR-017) — no implementaciones visuales distintas por sección. *(Ubicuo)*
+
 ### Key Entities
 
 - **Servicio**: Oferta de QA presentada en la sección Servicios. Atributos clave: nombre, descripción breve, descripción ampliada, nivel (consolidado / en aprendizaje).
@@ -197,6 +204,7 @@ Un reclutador interesado contacta a la autora por LinkedIn o email, o descarga s
 - **SC-005**: El 100% de los enlaces de contacto (LinkedIn, email, CV) llevan a un destino válido y funcional, verificado antes de publicar.
 - **SC-006**: Un reclutador puede distinguir, sin leer texto adicional, qué habilidades son experiencia consolidada y cuáles están en aprendizaje activo, en menos de 10 segundos de ver la sección de Habilidades.
 - **SC-007**: Un reclutador identifica que la autora busca posiciones remotas en Argentina/LATAM sin necesidad de buscar esa información fuera de las secciones Sobre mí o Contacto.
+- **SC-008**: El 100% de las menciones de una tecnología en el sitio son consistentes con su clasificación declarada (ninguna tecnología marcada "en aprendizaje" aparece descrita como dominada en otra sección), verificado con una revisión manual completa del copy antes de publicar.
 
 ## Assumptions
 
@@ -205,3 +213,8 @@ Un reclutador interesado contacta a la autora por LinkedIn o email, o descarga s
 - La evidencia exhaustiva del proyecto destacado (repositorio completo de casos de prueba, bug tracker completo, código de automatización) puede vivir fuera del sitio principal (por ejemplo, en un repositorio público); la sección de Proyecto destacado muestra una síntesis representativa y enlaza a esa evidencia ampliada cuando exista.
 - "Servicios" describe capacidades ofrecidas por la autora como profesional QA en búsqueda de empleo, no un catálogo comercial con tarifas ni un formulario de cotización.
 - La sección de Experiencia se completa con información real provista por la autora; si la experiencia laboral formal en QA es limitada, se documenta igual con lo que exista (formación, proyectos, prácticas) en vez de dejarse vacía.
+- La autora es responsable de la revisión editorial previa a la publicación (autorrevisión), incluyendo verificar que ningún copy sobrevende una habilidad en aprendizaje (FR-006, SC-008) — no existe un proceso de aprobación externo, dado que es un portfolio personal.
+- La clasificación `consolidado`/`en_aprendizaje` de cada habilidad o servicio (ver `data-model.md`) se revisa y actualiza por la autora de forma periódica (p. ej., junto con cada actualización del CV); no hay mecanismo automático de vigencia.
+- La autora es responsable de mantener el contenido del CV descargable alineado con las afirmaciones de honestidad del sitio; no hay verificación automática entre ambos.
+- "Síntesis representativa" (evidencia condensada del proyecto destacado) queda acotada por los mínimos de FR-011/FR-012: al menos 3 casos de prueba, 2 bugs y 1 pieza de evidencia de automatización; el resto de la evidencia exhaustiva puede vivir fuera del sitio (FR-014).
+- "Pieza de evidencia concreta" (SC-002) es cualquiera de: una captura del resultado, un fragmento de código o script, un caso de prueba documentado, o un enlace verificable (repositorio, ejecución de CI) — no alcanza una sola oración de intención sin artefacto asociado.

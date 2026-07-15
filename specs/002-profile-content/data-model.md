@@ -23,7 +23,9 @@ Oferta de QA en la sección Servicios (FR-007, FR-008, FR-009).
 | `descripcion_ampliada_es` / `_en` | string | Mostrada en hover/foco (FR-009) |
 | `nivel` | enum: `consolidado` \| `en_aprendizaje` | Determina la marca visual (FR-008) |
 
-**Validación**: si `nivel = en_aprendizaje`, el elemento visual DEBE incluir la etiqueta textual "en aprendizaje" (no solo color, por principio II de la constitución).
+**Validación**: si `nivel = en_aprendizaje`, el elemento visual DEBE incluir la etiqueta textual "en aprendizaje" (no solo color, por principio II de la constitución), y DEBE tener evidencia asociada visible en el sitio o se omite (FR-026).
+
+**Regla de clasificación de `nivel`** (aplica también a Habilidad técnica): `consolidado` si la autora aplicó la habilidad en más de un proyecto o contexto profesional/académico real; `en_aprendizaje` si está siendo estudiada o practicada activamente pero todavía no aplicada en más de un proyecto real (aunque exista evidencia parcial, como el proyecto destacado).
 
 ## Proyecto destacado
 
