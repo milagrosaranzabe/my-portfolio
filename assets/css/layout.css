@@ -1,0 +1,32 @@
+/* Mobile-first: estilos base ya asumen móvil (ver base.css/components.css).
+   Los breakpoints solo ajustan densidad/columnas para pantallas más anchas. */
+
+@media (min-width: 48rem) {
+  /* Tablet */
+  .screenshots {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero__tagline {
+    font-size: var(--font-size-xl);
+  }
+}
+
+@media (min-width: 80rem) {
+  /* Desktop */
+  .screenshots {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* auto-fit en vez de un número fijo de columnas: se adapta sola a la
+   cantidad real de tarjetas (hoy 3) sin dejar huecos vacíos, y sigue
+   funcionando si en el futuro se agrega o quita algún servicio. */
+.services__grid {
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+/* El proyecto destacado nunca compite en grilla con otras tarjetas:
+   siempre ocupa el ancho completo del contenedor de sección, en
+   cualquier breakpoint, para mantener su tratamiento visualmente
+   prominente (FR-005 de 001-site-structure). */

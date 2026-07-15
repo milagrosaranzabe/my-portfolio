@@ -1,0 +1,34 @@
+:root {
+  /* Paleta (verificada a mano contra WCAG AA — ver research.md §3) */
+  --color-bg: #ffffff;
+  --color-bg-alt: #f5f3fa;
+  --color-text: #1a1f36;
+  --color-text-muted: #4a4f6a;
+  --color-accent: #6c4fd6;
+  --color-accent-dark: #5636b0;
+  --color-border: #e0dcef;
+
+  /* Tipografía: pila del sistema, sin webfont externa (principio V) */
+  --font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-size-base: 1rem;
+  --font-size-sm: 0.875rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.75rem;
+  --font-size-2xl: 2.5rem;
+  --line-height-base: 1.6;
+
+  /* Espaciado */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+  --space-6: 4.5rem;
+
+  /* Breakpoints de referencia (usados como comentario; ver layout.css) */
+  --bp-tablet: 48rem;   /* 768px */
+  --bp-desktop: 80rem;  /* 1280px */
+
+  --radius: 0.5rem;
+  --max-width: 72rem;
+}

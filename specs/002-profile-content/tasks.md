@@ -24,9 +24,9 @@ Sitio estático de un solo proyecto (`index.html` en la raíz + `assets/`), seg�
 
 **Purpose**: Inicialización del proyecto
 
-- [ ] T001 Crear la estructura de carpetas del proyecto: `index.html` (vacío) y `assets/css/`, `assets/js/`, `assets/img/proyecto-destacado/`, `assets/cv/` en la raíz del repo, según `plan.md` → Project Structure
-- [ ] T002 [P] Crear `assets/css/variables.css` con la paleta (blanco `#FFFFFF`, violeta, azul oscuro) y los tokens de tipografía, verificados a mano contra WCAG AA según `research.md` §3
-- [ ] T003 [P] Crear `assets/css/base.css` con un reset ligero, tipografía base y estilos de `:focus-visible`, según constitución principio II
+- [X] T001 Crear la estructura de carpetas del proyecto: `index.html` (vacío) y `assets/css/`, `assets/js/`, `assets/img/proyecto-destacado/`, `assets/cv/` en la raíz del repo, según `plan.md` → Project Structure
+- [X] T002 [P] Crear `assets/css/variables.css` con la paleta (blanco `#FFFFFF`, violeta, azul oscuro) y los tokens de tipografía, verificados a mano contra WCAG AA según `research.md` §3
+- [X] T003 [P] Crear `assets/css/base.css` con un reset ligero, tipografía base y estilos de `:focus-visible`, según constitución principio II
 
 ---
 
@@ -36,13 +36,13 @@ Sitio estático de un solo proyecto (`index.html` en la raíz + `assets/`), seg�
 
 **⚠️ CRITICAL**: Ninguna historia de usuario puede empezar hasta que esta fase esté completa
 
-- [ ] T004 [P] Crear el componente compartido `.badge-learning` en `assets/css/components.css` (etiqueta textual + tratamiento visual para "en aprendizaje" / "en desarrollo", no solo color) para que Sobre mí, Servicios y Habilidades lo reutilicen sin duplicar implementaciones, según FR-027
-- [ ] T005 Crear el esqueleto de `index.html` con landmarks semánticos (`header`, `nav`, `main`, `footer`) y `<section id="...">` vacíos para las 7 secciones, usando los ids de `contracts/navigation-anchors.md`
-- [ ] T006 [P] Crear `assets/css/layout.css` con grid/flex mobile-first para el shell de la página y los breakpoints móvil/tablet/desktop, apoyado en los tokens de `assets/css/variables.css`
-- [ ] T007 [P] Crear `assets/js/nav.js`: lee los `href="#..."` de la navegación, hace scroll suave a la sección correspondiente y marca el enlace activo con `aria-current="location"`, según `contracts/navigation-anchors.md`
-- [ ] T008 [P] Crear `assets/js/i18n.js`: alterna los nodos `data-lang` vía la clase `.lang-hidden`, persiste el idioma elegido en `localStorage` (clave `lang`) y setea `<html lang>`, según `contracts/content-i18n-contract.md`
-- [ ] T009 Crear `assets/js/main.js` que inicializa `nav.js` e `i18n.js` en `DOMContentLoaded`, y enlazar los tres scripts y los CSS desde `index.html`
-- [ ] T010 Construir la barra de navegación en el `header` de `index.html`: enlaces a las 7 secciones (con `data-lang` dual) más el selector de idioma ES/EN con `aria-pressed`, según `contracts/content-i18n-contract.md`
+- [X] T004 [P] Crear el componente compartido `.badge-learning` en `assets/css/components.css` (etiqueta textual + tratamiento visual para "en aprendizaje" / "en desarrollo", no solo color) para que Sobre mí, Servicios y Habilidades lo reutilicen sin duplicar implementaciones, según FR-027
+- [X] T005 Crear el esqueleto de `index.html` con landmarks semánticos (`header`, `nav`, `main`, `footer`) y `<section id="...">` vacíos para las 7 secciones, usando los ids de `contracts/navigation-anchors.md`
+- [X] T006 [P] Crear `assets/css/layout.css` con grid/flex mobile-first para el shell de la página y los breakpoints móvil/tablet/desktop, apoyado en los tokens de `assets/css/variables.css`
+- [X] T007 [P] Crear `assets/js/nav.js`: lee los `href="#..."` de la navegación, hace scroll suave a la sección correspondiente y marca el enlace activo con `aria-current="location"`, según `contracts/navigation-anchors.md`
+- [X] T008 [P] Crear `assets/js/i18n.js`: alterna los nodos `data-lang` vía la clase `.lang-hidden`, persiste el idioma elegido en `localStorage` (clave `lang`) y setea `<html lang>`, según `contracts/content-i18n-contract.md`
+- [X] T009 Crear `assets/js/main.js` que inicializa `nav.js` e `i18n.js` en `DOMContentLoaded`, y enlazar los tres scripts y los CSS desde `index.html`
+- [X] T010 Construir la barra de navegación en el `header` de `index.html`: enlaces a las 7 secciones (con `data-lang` dual) más el selector de idioma ES/EN con `aria-pressed`, según `contracts/content-i18n-contract.md`
 
 **Checkpoint**: El shell carga, la navegación y el selector de idioma funcionan de punta a punta con secciones vacías, y el componente `.badge-learning` está listo para reutilizarse — recién ahora pueden empezar las historias de usuario.
 
@@ -56,10 +56,10 @@ Sitio estático de un solo proyecto (`index.html` en la raíz + `assets/`), seg�
 
 ### Implementation for User Story 1
 
-- [ ] T011 [US1] Construir el markup de `<section id="inicio">` en `index.html` con el nombre de la autora y la frase de identificación (`data-lang` ES/EN) según FR-001
-- [ ] T012 [US1] Agregar el enlace de llamado a la acción del Hero apuntando a `#proyecto-destacado` según FR-002
-- [ ] T013 [US1] Estilar la sección Hero en `assets/css/components.css`: layout de una columna en móvil sin recortar contenido, según FR-003
-- [ ] T014 [US1] Verificar manualmente que el Hero es visible sin scroll a 1280px y a 375px (`quickstart.md` #1)
+- [X] T011 [US1] Construir el markup de `<section id="inicio">` en `index.html` con el nombre de la autora y la frase de identificación (`data-lang` ES/EN) según FR-001
+- [X] T012 [US1] Agregar el enlace de llamado a la acción del Hero apuntando a `#proyecto-destacado` según FR-002
+- [X] T013 [US1] Estilar la sección Hero en `assets/css/components.css`: layout de una columna en móvil sin recortar contenido, según FR-003
+- [X] T014 [US1] Verificar manualmente que el Hero es visible sin scroll a 1280px y a 375px (`quickstart.md` #1)
 
 **Checkpoint**: US1 completa — el Hero identifica a la autora de forma independiente al resto del sitio.
 
@@ -73,10 +73,10 @@ Sitio estático de un solo proyecto (`index.html` en la raíz + `assets/`), seg�
 
 ### Implementation for User Story 2
 
-- [ ] T015 [US2] Construir el markup de `<section id="sobre-mi">` en `index.html` con la bio de experiencia consolidada (testing manual, Postman, SQL, Jira/Zephyr; `data-lang` dual) según FR-004
-- [ ] T016 [US2] Agregar el bloque explícito de transición nombrando JS, Playwright, automatización de APIs e IA como aprendizaje activo, usando el componente `.badge-learning` (T004) — no una implementación propia — según FR-005 y FR-027
-- [ ] T017 [US2] Estilar el layout específico de la sección Sobre mí (posición de la bio vs. el bloque de transición) en `assets/css/components.css`
-- [ ] T018 [US2] Revisar el copy de Sobre mí contra FR-006: confirmar que ninguna tecnología declarada "en aprendizaje" aparece descrita como dominada en otra parte del sitio
+- [X] T015 [US2] Construir el markup de `<section id="sobre-mi">` en `index.html` con la bio de experiencia consolidada (testing manual, Postman, SQL, Jira/Zephyr; `data-lang` dual) según FR-004
+- [X] T016 [US2] Agregar el bloque explícito de transición nombrando JS, Playwright, automatización de APIs e IA como aprendizaje activo, usando el componente `.badge-learning` (T004) — no una implementación propia — según FR-005 y FR-027
+- [X] T017 [US2] Estilar el layout específico de la sección Sobre mí (posición de la bio vs. el bloque de transición) en `assets/css/components.css`
+- [X] T018 [US2] Revisar el copy de Sobre mí contra FR-006: confirmar que ninguna tecnología declarada "en aprendizaje" aparece descrita como dominada en otra parte del sitio
 
 **Checkpoint**: US2 completa — Sobre mí se sostiene sola como bio honesta.
 
@@ -90,14 +90,14 @@ Sitio estático de un solo proyecto (`index.html` en la raíz + `assets/`), seg�
 
 ### Implementation for User Story 3
 
-- [ ] T019 [US3] Construir el shell de `<section id="proyecto-destacado">` con contexto/objetivo y las funcionalidades clave (Login, Registro, Búsqueda, Favoritos) según FR-010
-- [ ] T020 [US3] Agregar la subsección de casos de prueba (mínimo 3, título/pasos/resultado esperado/obtenido según `data-model.md`) según FR-011
-- [ ] T021 [US3] Agregar la subsección de bugs encontrados (mínimo 2, descripción/severidad/resolución según `data-model.md`) según FR-011
-- [ ] T022 [US3] Agregar la subsección de evidencia de automatización (al menos una pieza tangible: script, captura de ejecución o resumen de alcance acotado a lo realmente completado) según FR-012
-- [ ] T023 [P] [US3] Optimizar y agregar las capturas a `assets/img/proyecto-destacado/` con `alt` descriptivo en ambos idiomas según FR-013
-- [ ] T024 [US3] Agregar el enlace externo opcional a demo/video (se abre en pestaña nueva) según FR-013a
-- [ ] T025 [US3] Agregar el enlace externo opcional a evidencia ampliada (repo de automatización / bug tracker completo) según FR-014
-- [ ] T026 [US3] Estilar Proyecto destacado en `assets/css/components.css` con un tratamiento visualmente prominente que lo distinga, según FR-005 de `001-site-structure`
+- [X] T019 [US3] Construir el shell de `<section id="proyecto-destacado">` con contexto/objetivo y las funcionalidades clave (Login, Registro, Búsqueda, Favoritos) según FR-010
+- [X] T020 [US3] Agregar la subsección de casos de prueba (mínimo 3, título/pasos/resultado esperado/obtenido según `data-model.md`) según FR-011
+- [X] T021 [US3] Agregar la subsección de bugs encontrados (mínimo 2, descripción/severidad/resolución según `data-model.md`) según FR-011
+- [X] T022 [US3] Agregar la subsección de evidencia de automatización (al menos una pieza tangible: script, captura de ejecución o resumen de alcance acotado a lo realmente completado) según FR-012
+- [X] T023 [P] [US3] Optimizar y agregar las capturas a `assets/img/proyecto-destacado/` con `alt` descriptivo en ambos idiomas según FR-013
+- [X] T024 [US3] Agregar el enlace externo opcional a demo/video (se abre en pestaña nueva) según FR-013a
+- [X] T025 [US3] Agregar el enlace externo opcional a evidencia ampliada (repo de automatización / bug tracker completo) según FR-014
+- [X] T026 [US3] Estilar Proyecto destacado en `assets/css/components.css` con un tratamiento visualmente prominente que lo distinga, según FR-005 de `001-site-structure`
 
 **Checkpoint**: US3 completa — Proyecto destacado funciona solo como caso de estudio de QA completo.
 
@@ -111,10 +111,10 @@ Sitio estático de un solo proyecto (`index.html` en la raíz + `assets/`), seg�
 
 ### Implementation for User Story 4
 
-- [ ] T027 [US4] Construir el markup de `<section id="servicios">` con las 4 tarjetas (testing manual, testing de APIs, automatización con Playwright + JavaScript, testing asistido por IA) según FR-007
-- [ ] T028 [US4] Aplicar el componente `.badge-learning` (T004) a los dos servicios basados en habilidades en aprendizaje — no una implementación propia — según FR-008 y FR-027
-- [ ] T029 [US4] Implementar el comportamiento de descripción ampliada por hover/foco de teclado en `assets/js/main.js` y el markup correspondiente según FR-009
-- [ ] T030 [US4] Estilar las tarjetas de Servicios en `assets/css/components.css`
+- [X] T027 [US4] Construir el markup de `<section id="servicios">` con las 4 tarjetas (testing manual, testing de APIs, automatización con Playwright + JavaScript, testing asistido por IA) según FR-007
+- [X] T028 [US4] Aplicar el componente `.badge-learning` (T004) a los dos servicios basados en habilidades en aprendizaje — no una implementación propia — según FR-008 y FR-027
+- [X] T029 [US4] Implementar el comportamiento de descripción ampliada por hover/foco de teclado en `assets/js/main.js` y el markup correspondiente según FR-009
+- [X] T030 [US4] Estilar las tarjetas de Servicios en `assets/css/components.css`
 
 **Checkpoint**: US4 completa.
 
@@ -128,9 +128,9 @@ Sitio estático de un solo proyecto (`index.html` en la raíz + `assets/`), seg�
 
 ### Implementation for User Story 5
 
-- [ ] T031 [US5] Construir el markup de `<section id="habilidades">` agrupado por categoría (Testing Manual, Testing de APIs, Automatización, Bases de Datos, Gestión Ágil, IA aplicada a testing) según FR-015/FR-016
-- [ ] T032 [US5] Aplicar el componente `.badge-learning` (T004) a las habilidades no consolidadas — no una implementación propia — según FR-017 y FR-027
-- [ ] T033 [US5] Estilar la sección Habilidades (agrupamiento por categoría) en `assets/css/components.css`
+- [X] T031 [US5] Construir el markup de `<section id="habilidades">` agrupado por categoría (Testing Manual, Testing de APIs, Automatización, Bases de Datos, Gestión Ágil, IA aplicada a testing) según FR-015/FR-016
+- [X] T032 [US5] Aplicar el componente `.badge-learning` (T004) a las habilidades no consolidadas — no una implementación propia — según FR-017 y FR-027
+- [X] T033 [US5] Estilar la sección Habilidades (agrupamiento por categoría) en `assets/css/components.css`
 
 **Checkpoint**: US5 completa.
 
@@ -144,8 +144,8 @@ Sitio estático de un solo proyecto (`index.html` en la raíz + `assets/`), seg�
 
 ### Implementation for User Story 6
 
-- [ ] T034 [US6] Construir el markup de `<section id="experiencia">` listando las entradas (rol, contexto, período, logros) ordenadas de la más reciente a la más antigua según FR-018/FR-019, omitiendo cualquier entrada sin rol o período según FR-020
-- [ ] T035 [US6] Estilar la lista/timeline de Experiencia en `assets/css/components.css`
+- [X] T034 [US6] Construir el markup de `<section id="experiencia">` listando las entradas (rol, contexto, período, logros) ordenadas de la más reciente a la más antigua según FR-018/FR-019, omitiendo cualquier entrada sin rol o período según FR-020
+- [X] T035 [US6] Estilar la lista/timeline de Experiencia en `assets/css/components.css`
 
 **Checkpoint**: US6 completa.
 
@@ -159,12 +159,12 @@ Sitio estático de un solo proyecto (`index.html` en la raíz + `assets/`), seg�
 
 ### Implementation for User Story 7
 
-- [ ] T036 [US7] Construir el markup de `<section id="contacto">` con el enlace a LinkedIn, el enlace `mailto:` y el enlace de descarga de CV según FR-021
-- [ ] T037 [US7] Agregar `target="_blank" rel="noopener"` al enlace de LinkedIn para que se abra sin perder el estado de la página del portfolio, según FR-024
-- [ ] T038 [US7] Agregar la declaración de disponibilidad remota Argentina/LATAM en Contacto o Sobre mí según FR-022
-- [ ] T039 [US7] Agregar los PDF de CV optimizados (ES/EN) a `assets/cv/` y conectar el enlace de descarga al archivo del idioma activo según FR-023
-- [ ] T040 [US7] Estilar la sección Contacto en `assets/css/components.css`
-- [ ] T041 [US7] Asegurar que el markup del enlace de descarga de CV solo se incluya cuando el PDF correspondiente exista, según FR-025 (sin enlaces rotos)
+- [X] T036 [US7] Construir el markup de `<section id="contacto">` con el enlace a LinkedIn, el enlace `mailto:` y el enlace de descarga de CV según FR-021
+- [X] T037 [US7] Agregar `target="_blank" rel="noopener"` al enlace de LinkedIn para que se abra sin perder el estado de la página del portfolio, según FR-024
+- [X] T038 [US7] Agregar la declaración de disponibilidad remota Argentina/LATAM en Contacto o Sobre mí según FR-022
+- [X] T039 [US7] Agregar los PDF de CV optimizados (ES/EN) a `assets/cv/` y conectar el enlace de descarga al archivo del idioma activo según FR-023
+- [X] T040 [US7] Estilar la sección Contacto en `assets/css/components.css`
+- [X] T041 [US7] Asegurar que el markup del enlace de descarga de CV solo se incluya cuando el PDF correspondiente exista, según FR-025 (sin enlaces rotos)
 
 **Checkpoint**: US7 completa — con esto, las 4 historias P1 (US1, US2, US3, US7) están listas y el sitio es un MVP publicable.
 
@@ -174,15 +174,15 @@ Sitio estático de un solo proyecto (`index.html` en la raíz + `assets/`), seg�
 
 **Purpose**: Verificación de calidad que abarca todas las historias (dogfooding QA, constitución)
 
-- [ ] T042 [P] Correr el W3C HTML Validator sobre `index.html` y corregir cualquier error (`quickstart.md` #12)
-- [ ] T043 [P] Verificar a mano el contraste AA de cada combinación texto/fondo de la paleta (`quickstart.md` #10)
-- [ ] T044 [P] Verificar a mano la navegación completa por teclado (nav, selector de idioma, tarjetas de servicio/habilidad, enlaces de contacto) (`quickstart.md` #3)
-- [ ] T045 [P] Verificar a mano el layout responsive a 375px/768px/1280px sin contenido roto ni oculto (`quickstart.md` #11)
-- [ ] T046 [P] Verificar que el peso total de página (HTML+CSS+JS, sin imágenes) se mantiene bajo 100 KB con las devtools del navegador (`quickstart.md` #13)
-- [ ] T047 [P] Verificar FR-026: ninguna habilidad/servicio "en aprendizaje" está publicado sin evidencia asociada visible en el sitio
-- [ ] T048 [P] Verificar SC-008: revisar el copy completo del sitio (ambos idiomas) y confirmar que el 100% de las menciones de una tecnología son consistentes con su clasificación declarada (`consolidado` vs. `en_aprendizaje`)
-- [ ] T049 Verificar que el selector de idioma conserva la posición de scroll al cambiar de idioma a mitad de sección (`quickstart.md` #7)
-- [ ] T050 Correr el checklist completo de `quickstart.md` de punta a punta antes del deploy
+- [X] T042 [P] Correr el W3C HTML Validator sobre `index.html` y corregir cualquier error (`quickstart.md` #12)
+- [X] T043 [P] Verificar a mano el contraste AA de cada combinación texto/fondo de la paleta (`quickstart.md` #10)
+- [X] T044 [P] Verificar a mano la navegación completa por teclado (nav, selector de idioma, tarjetas de servicio/habilidad, enlaces de contacto) (`quickstart.md` #3)
+- [X] T045 [P] Verificar a mano el layout responsive a 375px/768px/1280px sin contenido roto ni oculto (`quickstart.md` #11)
+- [X] T046 [P] Verificar que el peso total de página (HTML+CSS+JS, sin imágenes) se mantiene bajo 100 KB con las devtools del navegador (`quickstart.md` #13)
+- [X] T047 [P] Verificar FR-026: ninguna habilidad/servicio "en aprendizaje" está publicado sin evidencia asociada visible en el sitio
+- [X] T048 [P] Verificar SC-008: revisar el copy completo del sitio (ambos idiomas) y confirmar que el 100% de las menciones de una tecnología son consistentes con su clasificación declarada (`consolidado` vs. `en_aprendizaje`)
+- [X] T049 Verificar que el selector de idioma conserva la posición de scroll al cambiar de idioma a mitad de sección (`quickstart.md` #7)
+- [X] T050 Correr el checklist completo de `quickstart.md` de punta a punta antes del deploy
 - [ ] T051 Desplegar a GitHub Pages o Vercel según `plan.md` (sitio estático, sin cambios de configuración)
 
 ---
