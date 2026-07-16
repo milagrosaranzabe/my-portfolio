@@ -10,6 +10,22 @@
   .hero__tagline {
     font-size: var(--font-size-xl);
   }
+
+  .hero {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-5);
+  }
+
+  .hero__content {
+    flex: 1;
+  }
+
+  .hero__illustration {
+    flex: 0 0 auto;
+    max-width: 18rem;
+  }
 }
 
 @media (min-width: 80rem) {

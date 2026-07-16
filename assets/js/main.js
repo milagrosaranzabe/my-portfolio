@@ -1,5 +1,5 @@
-// Bootstrap: inicializa nav.js e i18n.js. Único punto de entrada del
-// sitio (ver plan.md → Project Structure).
+// Bootstrap: inicializa nav.js, i18n.js, theme.js y reveal.js. Único
+// punto de entrada del sitio (ver plan.md → Project Structure).
 document.addEventListener('DOMContentLoaded', function () {
   document.documentElement.classList.add('js-ready');
 
@@ -8,6 +8,12 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   if (typeof window.initI18n === 'function') {
     window.initI18n();
+  }
+  if (typeof window.initTheme === 'function') {
+    window.initTheme();
+  }
+  if (typeof window.initReveal === 'function') {
+    window.initReveal();
   }
 
   initServiceCards();
