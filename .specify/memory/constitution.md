@@ -1,37 +1,39 @@
 <!--
 Sync Impact Report
 ==================
-Version change: (template, unratified) → 1.0.0
-Rationale: Initial ratification. No prior filled constitution existed (file only
-contained template placeholders), so this is treated as MAJOR 1.0.0 rather than
-an amendment.
+Version change: 1.0.0 → 2.0.0
+Rationale: MAJOR — redefines Principio III incompatibly. Previously required
+QA evidence (casos de prueba, bugs, automatización) as inline first-level
+content on the portfolio's Proyecto destacado section. Now allows that
+evidence to live on the featured project's own live site (in its own
+"Evidencia de QA" section/menu), as long as the portfolio links to it
+prominently and the evidence is genuinely accessible — requested by the user
+to avoid duplicating the same content in two places once the project has its
+own deployed site.
 
-Modified principles: N/A (first fill, no renames)
+Modified principles:
+- III. Evidencia Visible de Proceso QA (Proyecto Destacado) — evidence may
+  now live on the linked project site instead of only inline on the
+  portfolio; the non-negotiable floor is "a live demo with zero visible
+  trace of QA anywhere is not acceptable," not "evidence must be inline."
 
-Added sections:
-- I. Código Limpio y HTML Semántico
-- II. Accesibilidad Real
-- III. Evidencia Visible de Proceso QA (Proyecto Destacado)
-- IV. Honestidad en el Copy
-- V. Rendimiento: Ligero y Responsive
-- Estándares Técnicos y de Performance (Section 2)
-- Proceso de Revisión (Dogfooding de QA) (Section 3)
-- Governance
-
+Added sections: none
 Removed sections: none
 
 Templates requiring updates:
-- .specify/templates/plan-template.md ✅ no changes needed (Constitution Check
-  section is intentionally generic and reads from this file at plan time)
-- .specify/templates/spec-template.md ✅ no changes needed (no constitution-specific
-  references to update)
-- .specify/templates/tasks-template.md ✅ no changes needed (generic task
-  categories already accommodate accessibility/QA-evidence/performance tasks)
-- .specify/templates/checklist-template.md ✅ no changes needed
-- No command files found under .specify/templates/commands/
-- No README.md or other runtime guidance docs found in repo root to update
+- specs/002-profile-content/spec.md ⚠ pending — FR-010–FR-014, SC-003, Key
+  Entities, Assumptions describe inline evidence; need rewrite to match.
+- specs/002-profile-content/data-model.md ⚠ pending — CasoDePrueba/Bug
+  subentities of Proyecto destacado need to move to "external, not stored in
+  this repo."
+- specs/002-profile-content/tasks.md ⚠ pending — US3 tasks build inline
+  evidence HTML; need rework to build context + prominent external link.
+- specs/002-profile-content/checklists/honesty-qa-evidence.md ⚠ pending —
+  CHK001/CHK002 assumed inline minimums; note as superseded.
+- index.html ⚠ pending — replace the inline test-case/bug/automation block
+  in Proyecto destacado with a prominent link-out treatment.
 
-Follow-up TODOs: none
+Follow-up TODOs: apply the pending updates above in this same session.
 -->
 
 # Portfolio QA Constitution
@@ -72,16 +74,24 @@ el estándar que su autor promueve profesionalmente.
 ### III. Evidencia Visible de Proceso QA (Proyecto Destacado)
 
 El proyecto destacado (Biblioteca de Películas y Series) NO puede presentarse
-como un demo funcional aislado. DEBE incluir evidencia visible y concreta del
-proceso de QA aplicado: casos de prueba documentados, bugs encontrados y su
-resolución, checklists usados, capturas de evidencia, o un resumen del
-enfoque de testing (manual, exploratorio, casos límite cubiertos). Esta
-evidencia es contenido de primer nivel en la página del proyecto, no un
-enlace opcional al final.
+como un demo funcional aislado, ni como un enlace genérico sin contexto. El
+portfolio DEBE mostrar el proyecto de forma prominente en su propia sección
+(contexto, objetivo, funcionalidades clave) y un enlace claramente destacado
+y etiquetado hacia su sitio en vivo. La evidencia detallada del proceso de QA
+aplicado (casos de prueba documentados, bugs encontrados y su resolución,
+resultados de automatización) DEBE existir y ser accesible en la práctica —
+alojada en el propio sitio del proyecto, en una sección o menú dedicado
+("Evidencia de QA" o equivalente) claramente enlazado desde el portfolio, o
+directamente dentro del portfolio. No alcanza con un demo funcional sin
+ningún rastro visible de proceso de QA en ningún lugar accesible.
 
 **Rationale**: El valor diferencial de un portfolio de QA no es "funciona",
 sino "así es como verifiqué que funciona". Ocultar el proceso detrás del
 producto final desperdicia la prueba más fuerte de la habilidad del autor.
+Permitir que la evidencia viva en el propio proyecto (en vez de duplicarse
+en el portfolio) evita mantener el mismo contenido en dos lugares, siempre
+que el camino hacia esa evidencia sea corto, prominente y explícito — la
+línea que no se cruza es "demo sin ningún rastro de QA en ningún lado".
 
 ### IV. Honestidad en el Copy
 
@@ -153,4 +163,4 @@ verificar contraste o navegación por teclado) debe corregirse antes de
 considerar el trabajo completo, o quedar explícitamente justificada por
 escrito si se decide una excepción puntual.
 
-**Version**: 1.0.0 | **Ratified**: 2026-07-12 | **Last Amended**: 2026-07-12
+**Version**: 2.0.0 | **Ratified**: 2026-07-12 | **Last Amended**: 2026-07-16

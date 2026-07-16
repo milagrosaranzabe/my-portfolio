@@ -84,19 +84,19 @@ Sitio estático de un solo proyecto (`index.html` en la raíz + `assets/`), seg�
 
 ## Phase 5: User Story 3 - Caso de estudio central: Proyecto destacado (Priority: P1)
 
-**Goal**: Un reclutador encuentra, dentro de Proyecto destacado, evidencia concreta de QA manual y de automatización — no solo una descripción del producto
+**Goal**: Un reclutador entiende el proyecto y llega en 1 clic a la evidencia de QA real, alojada en el sitio del propio proyecto (enmienda a la constitución v2.0.0, 2026-07-16)
 
-**Independent Test**: Mostrar solo esta sección y confirmar que contiene contexto, casos de prueba, bugs y evidencia de automatización, no únicamente un enlace al demo
+**Independent Test**: Mostrar solo esta sección y confirmar que contiene contexto y un enlace prominente al sitio en vivo; verificar que ese sitio expone su propia evidencia de QA — no únicamente un link genérico sin contexto
 
 ### Implementation for User Story 3
 
 - [X] T019 [US3] Construir el shell de `<section id="proyecto-destacado">` con contexto/objetivo y las funcionalidades clave (Login, Registro, Búsqueda, Favoritos) según FR-010
-- [X] T020 [US3] Agregar la subsección de casos de prueba (mínimo 3, título/pasos/resultado esperado/obtenido según `data-model.md`) según FR-011
-- [X] T021 [US3] Agregar la subsección de bugs encontrados (mínimo 2, descripción/severidad/resolución según `data-model.md`) según FR-011
-- [X] T022 [US3] Agregar la subsección de evidencia de automatización (al menos una pieza tangible: script, captura de ejecución o resumen de alcance acotado a lo realmente completado) según FR-012
-- [X] T023 [P] [US3] Optimizar y agregar las capturas a `assets/img/proyecto-destacado/` con `alt` descriptivo en ambos idiomas según FR-013
-- [X] T024 [US3] Agregar el enlace externo opcional a demo/video (se abre en pestaña nueva) según FR-013a
-- [X] T025 [US3] Agregar el enlace externo opcional a evidencia ampliada (repo de automatización / bug tracker completo) según FR-014
+- [X] T020 [US3] Reemplazar la subsección de casos de prueba/bugs/evidencia de automatización (contenido de ejemplo) por un enlace prominente y claramente etiquetado ("Ver el proyecto en vivo") hacia la URL pública del proyecto, según FR-011 — retira el `placeholder-notice` de evidencia de QA, que ya no aplica
+- [X] T021 [US3] Asegurar que el enlace de T020 abre en pestaña nueva (`target="_blank" rel="noopener"`) sin sacar al visitante de la navegación del portfolio, según FR-014
+- [X] T022 [US3] Documentar (copy o comentario) que la evidencia de QA detallada vive en la sección/menú "Evidencia de QA" del sitio del proyecto enlazado, según FR-012 — es una dependencia externa, no se construye en este repositorio
+- [X] T023 [P] [US3] Mantener las capturas ilustrativas opcionales en `assets/img/proyecto-destacado/` con `alt` descriptivo en ambos idiomas según FR-013 (ya no son la evidencia principal — ver T020)
+- [X] T024 [US3] Revisar si el `placeholder-notice` de las capturas sigue aplicando dado que ahora son solo ilustrativas y opcionales; ajustar el texto del aviso si corresponde
+- [X] T025 [US3] Verificar manualmente el Independent Test de esta historia y SC-003: el enlace de T020 lleva al proyecto, y cuando ese sitio exista, su evidencia de QA es alcanzable en 1 clic desde el portfolio
 - [X] T026 [US3] Estilar Proyecto destacado en `assets/css/components.css` con un tratamiento visualmente prominente que lo distinga, según FR-005 de `001-site-structure`
 
 **Checkpoint**: US3 completa — Proyecto destacado funciona solo como caso de estudio de QA completo.

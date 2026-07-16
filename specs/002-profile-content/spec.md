@@ -41,17 +41,17 @@ Un reclutador lee Sobre mí y obtiene una descripción breve y honesta de la exp
 
 ### User Story 3 - Caso de estudio central: Proyecto destacado (Priority: P1)
 
-Un reclutador entra a la sección de Proyecto destacado (Biblioteca de Películas y Series) y encuentra evidencia concreta y verificable del proceso de QA manual y de la automatización aplicada, no solo una descripción del producto.
+Un reclutador entra a la sección de Proyecto destacado (Biblioteca de Películas y Series), entiende de qué se trata el proyecto, y llega en un clic a la evidencia real del proceso de QA aplicado — alojada en el sitio del propio proyecto, no duplicada en el portfolio.
 
 **Why this priority**: Es la prueba central de la habilidad de la autora (constitución, principio III) y el elemento que más diferencia este portfolio de uno genérico.
 
-**Independent Test**: Se puede probar mostrando solo esta sección y verificando que contiene, como mínimo, contexto del proyecto, casos de prueba documentados, bugs encontrados y evidencia de automatización — no únicamente un enlace al demo.
+**Independent Test**: Se puede probar mostrando solo esta sección y verificando que contiene contexto del proyecto y un enlace prominente hacia su sitio en vivo, y que ese sitio expone una sección de evidencia de QA accesible — no un demo sin ningún rastro de QA en ningún lado.
 
 **Acceptance Scenarios**:
 
 1. **Given** la sección de Proyecto destacado, **When** un reclutador la revisa, **Then** encuentra el contexto/objetivo del proyecto y sus funcionalidades clave (Login, Registro, Búsqueda, Favoritos).
-2. **Given** la sección de Proyecto destacado, **When** un reclutador busca evidencia de QA, **Then** encuentra casos de prueba documentados y bugs encontrados con su resolución.
-3. **Given** la sección de Proyecto destacado, **When** un reclutador busca evidencia de automatización, **Then** encuentra evidencia concreta (no solo la mención) de pruebas automatizadas aplicadas al proyecto.
+2. **Given** la sección de Proyecto destacado, **When** un reclutador hace clic en el enlace al proyecto, **Then** llega al sitio en vivo de Biblioteca de Películas y Series en una pestaña nueva.
+3. **Given** el sitio en vivo del proyecto, **When** un reclutador busca evidencia de QA, **Then** encuentra una sección o menú dedicado con casos de prueba, bugs y evidencia de automatización — no solo el producto funcionando.
 
 ---
 
@@ -152,11 +152,10 @@ Un reclutador interesado contacta a la autora por LinkedIn o email, o descarga s
 ### Proyecto destacado — Biblioteca de Películas y Series
 
 - **FR-010**: El sitio SHALL presentar en Proyecto destacado el contexto, el objetivo y las funcionalidades clave del proyecto (Login, Registro, Búsqueda, Favoritos). *(Ubicuo)*
-- **FR-011**: El sitio SHALL mostrar en Proyecto destacado evidencia del proceso de QA manual aplicado, incluyendo un mínimo de 3 casos de prueba representativos y 2 bugs encontrados con su resolución. *(Ubicuo)*
-- **FR-012**: El sitio SHALL mostrar en Proyecto destacado al menos una pieza de evidencia tangible de automatización aplicada al proyecto (por ejemplo, un fragmento de script de prueba, una captura del resultado de una ejecución, o un resumen de alcance con funcionalidades específicas cubiertas), no solo la mención de que existe. El alcance descripto MUST corresponder exactamente al trabajo de automatización realmente completado al momento de publicar (p. ej., si cubre 2 de las 4 funcionalidades clave, el copy lo indica explícitamente) — no se extrapola a un dominio de automatización mayor al alcanzado. *(Ubicuo)*
-- **FR-013**: El sitio SHALL presentar la evidencia visual del proyecto destacado mediante capturas de pantalla optimizadas del flujo (Login, Registro, Búsqueda, Favoritos) y de la evidencia de testing, embebidas directamente en la página. *(Ubicuo)*
-- **FR-013a**: DONDE exista un demo en vivo o un video walkthrough del proyecto destacado, el sitio SHALL enlazar a él como recurso externo en lugar de embeberlo directamente en la página. *(Característica opcional)*
-- **FR-014**: DONDE exista evidencia detallada adicional fuera del sitio principal (repositorio de automatización, reporte de bugs completo), el sitio SHALL enlazar a ella desde la sección de Proyecto destacado. *(Característica opcional)*
+- **FR-011**: El sitio SHALL incluir en Proyecto destacado un enlace prominente y claramente etiquetado (p. ej. "Ver el proyecto en vivo") hacia la URL pública de Biblioteca de Películas y Series. *(Ubicuo)*
+- **FR-012**: El proyecto Biblioteca de Películas y Series SHALL exponer, en su propio sitio, una sección o menú de "Evidencia de QA" con casos de prueba representativos, bugs encontrados con su resolución, y evidencia de automatización con alcance real. Esta evidencia vive fuera del código de este portfolio — su existencia y accesibilidad es una dependencia externa de esta feature, no contenido que este repositorio construya. *(Ubicuo)*
+- **FR-013**: DONDE el portfolio incluya capturas del proyecto destacado, estas SHALL ser ilustrativas y opcionales — no reemplazan la evidencia de QA de FR-012, que vive en el proyecto enlazado. *(Característica opcional)*
+- **FR-014**: El enlace de FR-011 SHALL abrir en una pestaña nueva, sin sacar al visitante de la navegación del portfolio. *(Ubicuo)*
 
 ### Habilidades técnicas
 
@@ -188,7 +187,7 @@ Estas reglas aplican a Sobre mí, Servicios, Proyecto destacado y Habilidades t�
 ### Key Entities
 
 - **Servicio**: Oferta de QA presentada en la sección Servicios. Atributos clave: nombre, descripción breve, descripción ampliada, nivel (consolidado / en aprendizaje).
-- **Proyecto destacado**: El caso de estudio central (Biblioteca de Películas y Series). Atributos clave: contexto/objetivo, funcionalidades clave, casos de prueba representativos, bugs encontrados y resolución, evidencia de automatización, evidencia visual, enlaces a evidencia detallada externa.
+- **Proyecto destacado**: El caso de estudio central (Biblioteca de Películas y Series). Atributos clave en el portfolio: contexto/objetivo, funcionalidades clave, URL del proyecto en vivo, capturas ilustrativas opcionales. La evidencia detallada de QA (casos de prueba, bugs, automatización) no es un atributo de esta entidad en el portfolio — vive en el sitio del proyecto enlazado (ver FR-012).
 - **Habilidad técnica**: Herramienta o tecnología concreta. Atributos clave: nombre, categoría, nivel (consolidada / en aprendizaje).
 - **Entrada de experiencia**: Ítem de la trayectoria profesional. Atributos clave: rol, contexto/organización, período, logros o responsabilidades.
 - **Enlace de contacto**: Medio de contacto listado en Contacto. Atributos clave: tipo (LinkedIn, email, CV), destino, disponibilidad.
@@ -199,7 +198,7 @@ Estas reglas aplican a Sobre mí, Servicios, Proyecto destacado y Habilidades t�
 
 - **SC-001**: Un reclutador puede identificar el nombre y la especialidad de la autora (QA en transición hacia Automation + AI) en los primeros 5 segundos de ver el Hero.
 - **SC-002**: El 100% de las habilidades o servicios marcados como "en aprendizaje" tienen al menos una pieza de evidencia concreta asociada visible en el sitio, no solo la mención de intención.
-- **SC-003**: Un reclutador puede encontrar, dentro de la sección de Proyecto destacado, evidencia de QA manual y evidencia de automatización sin salir de esa sección.
+- **SC-003**: Un reclutador puede llegar a la evidencia de QA manual y de automatización del proyecto destacado en un máximo de 1 clic desde el portfolio, vía el enlace prominente al proyecto en vivo (FR-011).
 - **SC-004**: Un reclutador puede iniciar contacto (LinkedIn, email o descarga de CV) en un máximo de 2 acciones desde cualquier punto del sitio.
 - **SC-005**: El 100% de los enlaces de contacto (LinkedIn, email, CV) llevan a un destino válido y funcional, verificado antes de publicar.
 - **SC-006**: Un reclutador puede distinguir, sin leer texto adicional, qué habilidades son experiencia consolidada y cuáles están en aprendizaje activo, en menos de 10 segundos de ver la sección de Habilidades.
@@ -210,11 +209,12 @@ Estas reglas aplican a Sobre mí, Servicios, Proyecto destacado y Habilidades t�
 
 - Esta feature expande el contenido de la estructura general ya definida en `001-site-structure` (sitio de una sola página con anclas, selector de idioma ES/EN); no la reemplaza. Confirmado por el usuario el 2026-07-14: la sección genérica "Proyectos" de `001` se refina aquí como "Proyecto destacado" (caso de estudio único, no una lista), y se agregan las secciones Servicios, Habilidades técnicas y Experiencia que `001` no contemplaba.
 - El CV descargable es un archivo PDF; si existen versiones en español e inglés, el enlace de descarga usa el idioma activo del selector de idioma del sitio.
-- La evidencia exhaustiva del proyecto destacado (repositorio completo de casos de prueba, bug tracker completo, código de automatización) puede vivir fuera del sitio principal (por ejemplo, en un repositorio público); la sección de Proyecto destacado muestra una síntesis representativa y enlaza a esa evidencia ampliada cuando exista.
+- La evidencia de QA del proyecto destacado (casos de prueba, bugs, automatización) vive en el sitio del propio proyecto (Biblioteca de Películas y Series), no en el código de este portfolio (enmienda a la constitución v2.0.0, 2026-07-16, confirmada por el usuario). El portfolio es responsable de un enlace prominente y correcto; el contenido de la evidencia en sí es una dependencia externa fuera del alcance de este repositorio.
+- La condición "evidencia asociada visible en el sitio" de FR-026 se satisface también cuando esa evidencia es alcanzable en 1 clic desde el portfolio (vía el enlace de FR-011), no solo cuando está embebida directamente — consistente con el criterio de accesibilidad del principio III ya amendado.
 - "Servicios" describe capacidades ofrecidas por la autora como profesional QA en búsqueda de empleo, no un catálogo comercial con tarifas ni un formulario de cotización.
 - La sección de Experiencia se completa con información real provista por la autora; si la experiencia laboral formal en QA es limitada, se documenta igual con lo que exista (formación, proyectos, prácticas) en vez de dejarse vacía.
 - La autora es responsable de la revisión editorial previa a la publicación (autorrevisión), incluyendo verificar que ningún copy sobrevende una habilidad en aprendizaje (FR-006, SC-008) — no existe un proceso de aprobación externo, dado que es un portfolio personal.
 - La clasificación `consolidado`/`en_aprendizaje` de cada habilidad o servicio (ver `data-model.md`) se revisa y actualiza por la autora de forma periódica (p. ej., junto con cada actualización del CV); no hay mecanismo automático de vigencia.
 - La autora es responsable de mantener el contenido del CV descargable alineado con las afirmaciones de honestidad del sitio; no hay verificación automática entre ambos.
-- "Síntesis representativa" (evidencia condensada del proyecto destacado) queda acotada por los mínimos de FR-011/FR-012: al menos 3 casos de prueba, 2 bugs y 1 pieza de evidencia de automatización; el resto de la evidencia exhaustiva puede vivir fuera del sitio (FR-014).
-- "Pieza de evidencia concreta" (SC-002) es cualquiera de: una captura del resultado, un fragmento de código o script, un caso de prueba documentado, o un enlace verificable (repositorio, ejecución de CI) — no alcanza una sola oración de intención sin artefacto asociado.
+- "Pieza de evidencia concreta" (SC-002) es cualquiera de: una captura del resultado, un fragmento de código o script, un caso de prueba documentado, o un enlace verificable (repositorio, ejecución de CI, o el propio sitio del proyecto con su sección de evidencia de QA) — no alcanza una sola oración de intención sin artefacto asociado.
+- Los mínimos de contenido de evidencia de QA (mínimo 3 casos de prueba representativos, 2 bugs con resolución, alcance real de automatización) aplican a la sección "Evidencia de QA" del sitio del proyecto (FR-012), no al portfolio — quedan como recomendación para ese proyecto, fuera del alcance de las tareas de este repositorio.

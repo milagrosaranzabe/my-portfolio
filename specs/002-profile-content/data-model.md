@@ -29,35 +29,16 @@ Oferta de QA en la sección Servicios (FR-007, FR-008, FR-009).
 
 ## Proyecto destacado
 
-Caso de estudio central — instancia única (Biblioteca de Películas y Series). FR-010 a FR-014, FR-013a.
+Caso de estudio central — instancia única (Biblioteca de Películas y Series). FR-010 a FR-014.
+
+**Nota (enmienda a la constitución v2.0.0, 2026-07-16)**: la evidencia detallada de QA (casos de prueba, bugs, automatización) dejó de ser contenido de este portfolio — vive en el sitio del propio proyecto, en su sección "Evidencia de QA". Las subentidades `CasoDePrueba` y `Bug` que existían acá se retiraron de este modelo; quedan como referencia de qué debería contener esa sección externa (ver Assumptions de `spec.md`), pero no se construyen en este repositorio.
 
 | Campo | Tipo | Notas |
 |---|---|---|
 | `contexto_objetivo_es` / `_en` | string (rich text) | Qué es el proyecto y por qué se hizo |
 | `funcionalidades_clave` | string[] | Fijo: Login, Registro, Búsqueda, Favoritos |
-| `casos_de_prueba` | CasoDePrueba[] | Ver subentidad |
-| `bugs_encontrados` | Bug[] | Ver subentidad |
-| `evidencia_automatizacion_es` / `_en` | string + enlace opcional | Resultado/alcance de pruebas automatizadas |
-| `capturas` | Captura[] | Ver subentidad — FR-013 |
-| `enlace_demo_video` | URL \| null | Externo, abre en pestaña nueva — FR-013a |
-| `enlace_evidencia_externa` | URL \| null | Repo de automatización / bug tracker completo — FR-014 |
-
-### Subentidad: Caso de prueba
-
-| Campo | Tipo |
-|---|---|
-| `titulo_es` / `_en` | string |
-| `pasos_es` / `_en` | string |
-| `resultado_esperado_es` / `_en` | string |
-| `resultado_obtenido_es` / `_en` | string |
-
-### Subentidad: Bug
-
-| Campo | Tipo |
-|---|---|
-| `descripcion_es` / `_en` | string |
-| `severidad` | enum: `baja` \| `media` \| `alta` |
-| `resolucion_es` / `_en` | string |
+| `url_proyecto` | URL | Enlace prominente al sitio en vivo, abre en pestaña nueva — FR-011, FR-014 |
+| `capturas` | Captura[] | Opcionales e ilustrativas — FR-013 |
 
 ### Subentidad: Captura
 
