@@ -22,6 +22,19 @@
 }
 
 /* ============================================================
+   Ícono compartido junto a títulos (Servicios y Habilidades) —
+   mismo ícono reutilizado entre la tarjeta de servicio y su
+   categoría equivalente para reforzar la asociación visual.
+   ============================================================ */
+.icon-heading {
+  width: 1.3em;
+  height: 1.3em;
+  flex-shrink: 0;
+  color: var(--color-accent-text);
+  vertical-align: -0.25em;
+}
+
+/* ============================================================
    Skip link (accesibilidad — permite saltar la nav por teclado)
    ============================================================ */
 .skip-link {
@@ -298,6 +311,13 @@
   transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-base), border-color var(--transition-base);
 }
 
+.service-card h3 {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
 .service-card:hover,
 .service-card:focus-within {
   transform: translateY(-4px);
@@ -423,6 +443,12 @@
    ============================================================ */
 .skills__category {
   margin-bottom: var(--space-3);
+}
+
+.skills__category h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
 }
 
 .skills__list {
