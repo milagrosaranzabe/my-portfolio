@@ -9,6 +9,8 @@
   --color-accent-dark: #5636b0; /* variante rica, uso como fondo (hover de botones) */
   --color-accent-text: #5636b0; /* violeta para texto/links sobre el fondo de página — ajusta por tema */
   --color-border: #e0dcef;
+  --color-pill-bg: #ece6fb; /* fondo violeta claro para pills/tags — se diferencia del fondo de página */
+  --color-pill-bg-hover: #ddd2f7;
   --shadow-color: rgba(26, 31, 54, 0.1);
 
   /* Tipografía: Manrope (Google Fonts, font-display: swap) con fallback
@@ -48,12 +50,14 @@
    se mantienen iguales porque solo se usan como fondo de botones con
    texto blanco encima (contraste independiente del tema). */
 :root[data-theme='dark'] {
-  --color-bg: #14121f;
+  --color-bg: #0e0c18; /* más oscuro que las pills, para que se diferencien */
   --color-bg-alt: #201a35; /* tinte violeta oscuro */
   --color-bg-alt-2: #141b2e; /* tinte azul oscuro */
   --color-text: #f2f0f7;
   --color-text-muted: #b8b4c9;
   --color-accent-text: #a78bfa;
   --color-border: #362f52;
+  --color-pill-bg: #372f5c; /* violeta claro, se despega del fondo oscuro */
+  --color-pill-bg-hover: #4a3f79;
   --shadow-color: rgba(167, 139, 250, 0.18);
 }
