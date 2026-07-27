@@ -1,14 +1,14 @@
-/* Manrope autoalojada (variable font, un solo archivo ~24 KB cubre los
-   pesos 400–800) — evita depender de un CDN externo, según principio V
+/* Space Grotesk autoalojada (variable font, un solo archivo ~22 KB cubre
+   los pesos 400–700) — evita depender de un CDN externo, según principio V
    de la constitución (dependencias externas minimizadas y justificadas).
    Se probó con Google Fonts vía <link> primero y se descartó: en
    entornos sin salida a dominios externos, ese <link> bloqueaba el
    render de toda la página esperando una respuesta que nunca llegaba. */
 @font-face {
-  font-family: 'Manrope';
-  src: url('../fonts/manrope-variable.woff2') format('woff2-variations'),
-       url('../fonts/manrope-variable.woff2') format('woff2');
-  font-weight: 400 800;
+  font-family: 'Space Grotesk';
+  src: url('../fonts/space-grotesk-variable.woff2') format('woff2-variations'),
+       url('../fonts/space-grotesk-variable.woff2') format('woff2');
+  font-weight: 400 700;
   font-style: normal;
   font-display: swap;
 }
