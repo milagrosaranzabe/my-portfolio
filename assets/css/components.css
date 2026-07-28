@@ -487,6 +487,33 @@
   border-radius: var(--radius);
 }
 
+.bug-report__evidence-row {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.bug-report__evidence-row .screenshots {
+  flex: 0 0 auto;
+  width: 180px;
+  margin-top: 0;
+}
+
+.bug-report__evidence-row .screenshots img {
+  width: 100%;
+  height: auto;
+}
+
+.bug-report__evidence-text {
+  flex: 1 1 220px;
+  min-width: 200px;
+}
+
+.bug-report__evidence-text p {
+  margin: 0;
+}
+
 /* ============================================================
    Habilidades técnicas (US5)
    ============================================================ */

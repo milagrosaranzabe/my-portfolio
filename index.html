@@ -507,11 +507,15 @@
               <div class="bug-report__field">
                 <p data-lang="es"><strong>Evidencia:</strong></p>
                 <p data-lang="en"><strong>Evidence:</strong></p>
-                <div class="screenshots">
-                  <img src="assets/img/proyecto-destacado/bug-header-mobile-antes.png" alt="Header apilado en 3 filas, ocupando ~22% del viewport en mobile" width="375" height="812" loading="lazy">
+                <div class="bug-report__evidence-row">
+                  <div class="screenshots">
+                    <img src="assets/img/proyecto-destacado/bug-header-mobile-antes.png" alt="Header apilado en 3 filas, ocupando ~22% del viewport en mobile" width="375" height="812" loading="lazy">
+                  </div>
+                  <div class="bug-report__evidence-text">
+                    <p data-lang="es">Medición vía DevTools: altura de <code>header.site-header</code> = 178,15px (21,9% del viewport), <code>position: sticky</code>.</p>
+                    <p data-lang="en">DevTools measurement: <code>header.site-header</code> height = 178.15px (21.9% of the viewport), <code>position: sticky</code>.</p>
+                  </div>
                 </div>
-                <p data-lang="es">Medición vía DevTools: altura de <code>header.site-header</code> = 178,15px (21,9% del viewport), <code>position: sticky</code>.</p>
-                <p data-lang="en">DevTools measurement: <code>header.site-header</code> height = 178.15px (21.9% of the viewport), <code>position: sticky</code>.</p>
               </div>
 
               <p class="bug-report__field"><strong><span data-lang="es">Severidad</span><span data-lang="en">Severity</span>:</strong> <span data-lang="es">Media — degrada la experiencia en mobile pero no bloquea ninguna funcionalidad.</span><span data-lang="en">Medium — degrades the mobile experience but doesn't block any functionality.</span></p>
@@ -526,11 +530,15 @@
                 <p class="bug-report__field" data-lang="es"><strong>Re-test:</strong> repetí los mismos pasos sobre la versión corregida, en el mismo modo responsive (375×812).</p>
                 <p class="bug-report__field" data-lang="en"><strong>Re-test:</strong> repeated the same steps against the fixed version, in the same responsive mode (375×812).</p>
 
-                <div class="screenshots">
-                  <img src="assets/img/proyecto-destacado/bug-header-mobile-despues.png" alt="Header corregido: una sola fila con la marca y un botón de menú colapsado" width="375" height="812" loading="lazy">
+                <div class="bug-report__evidence-row">
+                  <div class="screenshots">
+                    <img src="assets/img/proyecto-destacado/bug-header-mobile-despues.png" alt="Header corregido: una sola fila con la marca y un botón de menú colapsado" width="375" height="812" loading="lazy">
+                  </div>
+                  <div class="bug-report__evidence-text">
+                    <p data-lang="es">Altura de <code>header.site-header</code> = 49px (6% del viewport, antes 21,9%) con el menú colapsado por defecto. El resto de las opciones (Favoritos, email, Cerrar sesión, idioma, tema) sigue disponible al tocar el botón ☰, sin perder funcionalidad.</p>
+                    <p data-lang="en"><code>header.site-header</code> height = 49px (6% of the viewport, down from 21.9%) with the menu collapsed by default. The rest of the options (Favorites, email, sign out, language, theme) are still available by tapping the ☰ button, with no loss of functionality.</p>
+                  </div>
                 </div>
-                <p class="bug-report__field" data-lang="es">Altura de <code>header.site-header</code> = 49px (6% del viewport, antes 21,9%) con el menú colapsado por defecto. El resto de las opciones (Favoritos, email, Cerrar sesión, idioma, tema) sigue disponible al tocar el botón ☰, sin perder funcionalidad.</p>
-                <p class="bug-report__field" data-lang="en"><code>header.site-header</code> height = 49px (6% of the viewport, down from 21.9%) with the menu collapsed by default. The rest of the options (Favorites, email, sign out, language, theme) are still available by tapping the ☰ button, with no loss of functionality.</p>
               </div>
             </div>
           </div>
