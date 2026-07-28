@@ -495,19 +495,21 @@
 }
 
 .bug-report__evidence-row .screenshots {
+  display: block;
   flex: 0 0 auto;
-  width: 180px;
   margin-top: 0;
 }
 
 .bug-report__evidence-row .screenshots img {
-  width: 100%;
+  display: block;
+  width: 280px;
+  max-width: 100%;
   height: auto;
 }
 
 .bug-report__evidence-text {
-  flex: 1 1 220px;
-  min-width: 200px;
+  flex: 1 1 260px;
+  min-width: 220px;
 }
 
 .bug-report__evidence-text p {
