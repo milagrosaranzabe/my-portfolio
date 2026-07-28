@@ -6,6 +6,20 @@
       "runtimeExecutable": "npx",
       "runtimeArgs": ["serve", ".", "-l", "5050"],
       "port": 5050
+    },
+    {
+      "name": "biblioteca-local",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "C:\\Users\\Usuario\\Documents\\biblioteca-peliculas-series"],
+      "port": 3000,
+      "autoPort": true
+    },
+    {
+      "name": "portfolio-static-check",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "."],
+      "port": 4100,
+      "autoPort": true
     }
   ]
 }
