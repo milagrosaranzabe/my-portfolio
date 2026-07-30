@@ -22,10 +22,10 @@ document.addEventListener('DOMContentLoaded', function () {
   initServiceCards();
 });
 
-// Servicios (US4, FR-009): al hacer hover o dar foco de teclado a una
-// tarjeta, se muestra su descripción ampliada. El botón además es
-// accionable con Enter/Espacio y con tap en touch, sin depender del
-// hover para ser usable.
+// Servicios (US4, FR-009): al hacer hover o dar foco de teclado al botón
+// "Ver más" (no a la tarjeta entera), se muestra su descripción ampliada.
+// El botón además es accionable con Enter/Espacio y con tap en touch,
+// sin depender del hover para ser usable.
 function initServiceCards() {
   document.querySelectorAll('.service-card').forEach(function (card) {
     var toggle = card.querySelector('.service-card__toggle');
@@ -50,11 +50,11 @@ function initServiceCards() {
       }
     });
 
-    card.addEventListener('mouseenter', show);
-    card.addEventListener('mouseleave', hide);
+    toggle.addEventListener('mouseenter', show);
+    toggle.addEventListener('mouseleave', hide);
     toggle.addEventListener('focus', show);
-    card.addEventListener('focusout', function (event) {
-      if (!card.contains(event.relatedTarget)) {
+    toggle.addEventListener('blur', function (event) {
+      if (!extended.contains(event.relatedTarget)) {
         hide();
       }
     });
