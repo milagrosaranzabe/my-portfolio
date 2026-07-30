@@ -42,6 +42,8 @@
     <span data-lang="en">Skip to main content</span>
   </a>
 
+  <div class="scroll-progress" aria-hidden="true"></div>
+
   <header class="site-header">
     <nav class="site-nav" aria-label="Principal">
       <ul class="site-nav__list">
@@ -50,7 +52,7 @@
         <li><a href="#servicios"><span data-lang="es">Servicios</span><span data-lang="en">Services</span></a></li>
         <li><a href="#habilidades"><span data-lang="es">Habilidades</span><span data-lang="en">Skills</span></a></li>
         <li><a href="#experiencia"><span data-lang="es">Experiencia</span><span data-lang="en">Experience</span></a></li>
-        <li><a href="#proyecto-destacado"><span data-lang="es">Proyecto destacado</span><span data-lang="en">Featured project</span></a></li>
+        <li><a href="#proyectos-destacados"><span data-lang="es">Proyectos</span><span data-lang="en">Projects</span></a></li>
       </ul>
       <div class="header__controls">
         <div class="lang-switch" role="group" aria-label="Selector de idioma / Language selector">
@@ -91,9 +93,9 @@
           <h1 class="hero__name">Milagros A. Aranzabe Alonso</h1>
           <p class="hero__tagline" data-lang="es">Analista QA con experiencia en testing manual, en transición activa hacia QA Automation + AI.</p>
           <p class="hero__tagline" data-lang="en">QA Analyst with manual-testing experience, actively transitioning into QA Automation + AI.</p>
-          <a class="button" href="#proyecto-destacado">
-            <span data-lang="es">Ver mi proyecto destacado</span>
-            <span data-lang="en">See my featured project</span>
+          <a class="button" href="#proyectos-destacados">
+            <span data-lang="es">Ver mis proyectos</span>
+            <span data-lang="en">See my projects</span>
           </a>
         </div>
 
@@ -130,11 +132,11 @@
           <h3>
             <span class="badge-learning"><span data-lang="es">en aprendizaje</span><span data-lang="en">learning</span></span>
           </h3>
-          <p data-lang="es">Actualmente me encuentro en una transición activa hacia un perfil de QA Automation con enfoque en IA. Estoy ampliando mis conocimientos en JavaScript y Playwright, al mismo tiempo que exploro el uso de herramientas de inteligencia artificial aplicadas al testing, como ChatGPT, Claude y Gemini. Si bien estas competencias aún se encuentran en proceso de consolidación, representan mi principal foco de desarrollo profesional.</p>
-          <p data-lang="en">I'm currently in an active transition toward a QA Automation profile with a focus on AI. I'm expanding my knowledge of JavaScript and Playwright, while also exploring AI tools applied to testing, such as ChatGPT, Claude, and Gemini. While these skills are still being consolidated, they represent my main focus for professional development.</p>
+          <p data-lang="es">Estoy en transición activa hacia un perfil de QA Automation con foco en IA: sumando JavaScript y Playwright, y explorando herramientas como ChatGPT, Claude y Gemini aplicadas al testing.</p>
+          <p data-lang="en">I'm actively transitioning into a QA Automation profile with a focus on AI: picking up JavaScript and Playwright, and exploring tools like ChatGPT, Claude, and Gemini applied to testing.</p>
 
-          <p data-lang="es">En la sección <a href="#proyecto-destacado">Proyecto destacado</a> podrás encontrar evidencia concreta de este recorrido y de los avances realizados, más allá de una simple declaración de intención.</p>
-          <p data-lang="en">In the <a href="#proyecto-destacado">Featured project</a> section you'll find concrete evidence of this journey and the progress made, beyond a simple statement of intent.</p>
+          <p data-lang="es">La evidencia de este recorrido está en <a href="#proyectos-destacados">Proyectos</a>, no solo la intención.</p>
+          <p data-lang="en">The evidence of that journey is in <a href="#proyectos-destacados">Projects</a>, not just the intent.</p>
         </div>
 
         <div class="cv-download">
@@ -156,7 +158,7 @@
         <h2><span data-lang="es">Servicios</span><span data-lang="en">Services</span></h2>
 
         <div class="services__grid">
-          <article class="service-card">
+          <article class="service-card reveal-item">
             <h3><svg class="icon-heading" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="4" width="14" height="17" rx="2"/><rect x="9" y="2" width="6" height="3" rx="1" fill="currentColor" stroke="none"/><path d="M8.5 12.5l2 2 4.5-4.5"/></svg><span data-lang="es">Testing manual</span><span data-lang="en">Manual testing</span></h3>
             <p data-lang="es">Planificación y ejecución de casos de prueba, testing exploratorio y reporte de bugs claro y accionable.</p>
             <p data-lang="en">Test case planning and execution, exploratory testing, and clear, actionable bug reporting.</p>
@@ -169,7 +171,7 @@
             </div>
           </article>
 
-          <article class="service-card">
+          <article class="service-card reveal-item">
             <h3><svg class="icon-heading" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="7.5" cy="12" r="3.2"/><circle cx="16.5" cy="12" r="3.2"/><line x1="10.5" y1="12" x2="13.5" y2="12"/></svg><span data-lang="es">Testing de APIs</span><span data-lang="en">API testing</span></h3>
             <p data-lang="es">Validación de endpoints y contratos de API con Postman.</p>
             <p data-lang="en">Endpoint and API contract validation with Postman.</p>
@@ -182,7 +184,7 @@
             </div>
           </article>
 
-          <article class="service-card">
+          <article class="service-card reveal-item">
             <h3>
               <svg class="icon-heading" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="9 7 4 12 9 17"/><polyline points="15 7 20 12 15 17"/></svg>
               <span data-lang="es">Automatización con Playwright + JavaScript</span>
@@ -200,7 +202,7 @@
             </div>
           </article>
 
-          <article class="service-card">
+          <article class="service-card reveal-item">
             <h3>
               <svg class="icon-heading" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true" focusable="false"><path d="M12 2 14 9 21 11 14 13 12 21 10 13 3 11 10 9Z"/></svg>
               <span data-lang="es">Testing asistido por IA</span>
@@ -213,12 +215,12 @@
               <span data-lang="es">Ver más</span><span data-lang="en">Read more</span>
             </button>
             <div class="service-card__extended" hidden>
-              <p data-lang="es">En mi trabajo diario uso ChatGPT y Claude para revisar y entender documentación compleja o requerimientos completos, detectar inconsistencias, analizar la cobertura de pruebas y generar casos de prueba, entre otros usos. También estoy aprendiendo a diseñar mejores prompts con Claude / Claude Code / Cowork (agentes, skills, conectores) para armar proyectos a partir de lo que voy estudiando.</p>
-              <p data-lang="en">In my day-to-day work I use ChatGPT and Claude to review and understand complex documentation or full requirements, spot inconsistencies, analyze test coverage, and generate test cases, among other uses. I'm also learning to design better prompts with Claude / Claude Code / Cowork (agents, skills, connectors) to build projects from what I'm studying.</p>
+              <p data-lang="es">Los uso para revisar documentación, detectar inconsistencias y generar casos de prueba. También aprendo a diseñar mejores prompts con Claude Code (agentes, skills, conectores).</p>
+              <p data-lang="en">I use them to review documentation, spot inconsistencies, and generate test cases. I'm also learning to design better prompts with Claude Code (agents, skills, connectors).</p>
             </div>
           </article>
 
-          <article class="service-card">
+          <article class="service-card reveal-item">
             <h3><svg class="icon-heading" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.66 3.13 3 7 3s7-1.34 7-3V6"/><path d="M5 12v6c0 1.66 3.13 3 7 3s7-1.34 7-3v-6"/></svg><span data-lang="es">Testing de bases de datos SQL</span><span data-lang="en">SQL database testing</span></h3>
             <p data-lang="es">Validación de datos e integridad en bases de datos SQL/PostgreSQL.</p>
             <p data-lang="en">Data and integrity validation in SQL/PostgreSQL databases.</p>
@@ -239,7 +241,7 @@
       <div class="section__inner reveal">
         <h2><span data-lang="es">Habilidades técnicas</span><span data-lang="en">Technical skills</span></h2>
 
-        <div class="skills__category">
+        <div class="skills__category reveal-item">
           <h3><svg class="icon-heading" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="4" width="14" height="17" rx="2"/><rect x="9" y="2" width="6" height="3" rx="1" fill="currentColor" stroke="none"/><path d="M8.5 12.5l2 2 4.5-4.5"/></svg><span data-lang="es">Testing Manual</span><span data-lang="en">Manual Testing</span></h3>
           <ul class="skills__list">
             <li><span data-lang="es">Testing funcional</span><span data-lang="en">Functional testing</span></li>
@@ -255,7 +257,7 @@
           </ul>
         </div>
 
-        <div class="skills__category">
+        <div class="skills__category reveal-item">
           <h3><svg class="icon-heading" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="7.5" cy="12" r="3.2"/><circle cx="16.5" cy="12" r="3.2"/><line x1="10.5" y1="12" x2="13.5" y2="12"/></svg><span data-lang="es">Testing de APIs</span><span data-lang="en">API Testing</span></h3>
           <ul class="skills__list">
             <li>Postman</li>
@@ -264,7 +266,7 @@
           </ul>
         </div>
 
-        <div class="skills__category">
+        <div class="skills__category reveal-item">
           <h3><svg class="icon-heading" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.66 3.13 3 7 3s7-1.34 7-3V6"/><path d="M5 12v6c0 1.66 3.13 3 7 3s7-1.34 7-3v-6"/></svg><span data-lang="es">Bases de Datos</span><span data-lang="en">Databases</span></h3>
           <ul class="skills__list">
             <li>SQL</li>
@@ -272,7 +274,7 @@
           </ul>
         </div>
 
-        <div class="skills__category">
+        <div class="skills__category reveal-item">
           <h3><svg class="icon-heading" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="4" width="16" height="16" rx="2"/><line x1="9" y1="4" x2="9" y2="20"/><line x1="15" y1="4" x2="15" y2="20"/></svg><span data-lang="es">Gestión Ágil</span><span data-lang="en">Agile Management</span></h3>
           <ul class="skills__list">
             <li>Jira</li>
@@ -282,7 +284,7 @@
           </ul>
         </div>
 
-        <div class="skills__category">
+        <div class="skills__category reveal-item">
           <h3><svg class="icon-heading" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="9 7 4 12 9 17"/><polyline points="15 7 20 12 15 17"/></svg><span data-lang="es">Automatización</span><span data-lang="en">Automation</span></h3>
           <ul class="skills__list">
             <li>JavaScript <span class="badge-learning"><span data-lang="es">en aprendizaje</span><span data-lang="en">learning</span></span></li>
@@ -292,7 +294,7 @@
           </ul>
         </div>
 
-        <div class="skills__category">
+        <div class="skills__category reveal-item">
           <h3><svg class="icon-heading" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="9" width="18" height="10" rx="2"/><path d="M8 9V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v3"/><line x1="3" y1="13.5" x2="21" y2="13.5"/></svg><span data-lang="es">Otras herramientas</span><span data-lang="en">Other tools</span></h3>
           <ul class="skills__list">
             <li>BrowserStack</li>
@@ -307,7 +309,7 @@
           </ul>
         </div>
 
-        <div class="skills__category">
+        <div class="skills__category reveal-item">
           <h3><svg class="icon-heading" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true" focusable="false"><path d="M12 2 14 9 21 11 14 13 12 21 10 13 3 11 10 9Z"/></svg><span data-lang="es">IA aplicada a testing</span><span data-lang="en">AI applied to testing</span></h3>
           <ul class="skills__list">
             <li>ChatGPT <span class="badge-learning"><span data-lang="es">en aprendizaje</span><span data-lang="en">learning</span></span></li>
@@ -323,7 +325,7 @@
       <div class="section__inner reveal">
         <h2><span data-lang="es">Experiencia / Trayectoria</span><span data-lang="en">Experience</span></h2>
 
-        <div class="experience-entry">
+        <div class="experience-entry reveal-item">
           <h3><span data-lang="es">QA Analyst — Temperies</span><span data-lang="en">QA Analyst — Temperies</span></h3>
           <p class="experience-entry__period"><span data-lang="es">Febrero 2025 – Actualidad</span><span data-lang="en">February 2025 – Present</span></p>
           <p data-lang="es">Regresé a un rol técnico de QA con foco en la ejecución y validación de calidad, dejando atrás las responsabilidades de coordinación. Trabajo con un alto nivel de autonomía, resolviendo la mayoría de las tareas de forma independiente y consultando únicamente en situaciones de alta complejidad técnica.</p>
@@ -342,7 +344,7 @@
           </ul>
         </div>
 
-        <div class="experience-entry">
+        <div class="experience-entry reveal-item">
           <h3><span data-lang="es">QA Lead / Referente Técnica — Temperies</span><span data-lang="en">QA Lead / Technical Referent — Temperies</span></h3>
           <p class="experience-entry__period"><span data-lang="es">Julio 2024 – Febrero 2025</span><span data-lang="en">July 2024 – February 2025</span></p>
           <p data-lang="es">Lideré el área de QA, coordinando al equipo y definiendo estrategias de aseguramiento de la calidad para productos web y mobile.</p>
@@ -369,7 +371,7 @@
           </ul>
         </div>
 
-        <div class="experience-entry">
+        <div class="experience-entry reveal-item">
           <h3><span data-lang="es">QA Analyst Junior — Temperies</span><span data-lang="en">Junior QA Analyst — Temperies</span></h3>
           <p class="experience-entry__period"><span data-lang="es">Noviembre 2023 – Julio 2024</span><span data-lang="en">November 2023 – July 2024</span></p>
           <p data-lang="es">Participé en el aseguramiento de calidad de un ecosistema de aplicaciones fitness para plataformas web y mobile, trabajando bajo la mentoría de una QA Lead.</p>
@@ -388,7 +390,7 @@
           </ul>
         </div>
 
-        <div class="experience-entry">
+        <div class="experience-entry reveal-item">
           <h3><span data-lang="es">QA Analyst / Líder de Equipo QA — ID For Ideas</span><span data-lang="en">QA Analyst / QA Team Lead — ID For Ideas</span></h3>
           <p class="experience-entry__period"><span data-lang="es">Junio 2023 – Noviembre 2023</span><span data-lang="en">June 2023 – November 2023</span></p>
           <p data-lang="es">Formé parte del desarrollo de una plataforma web de e-commerce para una pizzería, colaborando con un equipo remoto distribuido en Latinoamérica.</p>
@@ -409,7 +411,7 @@
           </ul>
         </div>
 
-        <div class="experience-entry">
+        <div class="experience-entry reveal-item">
           <h3><span data-lang="es">QA Analyst Freelance</span><span data-lang="en">Freelance QA Analyst</span></h3>
           <p class="experience-entry__period"><span data-lang="es">Septiembre 2022 – Junio 2023</span><span data-lang="en">September 2022 – June 2023</span></p>
           <p data-lang="es">Participé en proyectos web de e-commerce y publicidad, colaborando con equipos de desarrollo reducidos y adquiriendo experiencia práctica en procesos de aseguramiento de calidad.</p>
@@ -426,7 +428,7 @@
           </ul>
         </div>
 
-        <div class="experience-entry">
+        <div class="experience-entry reveal-item">
           <h3><span data-lang="es">Formación en Testing QA — Educación IT</span><span data-lang="en">QA Testing Program — Educación IT</span></h3>
           <p class="experience-entry__period">2022 – 2023</p>
           <ul>
@@ -437,32 +439,44 @@
       </div>
     </section>
 
-    <!-- ================= Proyecto destacado (US3) ================= -->
-    <section id="proyecto-destacado" class="section section--tint-blue">
+    <!-- ================= Proyectos destacados (US3) ================= -->
+    <section id="proyectos-destacados" class="section section--tint-blue">
       <div class="section__inner reveal">
-        <p class="featured-project__eyebrow"><span data-lang="es">Proyecto destacado</span><span data-lang="en">Featured project</span></p>
-        <div class="featured-project">
-          <h2>Biblioteca de Películas y Series</h2>
+        <p class="featured-project__eyebrow"><span data-lang="es">Proyectos destacados</span><span data-lang="en">Featured projects</span></p>
+        <h2 class="visually-hidden"><span data-lang="es">Proyectos destacados</span><span data-lang="en">Featured projects</span></h2>
 
-          <p data-lang="es">Aplicación web para buscar películas y series, guardarlas como favoritas y gestionar una cuenta de usuario. Desarrollé este proyecto como una iniciativa integradora para aplicar el ciclo completo de QA sobre un producto funcional: desde el análisis de requisitos y el diseño de casos de prueba hasta la ejecución de pruebas manuales y la automatización. La aplicación incorpora funcionalidades como autenticación de usuarios, persistencia de datos y consumo de una API externa, proporcionando un entorno realista para validar procesos y buenas prácticas de testing.</p>
-          <p data-lang="en">A web app to search movies and TV shows, save them as favorites, and manage a user account. I developed this project as an integrator initiative to apply the full QA cycle to a working product: from requirements analysis and test case design to manual test execution and automation. The app includes features like user authentication, data persistence, and consumption of an external API, providing a realistic environment to validate testing processes and best practices.</p>
+        <div class="projects-grid">
+          <article class="project-card reveal-item">
+            <div class="project-card__frame">
+              <div class="project-card__frame-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+              <img class="project-card__cover" src="assets/img/proyecto-destacado/biblioteca-cover.png" alt="Pantalla principal de Biblioteca de Películas y Series, con la grilla de resultados" width="640" height="360" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__header">
+                <h3>Biblioteca de Películas y Series</h3>
+                <span class="project-card__status project-card__status--live"><span data-lang="es">En vivo</span><span data-lang="en">Live</span></span>
+              </div>
 
-          <ul class="featured-project__features">
-            <li><span data-lang="es">Login</span><span data-lang="en">Login</span></li>
-            <li><span data-lang="es">Búsqueda</span><span data-lang="en">Search</span></li>
-            <li><span data-lang="es">Favoritos</span><span data-lang="en">Favorites</span></li>
-          </ul>
+              <p data-lang="es">Buscá películas y series, guardalas como favoritas y gestioná tu cuenta. La construí para aplicar el ciclo completo de QA — análisis, casos de prueba, testing manual y automatización — sobre un producto real con auth, datos persistentes y una API externa.</p>
+              <p data-lang="en">Search movies and shows, save favorites, manage your account. Built to run the full QA cycle — analysis, test cases, manual testing, automation — on a real product with auth, persistent data, and an external API.</p>
 
-          <!-- FR-011/FR-014: enlace prominente al proyecto en vivo, abre en
-               pestaña nueva sin sacar al visitante del portfolio. -->
-          <a class="button" href="https://biblioteca-peliculas-series.web.app" target="_blank" rel="noopener">
-            <span data-lang="es">Ver el proyecto en vivo</span>
-            <span data-lang="en">See the live project</span>
-          </a>
+              <ul class="featured-project__features">
+                <li><span data-lang="es">Login</span><span data-lang="en">Login</span></li>
+                <li><span data-lang="es">Búsqueda</span><span data-lang="en">Search</span></li>
+                <li><span data-lang="es">Favoritos</span><span data-lang="en">Favorites</span></li>
+                <li>Firebase</li>
+              </ul>
 
-          <!-- Bug real, encontrado por testing manual funcional sobre la app en producción. -->
-          <div class="evidence-block">
-            <h3><span data-lang="es">Bug encontrado</span><span data-lang="en">Bug found</span></h3>
+              <div class="project-card__actions">
+                <a class="button" href="https://biblioteca-peliculas-series.web.app" target="_blank" rel="noopener">
+                  <span data-lang="es">Ver proyecto en vivo</span>
+                  <span data-lang="en">See live project</span>
+                </a>
+              </div>
+
+              <!-- Bug real, encontrado por testing manual funcional sobre la app en producción. -->
+              <details class="project-card__evidence">
+                <summary><span data-lang="es">Ver evidencia QA: bug real encontrado y corregido</span><span data-lang="en">See QA evidence: real bug found and fixed</span></summary>
 
             <div class="bug-report">
               <p>
@@ -540,7 +554,41 @@
                 </div>
               </div>
             </div>
-          </div>
+              </details>
+            </div>
+          </article>
+
+          <article class="project-card reveal-item">
+            <div class="project-card__frame project-card__frame--placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/>
+                <circle cx="12" cy="10" r="2.5"/>
+                <path d="M3 21c2-1.5 5-1.5 7 0" stroke-dasharray="2 2"/>
+                <path d="M14 21c2-1.5 5-1.5 7 0" stroke-dasharray="2 2"/>
+              </svg>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__header">
+                <h3>Travel Planner</h3>
+                <span class="project-card__status project-card__status--wip"><span data-lang="es">En construcción</span><span data-lang="en">In progress</span></span>
+              </div>
+
+              <p data-lang="es">Gestor de viajes que estoy construyendo desde cero para practicar QA sobre mi propio desarrollo. Trabajo organizado en GitHub Projects, con deploy planeado en Vercel.</p>
+              <p data-lang="en">A travel planner I'm building from scratch to practice QA on my own development. Work tracked in GitHub Projects, with deploy planned on Vercel.</p>
+
+              <ul class="featured-project__features">
+                <li>GitHub Projects</li>
+                <li>Vercel</li>
+              </ul>
+
+              <div class="project-card__actions">
+                <span class="button--disabled" aria-disabled="true">
+                  <span data-lang="es">Repositorio (próximamente)</span>
+                  <span data-lang="en">Repository (coming soon)</span>
+                </span>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -561,6 +609,7 @@
   <script src="assets/js/i18n.js"></script>
   <script src="assets/js/theme.js"></script>
   <script src="assets/js/reveal.js"></script>
+  <script src="assets/js/scroll-state.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

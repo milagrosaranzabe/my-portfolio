@@ -59,9 +59,38 @@
   position: sticky;
   top: 0;
   background-color: var(--color-bg);
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid transparent;
   z-index: 10;
-  transition: background-color var(--transition-base), border-color var(--transition-base);
+  transition: background-color var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+/* Agregada por scroll-state.js una vez que se scrollea la página —
+   separa visualmente el header del contenido sin depender de un
+   borde fijo que se note incluso en el tope de la página. */
+.site-header.is-scrolled {
+  border-bottom-color: var(--color-border);
+  box-shadow: 0 4px 20px var(--shadow-color);
+}
+
+/* Barra de progreso de lectura — su ancho lo controla scroll-state.js
+   vía --scroll-progress (0 a 1). Puramente decorativa. */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  z-index: 20;
+  transform-origin: left;
+  transform: scaleX(var(--scroll-progress, 0));
+  background: var(--color-accent);
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .scroll-progress {
+    transition: transform 0.1s linear;
+  }
 }
 
 .site-nav {
@@ -85,12 +114,28 @@
 }
 
 .site-nav__list a {
+  position: relative;
   text-decoration: none;
   color: var(--color-text);
-  font-size: var(--font-size-sm);
+  font-family: var(--font-nav);
+  font-style: italic;
+  font-size: var(--font-size-base);
   padding: 0.35em 0.5em;
   border-radius: var(--radius);
   transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.site-nav__list a::after {
+  content: '';
+  position: absolute;
+  left: 0.5em;
+  right: 0.5em;
+  bottom: 0.2em;
+  height: 2px;
+  background: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-fast);
 }
 
 .site-nav__list a:hover,
@@ -99,10 +144,15 @@
   color: var(--color-accent-text);
 }
 
+.site-nav__list a:hover::after,
+.site-nav__list a:focus-visible::after,
+.site-nav__list a[aria-current="location"]::after {
+  transform: scaleX(1);
+}
+
 .site-nav__list a[aria-current="location"] {
   color: var(--color-accent-text);
-  font-weight: 700;
-  border-bottom: 2px solid var(--color-accent);
+  font-weight: 600;
 }
 
 .lang-switch,
@@ -182,7 +232,7 @@
 .reveal {
   opacity: 0;
   transform: translateY(18px);
-  transition: opacity var(--transition-slow), transform var(--transition-slow);
+  transition: opacity var(--transition-slow) ease-out, transform var(--transition-slow) cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal--visible {
@@ -190,10 +240,53 @@
   transform: none;
 }
 
+/* Cascada sutil: tarjetas dentro de una grilla revelada usan
+   .reveal-item para aparecer una a una en vez de todas juntas. El
+   delay se calcula con --reveal-index (seteado inline por nth-child
+   ya que CSS no tiene un contador nativo utilizable en transition-delay). */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity var(--transition-slow) ease-out, transform var(--transition-slow) cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: calc(var(--reveal-index, 0) * 70ms);
+}
+
+.reveal--visible .reveal-item {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal-item:nth-child(1) { --reveal-index: 0; }
+.reveal-item:nth-child(2) { --reveal-index: 1; }
+.reveal-item:nth-child(3) { --reveal-index: 2; }
+.reveal-item:nth-child(4) { --reveal-index: 3; }
+.reveal-item:nth-child(5) { --reveal-index: 4; }
+.reveal-item:nth-child(6) { --reveal-index: 5; }
+.reveal-item:nth-child(7) { --reveal-index: 6; }
+.reveal-item:nth-child(8) { --reveal-index: 7; }
+
 /* ============================================================
    Hero (US1)
    ============================================================ */
+#inicio.section {
+  position: relative;
+  overflow: hidden;
+}
+
+#inicio.section::before {
+  content: '';
+  position: absolute;
+  top: -10rem;
+  right: -8rem;
+  width: 28rem;
+  height: 28rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--color-accent-glow), transparent 70%);
+  pointer-events: none;
+}
+
 .hero {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
@@ -390,6 +483,176 @@
   background-color: var(--color-pill-bg-hover);
   border-color: var(--color-accent);
   box-shadow: 0 8px 18px var(--shadow-color);
+}
+
+/* ============================================================
+   Proyectos destacados — grilla de 2 tarjetas
+   ============================================================ */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--color-accent);
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: var(--color-bg);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.project-card:hover,
+.project-card:focus-within {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px var(--shadow-color);
+}
+
+/* Marco tipo ventana de navegador alrededor de la captura — le da
+   contexto de "producto real" en vez de una imagen suelta. */
+.project-card__frame {
+  background-color: var(--color-bg-alt);
+}
+
+.project-card__frame-bar {
+  display: flex;
+  gap: 0.4rem;
+  padding: 0.6rem 0.75rem;
+  background-color: var(--color-bg-alt-2);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.project-card__frame-bar span {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background-color: var(--color-border);
+}
+
+.project-card__cover {
+  display: block;
+  width: 100%;
+  height: 14rem;
+  object-fit: cover;
+  object-position: top;
+}
+
+.project-card__frame--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 14rem;
+  color: var(--color-accent-text);
+}
+
+.project-card__frame--placeholder svg {
+  width: 5rem;
+  height: 5rem;
+}
+
+.project-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  flex: 1;
+}
+
+.project-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.project-card__header h3 {
+  margin: 0;
+}
+
+.project-card__status {
+  flex-shrink: 0;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  padding: 0.2em 0.7em;
+  border-radius: var(--radius);
+  white-space: nowrap;
+}
+
+.project-card__status--live {
+  background-color: var(--color-accent);
+  color: #fff;
+}
+
+.project-card__status--wip {
+  color: var(--color-accent-text);
+  background-color: var(--color-bg-alt);
+  border: 1px solid var(--color-accent);
+}
+
+.project-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: auto;
+  padding-top: var(--space-1);
+}
+
+.button--ghost {
+  background-color: transparent;
+  color: var(--color-accent-text);
+  border: 1px solid var(--color-accent);
+}
+
+.button--ghost:hover,
+.button--ghost:focus-visible {
+  background-color: var(--color-pill-bg);
+  color: var(--color-accent-text);
+}
+
+.button--disabled {
+  display: inline-block;
+  width: fit-content;
+  background-color: var(--color-bg-alt);
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+  padding: 0.75em 1.5em;
+  border-radius: var(--radius);
+  font-size: var(--font-size-base);
+  cursor: not-allowed;
+}
+
+/* Evidencia técnica dentro de la tarjeta: colapsada por defecto para
+   no convertir la sección de proyectos en una pared de texto — el
+   reporte completo de QA queda a un clic. */
+.project-card__evidence {
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-2);
+  margin-top: var(--space-1);
+}
+
+.project-card__evidence summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--color-accent-text);
+  padding: 0.4em 0;
+}
+
+.project-card__evidence summary:hover {
+  text-decoration: underline;
+}
+
+.project-card__evidence[open] summary {
+  margin-bottom: var(--space-2);
+}
+
+@media (min-width: 60rem) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+  }
 }
 
 .evidence-block {

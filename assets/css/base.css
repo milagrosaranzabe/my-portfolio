@@ -13,6 +13,18 @@
   font-display: swap;
 }
 
+/* Fraunces autoalojada (mismo criterio que Space Grotesk arriba: sin
+   depender de Google Fonts en runtime) — solo para el menú, para que
+   se diferencie del resto del sitio con una serif itálica editorial. */
+@font-face {
+  font-family: 'Fraunces';
+  src: url('../fonts/fraunces-italic-variable.woff2') format('woff2-variations'),
+       url('../fonts/fraunces-italic-variable.woff2') format('woff2');
+  font-weight: 300 700;
+  font-style: italic;
+  font-display: swap;
+}
+
 *,
 *::before,
 *::after {

@@ -15,6 +15,9 @@ document.addEventListener('DOMContentLoaded', function () {
   if (typeof window.initReveal === 'function') {
     window.initReveal();
   }
+  if (typeof window.initScrollState === 'function') {
+    window.initScrollState();
+  }
 
   initServiceCards();
 });
