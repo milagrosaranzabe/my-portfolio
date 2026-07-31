@@ -347,50 +347,80 @@
   width: 100%;
   max-width: 22rem;
   align-self: center;
-  cursor: default;
 }
 
+/* Loop continuo: el checklist se tilda y destilda, y mientras tanto
+   la lupa "atrapa" al bug — todo automático, sin depender del mouse
+   (útil en mobile). Un solo ciclo de 5s compartido entre las piezas
+   para que la narrativa quede sincronizada. prefers-reduced-motion
+   ya desactiva animation-duration globalmente (ver base.css). */
 .hero__check {
   stroke-dasharray: 34;
   stroke-dashoffset: 34;
-  animation: hero-check-draw 0.5s ease forwards;
+  animation: hero-check-loop 5s ease-in-out infinite;
 }
 
-.hero__check--1 { animation-delay: 0.3s; }
-.hero__check--2 { animation-delay: 0.6s; }
-.hero__check--3 { animation-delay: 0.9s; }
+.hero__check--1 { animation-delay: 0s; }
+.hero__check--2 { animation-delay: 0.25s; }
+.hero__check--3 { animation-delay: 0.5s; }
 
-@keyframes hero-check-draw {
-  to { stroke-dashoffset: 0; }
+@keyframes hero-check-loop {
+  0% { stroke-dashoffset: 34; }
+  20% { stroke-dashoffset: 0; }
+  75% { stroke-dashoffset: 0; }
+  90% { stroke-dashoffset: 34; }
+  100% { stroke-dashoffset: 34; }
 }
 
 .hero__illustration-glass {
   transform-origin: 255px 235px;
-  transition: transform var(--transition-base);
+  animation: hero-glass-loop 5s ease-in-out infinite;
+}
+
+@keyframes hero-glass-loop {
+  0%, 44% { transform: none; }
+  56%, 76% { transform: translate(-16px, -8px) scale(1.08) rotate(-6deg); }
+  100% { transform: none; }
 }
 
 .hero__illustration-bug {
-  transition: opacity var(--transition-base);
+  animation: hero-bug-loop 5s ease-in-out infinite;
+}
+
+@keyframes hero-bug-loop {
+  0%, 44% { opacity: 1; }
+  56%, 76% { opacity: 0.45; }
+  100% { opacity: 1; }
 }
 
 .hero__illustration-bug-x {
   opacity: 0;
-  transition: opacity var(--transition-fast);
+  animation: hero-bug-x-loop 5s ease-in-out infinite;
 }
 
-.hero__illustration:hover .hero__illustration-glass,
-.hero__illustration:focus-visible .hero__illustration-glass {
-  transform: translate(-16px, -8px) scale(1.08) rotate(-6deg);
+/* base.css fuerza animation-duration a ~0 con reduced-motion, lo que
+   "congela" un loop infinito en el último keyframe (checklist vacío,
+   bug sin atrapar) — no es un estado final coherente. Para quien pide
+   menos movimiento, mostramos directamente el resultado: todo
+   revisado, bug encontrado. */
+@media (prefers-reduced-motion: reduce) {
+  .hero__check {
+    stroke-dashoffset: 0;
+  }
+
+  .hero__illustration-bug {
+    opacity: 0.45;
+  }
+
+  .hero__illustration-bug-x {
+    opacity: 1;
+  }
 }
 
-.hero__illustration:hover .hero__illustration-bug,
-.hero__illustration:focus-visible .hero__illustration-bug {
-  opacity: 0.45;
-}
-
-.hero__illustration:hover .hero__illustration-bug-x,
-.hero__illustration:focus-visible .hero__illustration-bug-x {
-  opacity: 1;
+@keyframes hero-bug-x-loop {
+  0%, 46% { opacity: 0; }
+  56%, 74% { opacity: 1; }
+  86%, 100% { opacity: 0; }
 }
 
 .button {
